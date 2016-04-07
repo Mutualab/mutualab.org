@@ -7,6 +7,10 @@ const  gulp = require('gulp'),
 const srcDir   = "src",
       buildDir = "dist";
  
+
+/**
+ * Dev tasks
+ */
 gulp.task('webserver', () => {
   gulp.src(['./',`./${srcDir}/`])
     .pipe(webserver({
@@ -40,12 +44,15 @@ gulp.task("sass", () => {
       .pipe(gulp.dest(`./${srcDir}/css`));
 });
 
+
+/**
+ * Build tasks
+ */
 gulp.task('build', ()=>{
     return gulp.src(
-      [`./${srcDir}/**/*.html`,
-       `./${srcDir}/**/*.js`,
-       `./${srcDir}/**/*.css`,
-       ])
+      [ `./${srcDir}/**/*.{html,js,css,eot,svg,ttf,woff,woff2}`,
+        `./${srcDir}/**/multicolore/*.pdf`,
+        `!./${srcDir}/**/specimen_files/*`])
       .pipe(gulp.dest(`./${buildDir}/`));
 });
 
