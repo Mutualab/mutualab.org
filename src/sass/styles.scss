@@ -1,0 +1,66 @@
+$main-grey:#333;
+
+*{ 
+  font-family: "multicolore_regular", sans-serif;
+}
+
+
+a{
+  text-decoration: none;
+  color:lighten($main-grey, 20%);
+}
+/**
+ * Header on home page
+ */
+
+header.main-header {
+  img{
+    width : 800px;
+    max-width: 100%;
+    margin:0 auto;
+    display: block;
+  }
+  h1{
+    text-align: center;
+    font-size: 1.5rem;
+    color:#444;
+  }
+}
+
+
+
+nav {
+  width:100%;
+  &> ul {
+    //text-align: center;
+    &> li {
+      & {
+        //display: inline-block;
+        list-style-type: none;
+        padding:0 2em;
+      }
+
+      & > a {
+        $icon-size:10em;
+        height:$icon-size;
+        span {
+          color:lighten($main-grey, 40%);
+          font-size: 2em;
+          line-height:$icon-size/2;
+        }
+      
+        i {
+            width: $icon-size;
+            height:$icon-size;
+            float:left;
+            svg{
+              max-width: 100%;
+              path {
+                mix-blend-mode: multiply;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
