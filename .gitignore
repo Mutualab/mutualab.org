@@ -2,3 +2,5 @@ node_modules
 bower_components
 art
 dist
+*.sublime-*
+!mutualab.sublime-project
