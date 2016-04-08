@@ -4,4 +4,4 @@ art
 dist
 *.sublime-*
 !mutualab.sublime-project
-*/multicolore/specimen_files
+src/fonts/multicolore/specimen_files
