@@ -16,5 +16,6 @@
     "gulp-wiredep": "0.0.0"
   },
   "author": "",
+  "private":true,
   "license": "ISC"
 }
