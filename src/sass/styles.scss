@@ -1,55 +1,123 @@
-$main-grey:#333;
+$gray:#333;
+$green:#8DC63F;
+$yellow:#FFCB08;
+$blue:#00ADEE;
+$red:#EE382D;
+$pink:#F172AC;
+$orange:#F7941E;
+
 
 *{ 
-  font-family: "multicolore_regular", sans-serif;
+  font-family: Roboto, sans-serif;
+  font-size:1em;
 }
 
+html, body{
+  margin:0;
+  padding:0;
+}
 
 a{
   text-decoration: none;
-  color:lighten($main-grey, 20%);
+  color:lighten($gray, 20%);
 }
+
+h1{
+  font-size:2em;
+  font-weight: 300;
+  color:$gray;
+}
+
 /**
  * Header on home page
  */
 
 header.main-header {
+  &{
+    background:lighten($gray,45%);
+    background-image: 
+      url(../images/coworking-mutualab.jpg), 
+      linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media(min-width: 960px){
+      padding:15% 0;
+    }
+  }
   img{
-    width : 800px;
+    mix-blend-mode: multiply;
+    width : 45%;
     max-width: 100%;
+    min-width:400px;
     margin:0 auto;
     display: block;
   }
   h1{
     text-align: center;
-    font-size: 1.5rem;
     color:#444;
+    color:$gray;
   }
 }
 
 
 
 nav {
+  $icon-size:10rem;
+  @media(min-width: 960px){
+    $icon-size:15rem;
+  }
   width:100%;
   &> ul {
-    //text-align: center;
+    text-align: left;
+    @media(min-width: 960px){
+      margin-top: 5rem;
+      text-align: center;
+    }
     &> li {
       & {
-        //display: inline-block;
+        @media(max-width: 760px){
+          height:$icon-size;
+          display:block;
+          overflow:hidden;
+        }
+
+        margin-bottom:20px;
+        @media(min-width: 960px){
+          display: inline-block;
+        }
         list-style-type: none;
-        padding:0 2em;
+        padding:0 2rem;
       }
 
       & > a {
-        $icon-size:10em;
+        @media(max-width: 760px){
+            display:block;
+            padding-top:$icon-size/2;
+        }
+        
         height:$icon-size;
         span {
-          color:lighten($main-grey, 40%);
-          font-size: 2em;
-          line-height:$icon-size/2;
+          
+
+          color:lighten($gray, 40%);
+          font-family: "multicolore_regular", sans-serif;
+          font-size: 2rem;
+          @media(min-width: 760px){
+            line-height:$icon-size;
+          }
+
+          @media(min-width: 960px){
+            font-size: 1.5rem;
+            line-height:$icon-size;
+          }
         }
       
         i {
+            @media(max-width: 760px){
+              margin-top:-$icon-size/2;
+            }
             width: $icon-size;
             height:$icon-size;
             float:left;
