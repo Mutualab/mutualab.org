@@ -14,21 +14,15 @@ Les pré-requis :
 Cloner le repo
 `git clone https://github.com/Mutualab/mutualab.org.git`
 
-Installer les dépendances du build tool de développement : 
-`npm install` à executer à la racine du repo
+ - Installer les dépendances du build tool de développement :  `npm install` à executer à la racine du repo
 
-Installer les dépendances du site
-`bower install`
+ - Installer les dépendances du site `bower install`
 
+ - Pour executer le projet en dev :  `gulp watch`
 
-Pour executer le projet en dev : 
-`gulp watch`
+ - Pour builder le projet :  `gulp build`
 
-
-Pour builder le projet : 
-`gulp build`
-
-cette commande va automatiquement builder pour le déployer facilement
+*cette commande va automatiquement builder pour le déployer facilement*
 
 
 
