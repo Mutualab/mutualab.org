@@ -1,0 +1,15 @@
+{
+  "title":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+  "header":{
+    "logoTitle":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+    "introHeader":"Développez vos projets, rencontrez, échangez, faites germer vos idées…"
+  },
+  "menu":{
+    "work":"Espace de coworking",
+    "rent":"Salles de réunions",
+    "maker":"Maker space"
+  },
+  "contactSection":{
+    "title":"Nous trouver, nous contacter"
+  }
+}

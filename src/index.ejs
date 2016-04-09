@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= interface.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/favicon-mutualab@32x32.png">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>  <!-- bower:css -->
+  <!-- endbower -->
+  <link rel="stylesheet" type="text/css" href="fonts/multicolore/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- bower:js -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <!-- endbower -->
+  <script src="js/site.js"></script>
+</head>
+<body ng-app="mutualab.org">
+  <header class="main-header" >
+    <div class="content-header">
+        <img class="logo" src="images/logo-mutualab.svg" title="<%= interface.header.logoTitle %>"/>
+        <h1><%= interface.header.introHeader %></h1>
+    </div>
+
+
+    <div class="background-header" flickr-img search="mutualab" author="author"></div>
+    <a class="author-infos" ng-show="author" href="{{author.profile}}" target="_blank">
+        <img ng-src="{{author.pic}}" alt="Photo de {{author.name}}">
+        <span>Photo de <br>{{author.name}}</span>
+    </a>
+    
+  </header>
+  <nav>
+    <ul>
+      <li>
+          <a href="espace-coworking.html">
+            <i mt-svg src="images/icon-work.svg"></i>
+            <span><%= interface.menu.work %></span>
+          </a>
+      </li>
+      <li>
+          <a href="louer-salle.html">
+            <i mt-svg src="images/icon-rent.svg"></i>
+            <span><%= interface.menu.rent %></span>
+          </a>
+      </li>
+      <li>
+          <a href="maker-space.html">
+            <i mt-svg src="images/icon-make.svg"></i>
+            <span><%= interface.menu.maker %></span>
+          </a>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <article id="espace-coworking">
+      <%- coworking %>
+    </article>
+    <article id="nous-trouver" class="adress-infos">
+      <h1><%= interface.contactSection.title %></h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10123.462849887448!2d3.0615278!3d50.6296114!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb863a656f33d55b!2zTXV0dWFsxIFi!5e0!3m2!1sfr!2sfr!4v1460128150582" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </article>
+  
+  </section>
+</body>
+</html>

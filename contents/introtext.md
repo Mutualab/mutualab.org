@@ -1,0 +1,3 @@
+Mutualāb est un vaste **espace de travail partagé** (_coworking_) :  
+700 m2 en plein centre de Lille, pour travailler en mode collaboratif ou personnel.  
+Ce sont aussi des [salles de réunion](http://www.mutualab.org/location-de-salles-de-reunion/ "Location de salles de réunion"), un tas de [formations, événements et ateliers](http://www.mutualab.org/agenda), un [restaurant bio](http://www.mutualab.org/#bis2fly)…
