@@ -1,11 +1,21 @@
-// npm install --save  gulp-wiredep gulp
-const  gulp = require('gulp'),
-    wiredep = require('gulp-wiredep'),
- livereload = require('gulp-livereload'),
-  webserver = require('gulp-webserver');
+const       gulp = require('gulp'),
+         wiredep = require('gulp-wiredep'),
+      livereload = require('gulp-livereload'),
+       webserver = require('gulp-webserver'),
+            sass = require("gulp-sass"),
+    autoprefixer = require("gulp-autoprefixer"),
+         plumber = require('gulp-plumber')
+      sourcemaps = require("gulp-sourcemaps"),
+              fs = require('fs'),
+            glob = require("glob"),
+            path = require('path'),
+          marked = require('marked'),
+             ejs = require('ejs'),
+      changeCase = require('change-case');
   
 const srcDir   = "src",
-      buildDir = "dist";
+      buildDir = "dist",
+      contDir  = "contents";
  
 
 /**
@@ -21,16 +31,12 @@ gulp.task('webserver', () => {
 
 
 gulp.task('wiredep', () => {
-  gulp.src(`./${srcDir}/index.html`)
+  gulp.src(`./${srcDir}/index.ejs`)
     .pipe(wiredep())
     .pipe(gulp.dest('./${srcDir}'))
     .pipe(livereload());
 });
 
-const       sass = require("gulp-sass"),
-    autoprefixer = require("gulp-autoprefixer"),
-         plumber = require('gulp-plumber')
-      sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("sass", () => {
   const mapsDir = `../maps`
@@ -45,10 +51,45 @@ gulp.task("sass", () => {
 });
 
 
+
+
+gulp.task('contents',()=>{
+  var files = glob.sync(`${contDir}/*{.json,.md}`);
+  var data = {};
+
+  files.forEach((file)=>{
+    var ext = path.extname(file);
+    var key = path.basename(file, ext);
+    var rawContent = fs.readFileSync(file,'utf-8');
+    var content = null;
+    if(ext == '.json'){
+      content = JSON.parse(rawContent);
+    }else if(ext == '.md'){
+      content = marked(rawContent);
+    }
+    data[key]=content;
+  });
+
+  marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    pedantic: true,
+    sanitize: true,
+    smartLists: true,
+    smartypants: true
+  });
+
+  var file = fs.readFileSync(`${srcDir}/index.ejs`,'utf-8');
+  var fileContent = ejs.render(file, data, {});
+  fs.writeFileSync(`${srcDir}/index.html`,fileContent);
+});
+
 /**
  * Build tasks
  */
-gulp.task('build', ()=>{
+gulp.task('build',['contents'], ()=>{
     return gulp.src(
       [ `./${srcDir}/**/*.{html,js,css,eot,svg,ttf,woff,woff2}`,
         `./${srcDir}/**/multicolore/*.pdf`,
@@ -62,11 +103,16 @@ gulp.task('watch', () => {
 
   gulp.watch([`./${srcDir}/*/**.scss`], ['sass']);
 
+  gulp.watch([`./${srcDir}/**/*.ejs`,`./${contDir}/**/*{.json,.md}`], ['contents']);
+
   gulp.watch([`./${srcDir}/**/*.html`,
               `./${srcDir}/**/*.js`,
               `./${srcDir}/**/*.svg`], () => {
     livereload.reload()
   });
+
+
+
 
   gulp.watch([`./${srcDir}/css/**.css`], (evt) => {
     livereload.changed(evt.path)
