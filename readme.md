@@ -23,7 +23,9 @@ Les pré-requis :
 
 *cette commande va automatiquement builder pour le déployer facilement*
 
-
-
-
-
+## Modifier les contenus du site
+ - Les contenus se trouvent dans le dossier content, ils sont composé de .json qui permettent de modifier les contenu de l'interface et les configuration et des fichier .md qui concernent les contenus courants du site
+ - Pour modifier ces contenu vous devez : avoir un compte github, être autorisé à modifier le projet mutualab.org
+ 
+ - Vous pouvez modifier ces contenu directement sur github, il existe d'autre editeur de fichier .md accessible depuis internet via son compte github ou en passant par le site [prose.io](http://prose.io)
+ 
