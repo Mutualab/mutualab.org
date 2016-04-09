@@ -11,8 +11,7 @@ Les pré-requis :
   - gulp
 
 ###Installer le projet en développement
-Cloner le repo
-`git clone https://github.com/Mutualab/mutualab.org.git`
+ - Cloner le repo : `git clone https://github.com/Mutualab/mutualab.org.git`
 
  - Installer les dépendances du build tool de développement :  `npm install` à executer à la racine du repo
 
