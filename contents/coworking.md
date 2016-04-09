@@ -18,7 +18,7 @@ Vous choisissez de venir travailler quand bon vous semble. Payez au ticket ou au
 L’engagement est adapté à votre mode de travail!
 
 | **Ticket journée** |
----
+|---|
 | de 7 à 14€ TTC / par jour |
 | Bureau nomade \* |
 | Internet haut débit / WiFi |
@@ -32,21 +32,6 @@ L’engagement est adapté à votre mode de travail!
 |	40 tickets : 320€  |
 |	60 tickets : 420€  |
 
-
-
-*   **Ticket journée**
-*   de 7 à 14€ TTC / par jour
-*   Bureau nomade *
-*   Internet haut débit / WiFi
-*   Imprimante / Scanner **
-*   Salle de réunion **
-*   **Tarifs dégressifs**  
-    5 tickets : 70€c  
-    10 tickets : 120€  
-    20 tickets : 220€  
-    30 tickets : 270€  
-    40 tickets : 320€  
-    60 tickets : 420€
 
 
 
