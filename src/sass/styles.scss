@@ -6,6 +6,8 @@ $red:#EE382D;
 $pink:#F172AC;
 $orange:#F7941E;
 
+$font-multicolore: "multicolore_regular", sans-serif;
+
 
 *{ 
   font-family: Roboto, sans-serif;
@@ -26,6 +28,7 @@ h1{
   font-size:2em;
   font-weight: 300;
   color:$gray;
+  text-align:center;
 }
 
 /**
@@ -34,39 +37,85 @@ h1{
 
 header.main-header {
   &{
-    background:lighten($gray,45%);
-    background-image: 
-      url(../images/coworking-mutualab.jpg), 
-      linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    position:relative;
+    overflow: hidden;
+    min-height:30%;
+    padding:30% 0;
     @media(min-width: 960px){
-      padding:15% 0;
+      padding:10% 0;
     }
   }
-  img{
-    mix-blend-mode: multiply;
+
+  .content-header{
+    width:100%;
+    background-color: rgba(255,255,255,.8);
+    padding:40px 0; 
+  }
+
+
+  .background-header{
+    top:0;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    background:lighten($gray,10%);
+    background-blend-mode: screen;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+  }
+
+  .author-infos{
+    &{
+      position: absolute;
+      bottom:30px;
+      right:50px;
+      color:#fff;
+    }
+
+    span{
+      display: inline-block;
+    }
+
+    img{
+
+      display: block;
+      float:left;
+      border-radius: 50%;
+      margin-right:10px;
+    }
+  }
+
+  img.logo{
     width : 45%;
-    max-width: 100%;
-    min-width:400px;
     margin:0 auto;
     display: block;
+    @media(max-width: 760px){
+      width : 90%;
+    }
+
   }
   h1{
     text-align: center;
     color:#444;
     color:$gray;
   }
+
+  img,h1{
+    z-index:10;
+  }
+
 }
 
-
+/**
+ * Nav menu 
+ */
 
 nav {
-  $icon-size:10rem;
+  $icon-size:15rem;
   @media(min-width: 960px){
-    $icon-size:15rem;
+    $icon-size:9rem;
   }
   width:100%;
   &> ul {
@@ -99,10 +148,8 @@ nav {
         
         height:$icon-size;
         span {
-          
-
           color:lighten($gray, 40%);
-          font-family: "multicolore_regular", sans-serif;
+          font-family:$font-multicolore;
           font-size: 2rem;
           @media(min-width: 760px){
             line-height:$icon-size;
@@ -130,5 +177,15 @@ nav {
           }
         }
       }
+    }
+  }
+
+  /**
+   * Section map
+   */
+  
+  .adress-infos{
+    iframe{
+      width:100%;
     }
   }
