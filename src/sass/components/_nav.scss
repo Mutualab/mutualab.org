@@ -1,0 +1,72 @@
+@import "../vars";
+/**
+* Nav menu 
+*/
+
+nav {
+$icon-size:15rem;
+@media(min-width: 960px){
+  $icon-size:9rem;
+}
+width:100%;
+&> ul {
+  text-align: left;
+  @media(min-width: 960px){
+    margin-top: 5rem;
+    text-align: center;
+  }
+  &> li {
+    & {
+      @media(max-width: 760px){
+        height:$icon-size;
+        display:block;
+        overflow:hidden;
+      }
+
+      margin-bottom:20px;
+      @media(min-width: 960px){
+        display: inline-block;
+      }
+      list-style-type: none;
+      padding:0 2rem;
+    }
+
+    & > a {
+      @media(max-width: 760px){
+          display:block;
+          padding-top:$icon-size/2;
+      }
+      
+      height:$icon-size;
+      span {
+        color:lighten($gray, 40%);
+        font-family:$font-multicolore;
+        font-size: 2rem;
+        @media(min-width: 760px){
+          line-height:$icon-size;
+        }
+
+        @media(min-width: 960px){
+          font-size: 1.5rem;
+          line-height:$icon-size;
+        }
+      }
+    
+      i {
+          @media(max-width: 760px){
+            margin-top:-$icon-size/2;
+          }
+          width: $icon-size;
+          height:$icon-size;
+          float:left;
+          svg{
+            max-width: 100%;
+            path {
+              mix-blend-mode: multiply;
+            }
+          }
+        }
+      }
+    }
+  }
+}
