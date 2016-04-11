@@ -10,6 +10,7 @@ const       gulp = require('gulp'),
             glob = require("glob"),
             path = require('path'),
           marked = require('marked'),
+              md = require( "markdown-it" )().use(require('markdown-it-synapse-table'))
              ejs = require('ejs'),
       changeCase = require('change-case');
   
@@ -57,6 +58,7 @@ gulp.task('contents',()=>{
   var files = glob.sync(`${contDir}/*{.json,.md}`);
   var data = {};
 
+
   files.forEach((file)=>{
     var ext = path.extname(file);
     var key = path.basename(file, ext);
@@ -66,20 +68,12 @@ gulp.task('contents',()=>{
       content = JSON.parse(rawContent);
     }else if(ext == '.md'){
       content = marked(rawContent);
+      //content = md.render(rawContent)
+
     }
     data[key]=content;
   });
 
-  marked.setOptions({
-    renderer: new marked.Renderer(),
-    gfm: true,
-    tables: true,
-    breaks: true,
-    pedantic: true,
-    sanitize: true,
-    smartLists: true,
-    smartypants: true
-  });
 
   var file = fs.readFileSync(`${srcDir}/index.ejs`,'utf-8');
   var fileContent = ejs.render(file, data, {});
