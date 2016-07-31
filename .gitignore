@@ -6,3 +6,4 @@ dist
 *.sublime-*
 !mutualab.sublime-project
 src/fonts/multicolore/specimen_files
+src/css

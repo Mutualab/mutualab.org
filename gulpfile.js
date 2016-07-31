@@ -96,9 +96,7 @@ gulp.task('watch', () => {
   livereload.listen();
 
   gulp.watch([`./${srcDir}/*/**.scss`], ['sass']);
-
   gulp.watch([`./${srcDir}/**/*.ejs`,`./${contDir}/**/*{.json,.md}`], ['contents']);
-
   gulp.watch([`./${srcDir}/**/*.html`,
               `./${srcDir}/**/*.js`,
               `./${srcDir}/**/*.svg`], () => {
