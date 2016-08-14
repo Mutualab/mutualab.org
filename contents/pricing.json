@@ -1,0 +1,29 @@
+{
+  "plans":[
+    {
+      "name":"Ticket journée",
+      "price":"de 7 à 14€",
+      "priceInfo":"TTC/par jour",
+      "specs":[
+        {"label":"Bureau nomade *"},
+        {"label":"Internet haut débit / WiFi"},
+        {"label":"Imprimante / Scanner **"},
+        {"label":"Salle de réunion **"}
+      ],
+      
+      "subpricings":{
+        "name":"Tarifs dégressifs",
+        "list":
+        [
+          {"label":"5 tickets","price":"70€"},
+          {"label":"10 tickets","price":"120€"},
+          {"label":"20 tickets","price":"220€"},
+          {"label":"30 tickets","price":"220€"},
+          {"label":"40 tickets","price":"270€"},
+          {"label":"50 tickets","price":"320€"},
+          {"label":"60 tickets","price":"420€"}
+        ]
+      }
+    }
+  ]
+}
