@@ -1,7 +1,8 @@
 {
   "plans":[
     {
-      "name":"Ticket journée",
+      "name": "daily",
+      "label":"Ticket journée",
       "price":"de 7 à 14€",
       "priceInfo":"TTC/par jour",
       "specs":[
@@ -10,8 +11,9 @@
         {"label":"Imprimante / Scanner **"},
         {"label":"Salle de réunion **"}
       ],
-      
-      "subpricings":{
+
+      "planInfos":null,
+      "priceDetail":{
         "name":"Tarifs dégressifs",
         "list":
         [
@@ -22,6 +24,59 @@
           {"label":"40 tickets","price":"270€"},
           {"label":"50 tickets","price":"320€"},
           {"label":"60 tickets","price":"420€"}
+        ]
+      }
+    },
+    {
+      "name": "nomad",
+      "label":"Forfait nomade",
+      "price":"140€",
+      "priceInfo":"TTC/par mois",
+      "specs":[
+        {"label":"Bureau nomade *"},
+        {"label":"Internet haut débit / WiFi"},
+        {"label":"Imprimante / Scanner **"},
+        {"label":"Salle de réunion **"},
+        {"label":"Casier + rangement"}
+      ],
+      "planInfos":["Engagement d’un mois minimum"],
+      "priceDetail": null
+    },
+    {
+      "name": "sedentary",
+      "label":"Forfait résident",
+      "price":"180€",
+      "priceInfo":"TTC/par mois",
+      "specs":[
+        {"label":"Bureau fixe"},
+        {"label":"Internet haut débit / WiFi"},
+        {"label":"Imprimante / Scanner **"},
+        {"label":"Salle de réunion **"},
+        {"label":"Casier + rangement"}
+      ],
+      "planInfos":["Engagement de 3 mois minimum, puis ensuite reconduction tacite par mois"],
+      "priceDetail": null
+    },
+    {
+      "name": "team",
+      "label":"Forfait résident",
+      "price":"de 120 à 180€",
+      "priceInfo":"TTC/par poste/par mois",
+      "specs":[
+        {"label":"Bureau fixe"},
+        {"label":"Internet haut débit / WiFi"},
+        {"label":"Imprimante / Scanner **"},
+        {"label":"Salle de réunion **"},
+        {"label":"Casier + rangement"}
+      ],
+      "planInfos":["Engagement de 3 mois minimum, puis ensuite reconduction tacite par mois"],
+      "priceDetail":{
+        "name":"Tarifs dégressifs",
+        "list":
+        [
+          {"label":"1er poste","price":"180€/mois"},
+          {"label":"2ème poste","price":"150€/mois"},
+          {"label":"3ème poste et suivant","price":"120€"}
         ]
       }
     }
