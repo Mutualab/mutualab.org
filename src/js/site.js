@@ -39,7 +39,7 @@ app.service('utils',[function(){
  * Flickr get contents from search
  */
 
-app.constant('flickrApiKey',"367322728086f1d0cffda0170fdcdf7b")
+app.constant('flickrApiKey',"__FLICKR_API_KEY__")
 app.service('FlickrImagesSearch',['$http','$q','flickrApiKey',
                           function($http,  $q,  flickrApiKey){
   this.get = function(search){
