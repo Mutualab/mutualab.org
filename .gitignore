@@ -2,8 +2,12 @@ node_modules
 bower_components
 art
 dist
+.tmp
+.env
+
+.flickrApiKey
 *.map
 *.sublime-*
+*.log
 !mutualab.sublime-project
 src/fonts/multicolore/specimen_files
-src/css
