@@ -30,10 +30,12 @@ const       gulp = require('gulp'),
 
 
 dotenv.config();
-const srcDir   = "src",
-      buildDir = "dist",
-      tmpDir   = ".tmp",
-      contDir  = "contents";
+const config = {
+      srcDir   : "src",
+      buildDir : "dist",
+      tmpDir   : ".tmp",
+      contDir  : "contents"
+};
  
 
 /**
@@ -43,7 +45,7 @@ const srcDir   = "src",
 gulp.task('bsync', () => {
   bsync.init({
     server: {
-      baseDir: [ './', tmpDir, buildDir]
+      baseDir: [ './', config.tmpDir, config.buildDir]
     },
     open: false
   });
@@ -53,42 +55,42 @@ gulp.task('bsync', () => {
 
 
 gulp.task('wiredep', () => {
-  gulp.src(`./${srcDir}/render/index.ejs`)
+  gulp.src(`./${config.srcDir}/render/index.ejs`)
     .pipe( wiredep() )
-    .pipe( gulp.dest(`./${srcDir}/render`) )
+    .pipe( gulp.dest(`./${config.srcDir}/render`) )
     .pipe( livereload()) ;
 });
 
 
 gulp.task("sass", () => {
   const mapsDir = `../maps`
-  return gulp.src([`./${srcDir}/sass/**/*.scss`]) 
+  return gulp.src([`./${config.srcDir}/sass/**/*.scss`]) 
       .pipe( plumber()).pipe( sourcemaps.init() )
       .pipe( sass().on('error', sass.logError) )
       .pipe( sourcemaps.write({ includeContent: false, 
-                                sourceRoot: `../${srcDir}/sass`}) )
+                                sourceRoot: `../${config.srcDir}/sass`}) )
       .pipe( sourcemaps.init({loadMaps: true}) )
       .pipe( autoprefixer({browsers: ["last 2 versions"],cascade: false}) )
       .pipe( sourcemaps.write(mapsDir, {includeContent: false, 
-                                        sourceRoot: `./${srcDir}/sass`}) )
-      .pipe( gulp.dest(`./${tmpDir}/css`) )
+                                        sourceRoot: `./${config.srcDir}/sass`}) )
+      .pipe( gulp.dest(`./${config.tmpDir}/css`) )
       .pipe( bsync.reload({stream:true}) );
 });
 
 
 gulp.task("js", () => {
-  gulp.src(`./${srcDir}/ng/**/*.js`)
+  gulp.src(`./${config.srcDir}/ng/**/*.js`)
   .pipe( replace(/__FLICKR_API_KEY__/g, process.env.FLICKR_API_KEY ) )
-  .pipe( gulp.dest(`./${tmpDir}/js`) )
+  .pipe( gulp.dest(`./${config.tmpDir}/js`) )
   
 });
 
 gulp.task('contents',() => {
-  var contentJsonFiles = glob.sync(`${contDir}/*.json`);
-  var componentsFiles = glob.sync(`${srcDir}/render/components/*{.ejs,.html}`);
+  var contentJsonFiles = glob.sync(`${config.contDir}/*.json`);
+  var componentsFiles = glob.sync(`${config.srcDir}/render/components/*{.ejs,.html}`);
 
-  var contentMdFiles = glob.sync(`${contDir}/*.md`);
-  var viewsFiles = glob.sync(`${srcDir}/render/views/*{.ejs,.html}`);
+  var contentMdFiles = glob.sync(`${config.contDir}/*.md`);
+  var viewsFiles = glob.sync(`${config.srcDir}/render/views/*{.ejs,.html}`);
   var data = {"views":{},"components":{}};
 
   function getName(file){
@@ -129,10 +131,10 @@ gulp.task('contents',() => {
 
 
 
-  return gulp.src(`${srcDir}/render/**/*.ejs`)
+  return gulp.src(`${config.srcDir}/render/**/*.ejs`)
     .pipe(gulpEjs(data,{ext:'.html'}))
     .pipe(beautify({indentSize: 2}))
-    .pipe(gulp.dest(`./${tmpDir}`))
+    .pipe(gulp.dest(`./${config.tmpDir}`))
 });
 
 
@@ -143,10 +145,10 @@ gulp.task('contents',() => {
  */
 gulp.task('assets',['contents'], ()=>{
     return gulp.src(
-      [ `./${srcDir}/**/*.{css,eot,svg,ttf,woff,woff2}`,
-        `./${srcDir}/**/multicolore/*.pdf`,
-        `!./${srcDir}/**/specimen_files/*`])
-      .pipe( gulp.dest(`./${buildDir}/`)) ;
+      [ `./${config.srcDir}/**/*.{css,eot,svg,ttf,woff,woff2}`,
+        `./${config.srcDir}/**/multicolore/*.pdf`,
+        `!./${config.srcDir}/**/specimen_files/*`])
+      .pipe( gulp.dest(`./${config.buildDir}/`)) ;
 });
 
 
@@ -157,7 +159,7 @@ gulp.task('assets',['contents'], ()=>{
 
 gulp.task('ngTemplates', () => {
 
-  return gulp.src(`${srcDir}/ng/**/*.html`, {base: `${srcDir}/ng/templates`})
+  return gulp.src(`${config.srcDir}/ng/**/*.html`, {base: `${config.srcDir}/ng/templates`})
   .pipe(minifyHtml({empty: true,spare: true, quotes: true}))
   .pipe(ngHtml2Js({
       moduleName: 'templates',
@@ -167,7 +169,7 @@ gulp.task('ngTemplates', () => {
   }))
   .pipe(concat("templates.js"))
   .pipe(uglify())
-  .pipe(gulp.dest(`${tmpDir}/js/`));
+  .pipe(gulp.dest(`${config.tmpDir}/js/`));
 
 });
 
@@ -179,21 +181,21 @@ gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','assets'])
 gulp.task('watch', () => {
   livereload.listen();
 
-  gulp.watch([`./${srcDir}/sass/**/*.scss`], ['sass']);
-  gulp.watch([`./${srcDir}/ng/**/*.js`], ['js']);
-  gulp.watch([`./${srcDir}/ng/**/*.html`], ['ngTemplates']);
+  gulp.watch([`./${config.srcDir}/sass/**/*.scss`], ['sass']);
+  gulp.watch([`./${config.srcDir}/ng/**/*.js`], ['js']);
+  gulp.watch([`./${config.srcDir}/ng/**/*.html`], ['ngTemplates']);
 
-  gulp.watch([`./${srcDir}/**/*.ejs`,`./${contDir}/**/*{.json,.md}`], ['contents']);
+  gulp.watch([`./${config.srcDir}/**/*.ejs`,`./${config.contDir}/**/*{.json,.md}`], ['contents']);
 
-  gulp.watch([`./${tmpDir}/**/*.html`,
-              `./${tmpDir}/**/*.js`,
-              `./${buildDir}/**/*.svg`], () => {
+  gulp.watch([`./${config.tmpDir}/**/*.html`,
+              `./${config.tmpDir}/**/*.js`,
+              `./${config.buildDir}/**/*.svg`], () => {
     bsync.reload()
   });
 
 
 
-  gulp.watch([`./${srcDir}/**/*.{eot,svg,ttf,woff,woff2}`],['assets'])
+  gulp.watch([`./${config.srcDir}/**/*.{eot,svg,ttf,woff,woff2}`],['assets'])
 
   gulp.watch([`bower.json`],['wiredep']);
 
