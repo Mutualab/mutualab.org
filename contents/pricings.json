@@ -5,6 +5,7 @@
       "label":"Ticket journée",
       "price":"de 7 à 14€",
       "priceInfo":"TTC/par jour",
+      "color":"green",
       "specs":[
         {"label":"Bureau nomade *"},
         {"label":"Internet haut débit / WiFi"},
@@ -27,11 +28,14 @@
         ]
       }
     },
+
+
     {
       "name": "nomad",
       "label":"Forfait nomade",
       "price":"140€",
       "priceInfo":"TTC/par mois",
+      "color":"orange",
       "specs":[
         {"label":"Bureau nomade *"},
         {"label":"Internet haut débit / WiFi"},
@@ -42,11 +46,14 @@
       "planInfos":["Engagement d’un mois minimum"],
       "priceDetail": null
     },
+
+
     {
       "name": "sedentary",
       "label":"Forfait résident",
       "price":"180€",
       "priceInfo":"TTC/par mois",
+      "color":"blue",
       "specs":[
         {"label":"Bureau fixe"},
         {"label":"Internet haut débit / WiFi"},
@@ -57,11 +64,14 @@
       "planInfos":["Engagement de 3 mois minimum, puis ensuite reconduction tacite par mois"],
       "priceDetail": null
     },
+
+
     {
       "name": "team",
-      "label":"Forfait résident",
+      "label":"Équipe",
       "price":"de 120 à 180€",
       "priceInfo":"TTC/par poste/par mois",
+      "color":"red",
       "specs":[
         {"label":"Bureau fixe"},
         {"label":"Internet haut débit / WiFi"},
@@ -74,9 +84,10 @@
         "name":"Tarifs dégressifs",
         "list":
         [
-          {"label":"1er poste","price":"180€/mois"},
-          {"label":"2ème poste","price":"150€/mois"},
-          {"label":"3ème poste et suivant","price":"120€"}
+          {"label":"1<sup>er</sup> poste","price":"180€/mo"},
+          {"label":"2<sup>ème</sup> poste","price":"150€/mo"},
+          {"label":"3<sup>ème</sup> poste","price":"120€/mo"},
+          {"label":"Postes suivants","price":"120€/mo"}
         ]
       }
     }

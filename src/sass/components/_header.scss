@@ -22,9 +22,10 @@ header.main-header {
 
 
   .background-header{
-    top:0;
-    height: 100%;
-    width:100%;
+    top:-1%;
+    left:-1%;
+    height: 102%;
+    width:102%;
     position:absolute;
     background:lighten($gray,10%);
     background-blend-mode: screen;
@@ -32,6 +33,7 @@ header.main-header {
     background-repeat: no-repeat;
     background-size: cover;
     z-index:-1;
+    filter:blur(2px);
   }
 
   .author-infos{

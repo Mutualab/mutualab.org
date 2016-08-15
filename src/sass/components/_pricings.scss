@@ -1,0 +1,222 @@
+//@import "bourbon";
+@import "vars";
+
+
+.pricing-inner{
+  margin-top: 2em;
+  padding-top:2em;
+  margin-bottom: 2em;
+  overflow:hidden;
+}
+
+
+.plan-container {
+  width: 25%;
+  float:left;
+  padding:.2%;
+  position: relative;
+  top: 0;
+  transition:all .2s;
+  line-height:1;
+
+  @media(max-width:$screen-sm-max){
+    width: 50%;
+    min-height:530px;
+    margin-bottom:3em;
+  }
+
+  @media(max-width:$screen-xs-max){
+    width: 100%;
+    min-height:520px;
+    overflow:hidden;
+  }
+
+  .price-emphase{
+    font-size:1.4em;
+    display:inline-block;
+    @media(max-width:$screen-md-max){
+      font-size:1.1em;
+    }
+  }
+
+  h2 {
+      color: #fff;
+      margin: 0;
+      font-family: $font-multicolore;
+      margin:0 .2em;
+      font-size:1.5em;
+      @media(max-width:$screen-md-max){
+        font-size:1.3em;
+      }
+  }
+
+  .price-infos{
+    font-size:.8em;
+    font-style:italic;
+    @media(max-width:$screen-md-max){
+        font-size:.7em;
+    }
+  }
+
+  .plan-inner{
+    background-color: lighten($gray,75%);
+    border-radius: .5em;
+    overflow:hidden;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    transition:top .3s;
+  }
+  .plan-header {
+    padding: 10px 10px;
+    border-radius: 0;
+    text-align: center;
+    height: 100px;
+    display:flex;
+    align-items: center;
+        
+    
+    p {
+      margin: 0;
+      color: #fff;
+    }
+  }
+  
+  .plan-details {
+    padding: 2em 0;
+    margin: 0 auto;
+    min-height: 450px;
+    overflow: hidden;
+
+   
+    ul { 
+      padding-left: 0;
+      list-style: none;
+      
+    }
+
+
+    .specs{
+      height:250px;
+      overflow:hidden;
+      padding:0;
+
+      @media(max-width:$screen-md-max){
+        height: 180px;
+      }
+
+      li {
+        border-top: 2px solid lighten($gray,70%);
+        padding: 1em .5em;
+        font-weight: bold;
+        
+        @media(max-width:$screen-md-max){
+          padding: .5em .5em;
+        }
+
+        &:last-child {
+          border-bottom: 2px solid lighten($gray,70%);
+        }
+        
+        span {
+          font-weight: lighter;
+          color: $gray;
+        }
+      }
+    }
+
+    .price-details{
+      overflow:hidden;
+      .read-more-content{
+        transitions:all 1s;
+        height: 0px;
+        overflow:hidden;
+        
+      }
+
+      .read-more-container{
+        &.open {
+          .read-more-content{
+            height:auto;
+            min-height:50px;
+          }
+
+          padding-bottom: 100px;
+        }
+
+        .action{
+          width:95%;
+          display:block;
+          text-align:center;
+          padding: 1em 0;
+          margin:0 auto;
+          background-color:lighten($gray,70%);
+          border-radius:.5em;
+          &:hover{
+            text-decoration:none;
+            background-color:lighten($gray,72%);
+          }
+        }
+      }
+      background-color: lighten($gray,75%);
+      h3{
+        font-size: 1.1em;
+        text-align:center;
+      }
+
+      li {
+        border-top: 1px solid lighten($gray,70%);
+        padding: .5em .5em;
+        font-weight: bold;
+        
+        &:last-child {
+          border-bottom: 3px solid lighten($gray,70%);
+        }
+        
+        span {
+          font-weight: lighter;
+          color: $gray;
+        }
+        .label{
+          font-size:.9em;
+        }
+
+        .price{
+          float:right;
+          font-weight:bold;
+        }
+      }
+    }
+
+    .plan-infos {
+      @media(max-width:$screen-sm-max){
+        min-width:95%;
+      }
+      min-height:80px;
+      position:absolute;
+      bottom:10px;
+      margin: .6em;
+      background-color: lighten($gray,65%);
+      padding: 1em;
+      font-size: .9em;
+      line-height: 1.4;
+      color: lighten($gray,10%);
+      p:last-child{
+        margin:0;
+      }
+      
+    }
+  }
+
+  /**
+   * Exceptions
+   */
+  
+  &.plan-daily .price-details .read-more-container.open {
+    padding-bottom:20px;
+  }
+}
+

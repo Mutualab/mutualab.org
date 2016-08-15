@@ -1,0 +1,9 @@
+<div class="read-more-container" ng-class="{'open': open }">
+   <div class="read-more-content">
+     <ng-transclude></ng-transclude>
+   </div>
+   <a class="action" ng-click="open = !open">
+    <span ng-show="!open"> Voir les tarifs dégressifs </span>
+    <span ng-show="open"> Masquer les tarifs </span>
+   </a>
+</div>

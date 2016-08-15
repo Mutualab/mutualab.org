@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="pricing-inner">
+    <%var planLength = pricings.plans.length %>
+    <%for (var i =  0; i < planLength; i++) { plan = pricings.plans[i] %>
+      <div class="plan-container plan-<%=plan.name%>">
+        <div class="plan-inner">
+          <div class="plan-header bg-<%=plan.color%>">
+            <div class="icon-box"><i class="fa fa-users icon"></i></div>
+            <h2><%=plan.label%></h2>
+            <p> 
+                <span class="price-emphase"><%=plan.price%></span>
+                <span class="price-infos"><%=plan.priceInfo%></span>
+            </p>
+          </div>
+          <div class="plan-details">
+
+            <div class="specs">
+              <ul>
+                <%var specsLength = plan.specs.length %>
+                <%for (var u =  0; u < specsLength; u++) { spec = plan.specs[u] %>
+                  <li><%=spec.label%></li>
+                <%}%>
+              </ul>
+            </div>
+
+              <%if(plan.priceDetail){%>
+              <div class="price-details">
+                <read-more>
+                  <!--<h3><%=plan.priceDetail.name%></h3>-->
+                  <ul>
+                  <%var planInfosLength = plan.priceDetail.list.length %>
+                  <%for (var u =  0; u < planInfosLength; u++) { price = plan.priceDetail.list[u] %>
+                    <li>
+                      <span class="label"><%-price.label%></span> 
+                      <span class="price"><%-price.price%></span>
+                    </li>
+                  <%}%>
+                  </ul>
+                </read-more>
+              </div>
+            <%}%>
+            
+            
+            <%if(plan.planInfos){%>
+            <div class="plan-infos">
+              <%var planInfosLength = plan.planInfos.length %>
+              <%for (var u =  0; u < planInfosLength; u++) { info = plan.planInfos[u] %>
+                <p><%=info%></p>
+              <%}%>
+            </div>
+            <%}%>
+            
+          </div>
+        </div>
+      </div>
+    <%}%>
+  </div>
+</div>

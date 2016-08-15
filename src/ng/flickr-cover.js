@@ -1,12 +1,4 @@
-var app = angular.module('mutualab.org',[]);
-
-app.directive('mtSvg',[function(){
-  return {
-      restrict : 'A',
-      scope:{src:"@"},
-      template:'<ng-include src="src"></ng-include>' 
-  };
-}]);
+var app = angular.module('flickr-cover',['templates']);
 
 
 app.directive('flickrImg',['FlickrImagesSearch','FlickrImage','utils',
@@ -83,5 +75,3 @@ app.factory('FlickrImage',['$http','$q','flickrApiKey',
     return defrd.promise;
   }
 }])
-
-
