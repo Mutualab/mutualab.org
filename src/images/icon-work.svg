@@ -7,6 +7,7 @@
 	.st1{fill:#FFCB08;}
 	.st2{fill:#8DC63F;}
 	.st3{fill:#00ADEE;}
+	path{mix-blend-mode: multiply;}
 </style>
 <g>
 	<path class="st0" d="M82.5,30.3L82.5,30.3c7,0,12.8,5.8,12.8,12.8l0.2,113.9c0,7-5.8,12.8-12.8,12.8l0,0c-7,0-12.8-5.8-12.8-12.8
