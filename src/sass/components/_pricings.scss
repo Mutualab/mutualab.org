@@ -31,6 +31,8 @@
     overflow:hidden;
   }
 
+
+
   .price-emphase{
     font-size:1.4em;
     display:inline-block;
@@ -60,7 +62,7 @@
 
   .plan-inner{
     background-color: lighten($gray,75%);
-    border-radius: .5em;
+    border-radius: .3em;
     overflow:hidden;
   }
   
@@ -88,7 +90,7 @@
   .plan-details {
     padding: 2em 0;
     margin: 0 auto;
-    min-height: 450px;
+    min-height: 400px;
     overflow: hidden;
 
    
@@ -100,7 +102,7 @@
 
 
     .specs{
-      height:250px;
+      height:230px;
       overflow:hidden;
       padding:0;
 
@@ -148,13 +150,13 @@
         }
 
         .action{
-          width:95%;
+          
           display:block;
           text-align:center;
           padding: 1em 0;
-          margin:0 auto;
+          margin:0 .6em;
           background-color:lighten($gray,70%);
-          border-radius:.5em;
+          border-radius:.2em;
           &:hover{
             text-decoration:none;
             background-color:lighten($gray,72%);
@@ -192,17 +194,23 @@
     }
 
     .plan-infos {
-      @media(max-width:$screen-sm-max){
-        min-width:95%;
-      }
       min-height:80px;
       position:absolute;
       bottom:10px;
-      margin: .6em;
-      background-color: lighten($gray,65%);
-      padding: 1em;
-      font-size: .9em;
-      line-height: 1.4;
+      padding: 1em .6em;
+      width:98.5%;
+
+
+      p {
+        display:block;
+        width:100%;
+        background-color: lighten($gray,65%);
+        font-size: .9em;
+        padding: 1em;
+        margin: 0 .6em;
+        line-height: 1.4; 
+        border-radius:.2em;
+      }      
       color: lighten($gray,10%);
       p:last-child{
         margin:0;

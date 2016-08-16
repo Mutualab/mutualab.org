@@ -38,3 +38,13 @@ h6{
 }
 
 
+.invert{
+  &, h1{
+     color:#fff;
+  }
+
+  a{
+    color:rgba(#fff,.8);
+  }
+}
+
