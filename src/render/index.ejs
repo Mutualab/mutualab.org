@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= interface.title %></title>
+  <title><%= ui.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="images/favicon-mutualab@32x32.png">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>  <!-- bower:css -->
@@ -22,8 +22,8 @@
 <body ng-app="mutualab.org">
   <header class="main-header" >
     <div class="content-header text-center">
-        <img class="logo" src="images/logo-mutualab.svg" title="<%= interface.header.logoTitle %>"/>
-        <h3><%= interface.header.introHeader %></h3>
+        <img class="logo" src="images/logo-mutualab.svg" title="<%= ui.header.logoTitle %>"/>
+        <h3><%= ui.header.introHeader %></h3>
     </div>
 
 
@@ -34,42 +34,27 @@
     </a>
     
   </header>
-  <div class="container menu-container" ui-scrollpoint>
-      <div class="col-md-10 col-md-offset-1">
-        <nav class="main-nav">
-          <ul>
-            <li>
-                <a href="espace-coworking.html">
-                  <i mt-svg src="images/icon-work.svg"></i>
-                  <span><%= interface.menu.work %></span>
-                </a>
-            </li>
-            <li>
-                <a href="louer-salle.html">
-                  <i mt-svg src="images/icon-rent.svg"></i>
-                  <span><%= interface.menu.rent %></span>
-                </a>
-            </li>
-            <li>
-                <a href="maker-space.html">
-                  <i mt-svg src="images/icon-make.svg"></i>
-                  <span><%= interface.menu.maker %></span>
-                </a>
-            </li>
-          </ul>
-        </nav>
+  <%- views.menu({ui:ui, contents:contents }) %>
+
+  <section class="main-content">
+    <article id="coworking" class="coworking-section view-section invert">
+      <div class="inner-section background-rotate">
+        <div class="container">
+          <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+            <%- contents.coworking %>
+          </div>
+        </div>
       </div>
-    </div>
-  <section>
-    <article id="espace-coworking" class="coworking full-page-section">
+    </article>
+    <article id="pricing-coworking" class="pricing-section view-section">
       <div class="container">
-        <div class="col-md-10 col-md-offset-1 text-center">
-          <%- coworking %>
+        <div class="col-md-12">
+          <%- contents.pricings %>
         </div>
       </div>
     </article>
     <article id="nous-trouver" class="adress-infos">
-      <h1><%= interface.contactSection.title %></h1>
+      <h1><%= ui.contactSection.title %></h1>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10123.462849887448!2d3.0615278!3d50.6296114!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb863a656f33d55b!2zTXV0dWFsxIFi!5e0!3m2!1sfr!2sfr!4v1460128150582" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </article>
   
