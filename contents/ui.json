@@ -1,0 +1,24 @@
+{
+  "title":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+  "header":{
+    "logoTitle":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+    "introHeader":"Développez vos projets, rencontrez, échangez, faites germer vos idées…"
+  },
+  "menu":{
+    "work":{
+        "label":"Espace de coworking",
+        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! <br> Mutualab est ouvert tous les jours de la semaine, de 9h à 19h."
+    },
+    "rent":{
+      "label":"Salles de réunions",
+      "description":""
+    },
+    "maker":{
+      "label":"Maker space",
+      "description":""
+    }
+  },
+  "contactSection":{
+    "title":"Nous trouver, nous contacter"
+  }
+}

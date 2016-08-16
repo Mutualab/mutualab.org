@@ -5,7 +5,7 @@
       "label":"Ticket journée",
       "price":"de 7 à 14€",
       "priceInfo":"TTC/par jour",
-      "color":"green",
+      "color":"yellow",
       "specs":[
         {"label":"Bureau nomade *"},
         {"label":"Internet haut débit / WiFi"},
@@ -35,7 +35,7 @@
       "label":"Forfait nomade",
       "price":"140€",
       "priceInfo":"TTC/par mois",
-      "color":"orange",
+      "color":"green",
       "specs":[
         {"label":"Bureau nomade *"},
         {"label":"Internet haut débit / WiFi"},
@@ -71,7 +71,7 @@
       "label":"Équipe",
       "price":"de 120 à 180€",
       "priceInfo":"TTC/par poste/par mois",
-      "color":"red",
+      "color":"orange",
       "specs":[
         {"label":"Bureau fixe"},
         {"label":"Internet haut débit / WiFi"},

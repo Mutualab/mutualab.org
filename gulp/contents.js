@@ -13,11 +13,11 @@ const
 
 module.exports = (config, bsync) => () => {
 
-    var contentJsonFiles = glob.sync(`${config.contDir}/*.json`);
-    var componentsFiles = glob.sync(`${config.srcDir}/render/components/*{.ejs,.html}`);
-    var contentMdFiles = glob.sync(`${config.contDir}/*.md`);
-    var viewsFiles = glob.sync(`${config.srcDir}/render/views/*{.ejs,.html}`);
-    var data = {"views":{},"components":{}};
+    var contentJsonFiles = glob.sync(`${config.contDir}/*.json`),
+         componentsFiles = glob.sync(`${config.srcDir}/render/components/*{.ejs,.html}`),
+          contentMdFiles = glob.sync(`${config.contDir}/*.md`),
+              viewsFiles = glob.sync(`${config.srcDir}/render/views/*{.ejs,.html}`),
+                    data = {"views":{},"components":{},"contents":{}};
 
     function getName(file){
       var ext = path.extname(file);
@@ -31,11 +31,9 @@ module.exports = (config, bsync) => () => {
       data[getName(file)]=content;
     });
 
-
     componentsFiles.forEach((file) => {
       data.components[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {});
     })
-
 
     contentMdFiles.forEach((file) => {
         var rawContent = fs.readFileSync(file,'utf-8');
@@ -45,20 +43,20 @@ module.exports = (config, bsync) => () => {
           components:data.components
         };
 
-        markdownHtml =  marked(rawContent)
+        markdownHtml =  marked(rawContent);
+
         // allow components in markdown contents
         markdownHtml = markdownHtml.replace(/\<p\>\[\%(.*)\%\]<\/p\>/g, "<%- (typeof $1 == 'function' ? $1(data) : $1) %>");
-        data[getName(file)] = ejs.render(markdownHtml, tmpData, {} )
+        data.contents[getName(file)] = ejs.render(markdownHtml, tmpData, {} )
     });
 
     viewsFiles.forEach((file) => {
-      data.views[getName(file)] = ejs.render(fs.readFileSync(file,'utf-8'), data);
+      data.views[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {});
     })
-
-
 
     return gulp.src(`${config.srcDir}/render/**/*.ejs`)
       .pipe(gulpEjs(data,{ext:'.html'}))
       .pipe(beautify({indentSize: 2}))
       .pipe(gulp.dest(`./${config.tmpDir}`));
+
 };
