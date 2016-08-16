@@ -10,7 +10,10 @@
         ".tmp",
         "dist"
       ],
-		}
+		},
+    {
+      "path": "src",
+    }
 	],
   "syntax_override":
   {
