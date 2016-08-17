@@ -5,9 +5,10 @@
 @import "components/header";
 @import "components/pricings";
 @import "components/layout";
+@import "components/summary";
 
-@import "components/homepage";
 
+@import "pages/homepage";
 @import "vars";
 /**
  * Common styles
@@ -48,26 +49,4 @@ table{
     padding:0;
   }
   
-}
-
-/**
- * Section coworking
- */
-
-.coworking{
-  table{
-    max-width:30%;
-    float:left;
-    margin:0 2%;
-  }
-}
-
-/**
- * Section map
- */
-
-.adress-infos{
-  iframe{
-    width:100%;
-  }
 }

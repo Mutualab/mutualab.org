@@ -4,8 +4,29 @@
 */
 
 
-nav.main-nav {
+/**
+ * Main menu style
+ */
+
+.menu-container{
+  transition: all .5s;
+  background-color:rgba(#fff,1);
+  &:not(.ui-scrollpoint){
+    padding-top: 2rem;
+  }
+  position:absolute;
   width:100%;
+
+  ul{
+    margin:0;
+    padding:0 5%;
+  }
+  nav.main-nav {
+  width:100%;
+  @media(max-width: $screen-sm-max){
+          display:none;
+  }
+
   &> ul {
     text-align: left;
     margin-left: 0;
@@ -13,11 +34,9 @@ nav.main-nav {
       text-align: center;
     }
     &> li {
+      transition: all .5s;
       & {
-        @media(max-width: 760px){
-          display:block;
-          overflow:hidden;
-        }
+        
 
         margin-bottom:20px;
         @media(min-width: 960px){
@@ -28,18 +47,24 @@ nav.main-nav {
       }
 
       & > a {
+        display:block;
+        width:100%;
+        padding: 0 1em;
+        border-radius:.2em;
+        &:hover{
+          background-color:rgba($gray,.05);
+          text-decoration:none;
+        }
+
+
         @media(max-width: 760px){
-            display:block;
+            //display:block;
         }
         
         span {
           color:lighten($gray, 40%);
           font-family:$font-multicolore;
-          font-size: 2rem;
-
-          @media(min-width: 960px){
-            font-size: 1.5rem;
-          }
+          font-size: 1.5rem;
         }
       
         i {
@@ -52,16 +77,16 @@ nav.main-nav {
             }
           }
         }
-
-        .menu-description{
-          display:none;
-        }
       }
     }
+  }
 }
 
+/**
+ * Manage icon sizes
+ */
 
-nav.main-nav {
+.menu-container nav.main-nav {
   $icon-size:15rem;
   @media(min-width: 960px){
     $icon-size:9rem;
@@ -104,119 +129,58 @@ nav.main-nav {
     }
 }
 
+/**
+ * Sticky 
+ */
 
-.menu-container.wide:not(.ui-scrollpoint){
-  background-color:#fff;
+.menu-container.ui-scrollpoint{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  z-index:200;
+  padding-top: 2rem;
+  background-color:rgba(#fff,.8);
+  ul{
+    padding:0;
+  }
+
   nav.main-nav {
-    $icon-size:15rem;
+      $icon-size:5rem;
+      @media(min-width: 960px){
+        $icon-size:6rem;
+      }
+      &> ul {
 
-    &> ul {
-      &> li {
-        & {
-          @media(max-width: 760px){
-            height:$icon-size;
+        &> li {
+          & {
+            @media(max-width: 760px){
+              height:$icon-size;
+            }
           }
-        }
 
-        & > a {
-
-          height:$icon-size;
-          @media(max-width: 760px){
-              padding-top:$icon-size/2;
-          }
+          & > a {
           
-          span {
-            @media(min-width: 760px){
-              line-height:$icon-size;
+            height:$icon-size;
+            @media(max-width: 760px){
+                padding-top:$icon-size/2;
+            };
+            span {
+              @media(min-width: 760px){
+                line-height:$icon-size;
+              }
+              @media(min-width: 960px){
+                line-height:$icon-size;
+              }
             }
-
-            @media(min-width: 960px){
-              line-height:$icon-size;
-            }
-          }
-        
-          i {
+            i {
               @media(max-width: 760px){
                 margin-top:-$icon-size/2;
               }
               width: $icon-size;
               height:$icon-size;
             }
-          .menu-description{
-            display:block;
-          }
-          }
-        }
-      }
-  }
-}
-
-
-
-.menu-container{
-  &:not(.ui-scrollpoint){
-    padding-top: 5rem;
-  }
-  position:absolute;
-  width:100%;
-  .summary{
-    display:none;
-  }
-  ul{
-    margin:0;
-    padding:0 5%;
-  }
-
-  &.ui-scrollpoint{
-    position:fixed;
-    top:0;
-    width:100%;
-    height:90px;
-    background-color:rgba(#fff,.9);
-    z-index:200;
-    padding-top: 2rem;
-
-    ul{
-      padding:0;
-    }
-
-    nav.main-nav {
-        $icon-size:5rem;
-        @media(min-width: 960px){
-          $icon-size:6rem;
-        }
-        &> ul {
-
-          &> li {
-            & {
-              @media(max-width: 760px){
-                height:$icon-size;
-              }
-            }
-
-            & > a {
-
-              height:$icon-size;
-              @media(max-width: 760px){
-                  padding-top:$icon-size/2;
-              };
-              span {
-                @media(min-width: 760px){
-                  line-height:$icon-size;
-                }
-                @media(min-width: 960px){
-                  line-height:$icon-size;
-                }
-              }
-              i {
-                @media(max-width: 760px){
-                  margin-top:-$icon-size/2;
-                }
-                width: $icon-size;
-                height:$icon-size;
-              }
-           }
-        }
+         }
       }
     }
   }

@@ -1,6 +1,5 @@
-<div class="container menu-container" ui-scrollpoint ng-class="{'wide':wide}">
-     <div class="col-md-10 col-md-offset-1">
-        <em class="summary"><%- contents.summary %></em>
+<div class="container menu-container" ui-scrollpoint  ng-class="{'wide':wide}">
+     <div class="col-lg-10 col-lg-offset-1 ">
         <nav class="main-nav">
           <ul>
             <li>
@@ -8,27 +7,18 @@
                   <i mt-svg src="images/icon-work.svg"></i>
                   <span><%= ui.menu.work.label %></span>
                 </a>
-                <p class="menu-description">
-                  <%- ui.menu.work.description %>
-                </p>
             </li>
             <li>
                 <a href="louer-salle.html">
                   <i mt-svg src="images/icon-rent.svg"></i>
                   <span><%= ui.menu.rent.label %></span>
                 </a>
-                <p class="menu-description">
-                  <%- ui.menu.rent.description %>
-                </p>
             </li>
             <li>
                 <a href="maker-space.html">
                   <i mt-svg src="images/icon-make.svg"></i>
                   <span><%= ui.menu.maker.label %></span>
                 </a>
-                <p class="menu-description">
-                  <%- ui.menu.maker.description %>
-                </p>
             </li>
           </ul>
         </nav>

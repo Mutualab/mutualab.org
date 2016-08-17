@@ -1,0 +1,125 @@
+@import "vars";
+
+
+.home .menu-container:not(.ui-scrollpoint){
+  opacity:0;
+  transtion: .3s all;
+}
+
+.intro-section{
+  padding-top:300px;
+  padding-bottom:1%;
+}
+
+.pricing-section{
+  h1 + p {
+    padding:3em 10%;
+    em{
+      font-size:1.2em;
+      text-align:center;
+    }
+  }
+}
+
+.background-rotate {
+  
+  overflow:hidden;
+  z-index:0;
+  height:100%;
+  position:relative;
+ 
+  &:before{
+  
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    pointer-events:none;
+  }
+}
+
+.summary-home {
+  .inner-section{
+    background: $blue;
+    padding-bottom:4em;
+
+    &:before {
+      transform: rotate(30deg);
+      opacity: .3;
+      background:url(../images/icon-make-white.svg) 80% -120px no-repeat;
+    }
+
+    li{
+      padding:1em;
+      background-color:rgaba(#ffffff,0);
+      transition: all .5s;
+      cursor:pointer;
+      margin: .5em;
+      &:hover{
+          background-color:rgba(#ffffff,1);
+          &,span{
+            color:lighten($gray,30%);
+          }
+          
+      }
+
+      .picto path{
+        transition: all 1s;
+      }
+      &:not(:hover){
+          .picto{
+            
+            path {
+              fill:#ffffff;
+              mix-blend-mode: normal;
+              
+              &:nth-child(1){
+                opacity:.5;
+              }
+              &:nth-child(2){
+                opacity:.4;
+              }
+              &:nth-child(3){
+                opacity:.6;
+              }
+              &:nth-child(4){
+                opacity:.3;
+              }
+              &:nth-child(5){
+                opacity:.7;
+              }
+    
+    
+            }
+          }
+        }
+      }
+  }
+}
+
+.coworking-section{
+  .inner-section{
+    background: $green;//rgba(lighten($gray,75%),.8);
+    padding:10% 0;
+    &:before {
+      transform: rotate(30deg);
+      opacity: .3;
+      background:url(../images/icon-work-white.svg) 0 0 no-repeat;
+    }
+  }
+  
+}
+
+
+/**
+ * Section map
+ */
+
+.adress-infos{
+  iframe{
+    width:100%;
+  }
+}

@@ -22,3 +22,22 @@ app.directive('readMore', function() {
 });
 
 
+
+
+app.directive('clickTrigger',function(){
+  return {
+    scope:{
+      "clickTrigger":"@?"
+    },
+    link:function(scope,elt,attr){
+      target = null
+      if( scope.clickTrigger ){
+        target = angular.element(scope.clickTrigger).get(0)
+      }else{
+        target = elt.find('a').get(0)
+      }
+
+      elt.click(function(){target.click()})
+    }
+  }
+});

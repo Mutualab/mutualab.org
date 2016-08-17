@@ -9,7 +9,8 @@ const
         gulpEjs = require('gulp-ejs'),  
        beautify = require('gulp-jsbeautifier'),
         plumber = require('gulp-plumber'),
-   autoprefixer = require("gulp-autoprefixer");
+   autoprefixer = require("gulp-autoprefixer"),
+          gutil = require('gulp-util');
 
 module.exports = (config, bsync) => () => {
 
@@ -51,12 +52,14 @@ module.exports = (config, bsync) => () => {
     });
 
     viewsFiles.forEach((file) => {
-      data.views[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {});
+      data.views[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {client:true});
     })
 
     return gulp.src(`${config.srcDir}/render/**/*.ejs`)
-      .pipe(gulpEjs(data,{ext:'.html'}))
+      .pipe(plumber())
+      .pipe(gulpEjs(data,{ext:'.html'}).on('error', gutil.log))
       .pipe(beautify({indentSize: 2}))
-      .pipe(gulp.dest(`./${config.tmpDir}`));
+      .pipe(gulp.dest(`./${config.tmpDir}`))
+      .pipe(bsync.stream());
 
 };

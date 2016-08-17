@@ -1,0 +1,1 @@
+ Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace. Objets utiles ou insolites, réparations et bidouilles en tout genre… Un mot d’ordre : « Juste fais le ! »

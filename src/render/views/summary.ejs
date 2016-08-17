@@ -1,0 +1,32 @@
+<div class="summary-section">
+  <em class="summary-content"><%- contents.summary %></em>
+    <ul>
+        <li click-trigger>
+            <a href="coworking.html">
+              <i class="picto" mt-svg src="images/icon-work.svg"></i>
+              <span><%= ui.menu.work.label %></span>
+            </a>
+            <p class="menu-description">
+              <%- ui.menu.work.description.replace(/(?:\r\n|\r|\n)/g, '<br>') %>
+            </p>
+        </li>
+        <li click-trigger>
+            <a href="louer-salle.html">
+              <i class="picto" mt-svg src="images/icon-rent.svg"></i>
+              <span><%= ui.menu.rent.label %></span>
+            </a>
+            <p class="menu-description">
+              <%- ui.menu.rent.description.replace(/(?:\r\n|\r|\n)/g, '<br>') %>
+            </p>
+        </li>
+        <li click-trigger>
+            <a href="maker-space.html">
+              <i class="picto" mt-svg src="images/icon-make.svg"></i>
+              <span><%= ui.menu.maker.label %></span>
+            </a>
+            <p class="menu-description">
+              <%- ui.menu.maker.description.replace(/(?:\r\n|\r|\n)/g, '<br>') %>
+            </p>
+        </li>
+      </ul>
+  </div>

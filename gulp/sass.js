@@ -10,12 +10,11 @@ module.exports = (config, bsync) => () => {
   return gulp.src([`./${config.srcDir}/sass/**/*.scss`]) 
       .pipe( plumber()).pipe( sourcemaps.init() )
       .pipe( sass().on('error', sass.logError) )
-      .pipe( sourcemaps.write({ includeContent: false, 
-                                sourceRoot: `../${config.srcDir}/sass`}) )
+      .pipe( sourcemaps.write({ includeContent: false, sourceRoot: `../${config.srcDir}/sass`}) )
       .pipe( sourcemaps.init({loadMaps: true}) )
       .pipe( autoprefixer({browsers: ["last 2 versions"],cascade: false}) )
-      .pipe( sourcemaps.write(mapsDir, {includeContent: false, 
-                                        sourceRoot: `./${config.srcDir}/sass`}) )
+      .pipe( sourcemaps.write(mapsDir, {includeContent: false, sourceRoot: `./${config.srcDir}/sass`}) )
       .pipe( gulp.dest(`./${config.tmpDir}/css`) )
-      .pipe( bsync.reload({stream:true}) );
+      .pipe( bsync.stream() )
+      
 };

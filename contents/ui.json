@@ -7,15 +7,19 @@
   "menu":{
     "work":{
         "label":"Espace de coworking",
-        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! <br> Mutualab est ouvert tous les jours de la semaine, de 9h à 19h."
+        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualab est ouvert tous les jours de la semaine, de 9h à 19h.",
+        "submenu":[
+            {"label":"Les tarifs du coworking","href":"#pricing-coworking"},
+            {"label":"Trouver le mutualab"}
+        ]
     },
     "rent":{
       "label":"Salles de réunions",
-      "description":""
+      "description":"Présentations, événements, formations, réunions… Tout est possible ! \n\n Nos espaces sont modulables : recevez vos partenaires et partagez vos idées dans un cadre inspirant, convivial et innovant."
     },
     "maker":{
       "label":"Maker space",
-      "description":""
+      "description":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace."
     }
   },
   "contactSection":{
