@@ -7,6 +7,6 @@ module.exports = (config,bsync) => ()=>{
       [ `./${config.srcDir}/fonts/**/*.{css,eot,svg,ttf,woff,woff2}`,
         `./${config.srcDir}/fonts/multicolore/*.pdf`,
         `!./${config.srcDir}/fonts/multicolore/specimen_files/*`])
-      .pipe( gulp.dest(`./${config.buildDir}/`)) 
+      .pipe( gulp.dest(`./${config.tmpDir}/fonts`)) 
       .pipe( bsync.stream() );
 }

@@ -3,10 +3,12 @@ const
            glob = require("glob"),
              fs = require('fs'),
       camelCase = require('camel-case'),
+      dashCase = require('camel-2-dash'),
            path = require('path'),
          marked = require('marked'),
-            ejs = require('ejs'),
-        gulpEjs = require('gulp-ejs'),  
+            njk = require('nunjucks'),
+       gulpData = require('gulp-data'),
+   gulpNunjucks = require('gulp-nunjucks'),
        beautify = require('gulp-jsbeautifier'),
         plumber = require('gulp-plumber'),
    autoprefixer = require("gulp-autoprefixer"),
@@ -15,49 +17,50 @@ const
 module.exports = (config, bsync) => () => {
 
     var contentJsonFiles = glob.sync(`${config.contDir}/*.json`),
-         componentsFiles = glob.sync(`${config.srcDir}/render/components/*{.ejs,.html}`),
+         componentsFiles = glob.sync(`${config.srcDir}/render/components/*.html`),
           contentMdFiles = glob.sync(`${config.contDir}/*.md`),
-              viewsFiles = glob.sync(`${config.srcDir}/render/views/*{.ejs,.html}`),
-                    data = {"views":{},"components":{},"contents":{}};
+                 cmsData = {"components":{},"contents":{}};
+
+
+    var filters = require(`../${config.srcDir}/render/filters`);
+    var njkEnv = njk.configure(`${config.srcDir}/render`,{autoescape:false});
+
+    for(filter in filters){
+      njkEnv.addFilter(filter, filters[filter] )
+    }
+    
+    
 
     function getName(file){
       var ext = path.extname(file);
       var key = path.basename(file, ext);
-      return camelCase(key)
+      return {cml:camelCase(key),file:key+ext}
     }
 
     contentJsonFiles.forEach((file) => {
       var rawContent = fs.readFileSync(file,'utf-8');
       content = JSON.parse(rawContent);
-      data[getName(file)]=content;
+      cmsData[getName(file).cml]=content;
     });
-
+    
     componentsFiles.forEach((file) => {
-      data.components[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {});
+      var key = getName(file)
+      cmsData.components[key.cml] = `components/${key.file}`;
     })
 
     contentMdFiles.forEach((file) => {
         var rawContent = fs.readFileSync(file,'utf-8');
-
-        tmpData = {
-          data:data,
-          components:data.components
-        };
-
         markdownHtml =  marked(rawContent);
 
         // allow components in markdown contents
-        markdownHtml = markdownHtml.replace(/\<p\>\[\%(.*)\%\]<\/p\>/g, "<%- (typeof $1 == 'function' ? $1(data) : $1) %>");
-        data.contents[getName(file)] = ejs.render(markdownHtml, tmpData, {} )
+        markdownHtml = markdownHtml.replace(/\<p\>\[\%(.*)\%\]<\/p\>/g, '{% include $1 %}');
+        cmsData.contents[getName(file).cml] = njkEnv.renderString(markdownHtml, cmsData)
     });
+    
 
-    viewsFiles.forEach((file) => {
-      data.views[getName(file)] = ejs.compile(fs.readFileSync(file,'utf-8'), {client:true});
-    })
-
-    return gulp.src(`${config.srcDir}/render/**/*.ejs`)
+    return gulp.src(`${config.srcDir}/render/*.html`)
       .pipe(plumber())
-      .pipe(gulpEjs(data,{ext:'.html'}).on('error', gutil.log))
+      .pipe(gulpNunjucks.compile(cmsData,{env:njkEnv}))
       .pipe(beautify({indentSize: 2}))
       .pipe(gulp.dest(`./${config.tmpDir}`))
       .pipe(bsync.stream());

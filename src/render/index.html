@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= ui.title %></title>
-   <%- views.head() %>
+  <title>{{ ui.title }}</title>
+   {% include "views/head.html" %}
 </head>
 <body ng-app="mutualab.org" class="home">
   <header class="main-header" >
     <div class="content-header text-center">
-        <img class="logo" src="images/logo-mutualab.svg" title="<%= ui.header.logoTitle %>"/>
-        <h3><%= ui.header.introHeader %></h3>
+        <img class="logo" src="images/logo-mutualab.svg" title="{{ ui.header.logoTitle }}"/>
+        <h3>{{ ui.header.introHeader }}</h3>
     </div>
 
 
     <div class="background-header" flickr-img search="mutualab" author="author"></div>
-    <a class="author-infos" ng-show="author" href="{{author.profile}}" target="_blank">
-        <img ng-src="{{author.pic}}" alt="Photo de {{author.name}}">
-        <span>Photo de <br>{{author.name}}</span>
+    <a class="author-infos" ng-show="author" href="\{{author.profile}}" target="_blank">
+        <img ng-src="\{{author.pic}}" alt="Photo de \{{author.name}}">
+        <span>Photo de <br>\{{author.name}}</span>
     </a>
     
   </header>
 
 
-  <%- views.menu({ui:ui, contents:contents }) %>
+  {% include "views/menu.html" %}
 
   <section class="main-content">
     
@@ -30,7 +30,7 @@
       <div class="inner-section background-rotate">
         <div class="container">
           <div class="col-md-10 col-md-offset-1">
-            <%- views.summary({test: {truc:"test"} , ui":ui , "contents":contents}) %>
+           {% include "views/summary.html" %}
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
       <div class="inner-section background-rotate">
         <div class="container">
           <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
-            <%- contents.coworking %>
+            {{ contents.coworking }}
           </div>
         </div>
       </div>
@@ -49,12 +49,12 @@
     <article id="pricing-coworking" class="pricing-section view-section">
       <div class="container">
         <div class="col-md-12">
-          <%- contents.pricings %>
+          {{ contents.pricings }}
         </div>
       </div>
     </article>
     <article id="nous-trouver" class="adress-infos">
-      <h1><%= ui.contactSection.title %></h1>
+      <h1>{{ ui.contactSection.title }}</h1>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10123.462849887448!2d3.0615278!3d50.6296114!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb863a656f33d55b!2zTXV0dWFsxIFi!5e0!3m2!1sfr!2sfr!4v1460128150582" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </article>
   

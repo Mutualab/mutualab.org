@@ -3,7 +3,7 @@ const       gulp = require('gulp'),
           bsync = require('browser-sync');
 
 module.exports = (config,bsync) => () => {
-  return gulp.src(`./${config.srcDir}/render/views/head.ejs`)
+  return gulp.src(`./${config.srcDir}/render/views/head.html`)
     .pipe( wiredep() )
     .pipe( gulp.dest(`./${config.srcDir}/render/views`) )
     .pipe( bsync.stream() ) ;

@@ -56,7 +56,11 @@
           text-decoration:none;
         }
 
-
+        &:visited, &:focus{
+          text-decoration:none;
+          outline:none;
+          background-color:rgba($gray,.02);
+        }
         @media(max-width: 760px){
             //display:block;
         }

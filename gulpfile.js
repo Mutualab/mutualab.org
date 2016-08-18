@@ -51,21 +51,23 @@ gulp.task('reload',()=>{
 /**
  * 
  */
-gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','images'])
+gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','images','fonts'])
 
 gulp.task('watch',['default'], () => {
   
   gulp.start('bsync');
+  gulp.watch([`bower.json`],['wiredep']);
   gulp.watch([`./${config.srcDir}/sass/**/*.scss`], ['sass']);
   gulp.watch([`./${config.srcDir}/ng/**/*.js`], ['js']);
   gulp.watch([`./${config.srcDir}/ng/**/*.html`], ['ngTemplates']);
-  gulp.watch([`./${config.srcDir}/**/*.ejs`,`./${config.contDir}/**/*{.json,.md}`], ['contents']);
+  gulp.watch([`./${config.srcDir}/render/**/*.{html,js}`,
+              `./${config.contDir}/**/*{.json,.md}`], ['contents']);
 
   //gulp.watch([`./${config.tmpDir}/**/*.html`], ['reload']);
 
   gulp.watch([`./${config.srcDir}/fonts/**/*.{eot,svg,ttf,woff,woff2}`],['fonts'])
   gulp.watch([ `./${config.srcDir}/images/**/*.{svg, jpg, png, gif}`],['images'])
-  gulp.watch([`bower.json`],['wiredep']);
+  
 });
 
 

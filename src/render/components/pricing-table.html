@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="pricing-inner">
+    {% for plan in pricings.plans %}
+      <div class="plan-container plan-{{plan.name}}">
+        <div class="plan-inner">
+          <div class="plan-header bg-{{plan.color}}">
+            <div class="icon-box"><i class="fa fa-users icon"></i></div>
+            <h2>{{plan.label}}</h2>
+            <p> 
+                <span class="price-emphase">{{plan.price}}</span>
+                <span class="price-infos">{{plan.priceInfo}}</span>
+            </p>
+          </div>
+          
+          <div class="plan-details">
+
+            <div class="specs">
+              <ul>
+                {%for  spec in plan.specs %}
+                  <li>{{spec.label}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+              
+              {% if plan.priceDetail %}
+              <div class="price-details">
+                <read-more>
+                  <!--<h3>{{plan.priceDetail.name}}</h3>-->
+                  <ul>
+                  {%for price in plan.priceDetail.list %}
+                    <li>
+                      <span class="label">{{price.label}}</span> 
+                      <span class="price">{{price.price}}</span>
+                    </li>
+                  {% endfor %}
+                  </ul>
+                </read-more>
+              </div>
+            {% endif %}
+            
+            {%if plan.planInfos %}
+            <div class="plan-infos">
+              {% for info in plan.planInfos %}
+                <p>{{info}}</p>
+              {% endfor %}
+            </div>
+            {% endif %}
+            
+          </div>
+        </div>
+      </div>
+   {% endfor %}
+  </div>
+</div>
