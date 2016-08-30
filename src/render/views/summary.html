@@ -1,31 +1,31 @@
 <div class="summary-section">
-  <em class="summary-content">{{ contents.summary }}</em>
+  <em class="summary-content">{{= contents.summary }}</em>
     <ul>
         <li click-trigger>
             <a href="index.html" nav-to="#coworking">
               <i class="picto" mt-svg src="images/icon-work.svg"></i>
-              <span>{{ ui.menu.work.label }}</span>
+              <span>{{= ui.menu.work.label }}</span>
             </a>
             <p class="menu-description">
-              {{ ui.menu.work.description|nl2br }}
+              {{= ui.menu.work.description|nl2br }}
             </p>
         </li>
         <li click-trigger>
             <a href="louer-salle.html">
               <i class="picto" mt-svg src="images/icon-rent.svg"></i>
-              <span>{{ ui.menu.rent.label }}</span>
+              <span>{{= ui.menu.rent.label }}</span>
             </a>
             <p class="menu-description">
-              {{ ui.menu.rent.description|nl2br }}
+              {{= ui.menu.rent.description|nl2br }}
             </p>
         </li>
         <li click-trigger>
             <a href="maker-space.html">
               <i class="picto" mt-svg src="images/icon-make.svg"></i>
-              <span>{{ ui.menu.maker.label }}</span>
+              <span>{{= ui.menu.maker.label }}</span>
             </a>
             <p class="menu-description">
-              {{ ui.menu.maker.description|nl2br }}
+              {{= ui.menu.maker.description|nl2br }}
             </p>
         </li>
       </ul>

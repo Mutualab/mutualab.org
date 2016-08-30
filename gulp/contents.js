@@ -23,7 +23,18 @@ module.exports = (config, bsync) => () => {
 
 
     var filters = require(`../${config.srcDir}/render/filters`);
-    var njkEnv = njk.configure(`${config.srcDir}/render`,{autoescape:false});
+    var njkEnv = njk.configure(`${config.srcDir}/render`,
+        {
+          autoescape:false,
+          tags: {
+              blockStart: '{%',
+              blockEnd: '%}',
+              variableStart: '{{=',
+              variableEnd: '}}',
+              commentStart: '{#',
+              commentEnd: '#}'
+            }
+          });
 
     for(filter in filters){
       njkEnv.addFilter(filter, filters[filter] )
@@ -57,6 +68,7 @@ module.exports = (config, bsync) => () => {
         cmsData.contents[getName(file).cml] = njkEnv.renderString(markdownHtml, cmsData)
     });
     
+
 
     return gulp.src(`${config.srcDir}/render/*.html`)
       .pipe(plumber())

@@ -15,16 +15,15 @@ app.directive('flickrImg',['FlickrImagesSearch','FlickrImage','FlkrUtils',
     link:function(scope,elt,attr){
       FlickrImagesSearch.get(attr.search)
       .then(function(images){
-
         FlickrImage(FlkrUtils.randomElt(images).id).then(function(data){
           elt.css('background-image',"url("+data.url+")");
-          //console.log(data)
           scope.author = data.author;
         });
       })
     }      
   };
 }]);
+
 
 app.service('FlkrUtils',[function(){
     this.randomElt = function(items){
@@ -71,7 +70,7 @@ app.factory('FlickrImage',['$http','$q','flickrApiKey',
       var photo = {
         url:"https://farm"+photoResp.farm+".staticflickr.com/"+photoResp.server+"/"+photoResp.id+"_"+photoResp.secret+"_b."+photoResp.originalformat,
         author:{
-          name:photoResp.owner.username,
+          name:photoResp.owner.realname,
           profile:"https://www.flickr.com/photos/"+userSlug,
           pic:"https://flickr.com/buddyicons/"+photoResp.owner.nsid+".jpg"
         },
