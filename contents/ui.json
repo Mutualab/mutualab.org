@@ -24,5 +24,20 @@
   },
   "contactSection":{
     "title":"Nous trouver, nous contacter"
+  },
+  "socialNetworks":[
+    {"name":"email",   "url":"mailto:mutualab@coworkinglille.com", "class":"fa fa-envelope-o", "target":"self"},
+    {"name":"twitter", "url":"https://twitter.com/mutualab", "class":"fa fa-twitter"},
+    {"name":"facebook","url":"https://www.facebook.com/Mutualab", "class":"fa fa-facebook"}
+  ],
+  "contactInfos":{
+    "email":"mutualab@coworkinglille.com",
+    "address":"19 rue Nicolas Leblanc",
+    "zip_code":"59000",
+    "city":"Lille"
+  },
+  "openStreetMap":{
+    "iframeUrl":"http://www.openstreetmap.org/export/embed.html?bbox=3.0587106943130493%2C50.62797585690704%2C3.0641233921051025%2C50.631211937089404&amp;layer=hot&amp;marker=50.62959222343254%2C3.061419725418091",
+    "linkUrl":"https://www.openstreetmap.org/?mlat=50.62959&mlon=3.06142#map=18/50.62959/3.06142&layers=H"
   }
 }
