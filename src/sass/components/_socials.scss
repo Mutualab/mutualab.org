@@ -1,0 +1,40 @@
+@import "vars";
+
+.social-networks{
+  width: 100%;
+  font-size: 5em;
+  text-align:center;
+  padding: 1em 0;
+  background-color: lighten($gray,65%);
+  transition: background-color .7s;
+  a{
+    
+    color:#fff;
+    padding: 0 .3em;
+    &:hover{
+      text-decoration: none;
+    }
+
+  }
+  &.hovered {
+      a:hover, a{
+        i{
+          color:#fff;
+        }
+      }
+      
+      &-facebook{
+        background-color: #3B5998;
+      }
+      &-twitter{
+        background-color: #00ACEE;
+      }
+      &-email{
+        background-color: $pink;
+      }
+
+      &-home{
+        background-color: $orange;
+      }
+  }
+}
