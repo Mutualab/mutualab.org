@@ -4,7 +4,9 @@ const
 
 module.exports = (config,bsync) => ()=>{
     return gulp.src(
-      [ `./${config.srcDir}/fonts/**/*.{css,eot,svg,ttf,woff,woff2}`,
+      [ 
+        `./bower_components/font-awesome/fonts/*.{css,eot,svg,ttf,woff,woff2,otf}`,
+        `./${config.srcDir}/fonts/**/*.{css,eot,svg,ttf,woff,woff2}`,
         `./${config.srcDir}/fonts/multicolore/*.pdf`,
         `!./${config.srcDir}/fonts/multicolore/specimen_files/*`])
       .pipe( gulp.dest(`./${config.tmpDir}/fonts`)) 
