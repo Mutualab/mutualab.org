@@ -3,9 +3,7 @@ const       gulp = require('gulp'),
            bsync = require('browser-sync').create(),
           dotenv = require('dotenv'),
             argv = require('yargs').argv, 
-
              lib = require('./gulp');
-
 
 dotenv.config();
 const config = {
@@ -15,7 +13,6 @@ const config = {
       contDir  : "contents"
 };
  
-
 /**
  * Init tasks stored in ./gulp folder
  */
@@ -49,8 +46,9 @@ gulp.task('reload',()=>{
 })
 
 /**
- * 
+ *  Default task
  */
+
 gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','images','fonts'])
 
 gulp.task('watch',['default'], () => {
@@ -62,8 +60,6 @@ gulp.task('watch',['default'], () => {
   gulp.watch([`./${config.srcDir}/ng/**/*.html`], ['ngTemplates']);
   gulp.watch([`./${config.srcDir}/render/**/*.{html,js}`,
               `./${config.contDir}/**/*{.json,.md}`], ['contents']);
-
-  //gulp.watch([`./${config.tmpDir}/**/*.html`], ['reload']);
 
   gulp.watch([`./${config.srcDir}/fonts/**/*.{eot,svg,ttf,woff,woff2}`],['fonts'])
   gulp.watch([ `./${config.srcDir}/images/**/*.{svg, jpg, png, gif}`],['images'])
