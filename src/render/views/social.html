@@ -1,0 +1,11 @@
+<div class="social-networks {{ hovered ? 'hovered hovered-'+hovered : ''  }}">
+  {% for network in ui.socialNetworks %}
+  <a href="{{= network.url }}" 
+     class="{{= network.name }}"
+     ng-mouseover="hovered='{{= network.name }}'"
+     ng-mouseleave="hovered=null"
+     target="{{= network.target or '_blank' }}">
+    <i class="{{= network.class }}"></i>
+  </a>
+  {% endfor %}
+</div>
