@@ -48,6 +48,7 @@ gulp.task('reload',()=>{
 /**
  *  Default task
  */
+
 gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','images','fonts'])
 
 gulp.task('watch',['default'], () => {
