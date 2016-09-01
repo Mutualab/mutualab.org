@@ -125,5 +125,26 @@
 }
 
 .map-container{
-  
+  position:relative;
+  .open-map-btn{
+    position: absolute;
+    right:10px;
+    top: 10px;
+    background-color: rgba(#fff,.7);
+    padding: .2em .5em;
+    font-size: 1.5em;
+    border-radius: 3px;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .adress-info{
+    position: absolute;
+    right:10px;
+    bottom: 30px;
+    padding: .5em .7em;
+    background-color: rgba(#fff,.7);
+    font-size: 1.1em;
+    border-radius: 3px;
+  }
 }

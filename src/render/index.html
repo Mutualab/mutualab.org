@@ -55,21 +55,32 @@
       <h1>{{= ui.contactSection.title }}</h1>
       <div class="half-screen">
         <div class="map-container">
-          <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=3.0589091777801514%2C50.62838080447465%2C3.0639356374740596%2C50.63081722209712&amp;layer=hot" style="border: 1px solid black"></iframe>
-          <a href="http://www.openstreetmap.org/#map=18/50.62960/3.06142&amp;layers=H" class="open-map-btn">
-            <!--<i class="material-icons">&#xE89E;</i>-->
+          <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" 
+                  src="{{= ui.openStreetMap.iframeUrl }}" 
+                  ></iframe>
+
+          <a href="{{= ui.openStreetMap.linkUrl }}" 
+             class="open-map-btn" target="_blank">
+            Agrandir la carte
             <span class="glyphicon glyphicon-new-window"></span>
           </a>
+          <div class="adress-info">
+              <p>
+                 <h2>Mutualab</h2>
+                 <a href="mailto:{{= ui.contactInfos.email }}">{{= ui.contactInfos.email }}</a> <br>
+                 {{= ui.contactInfos.address}} <br>
+                 {{= ui.contactInfos.zip_code}} {{= ui.contactInfos.city}}
+              </p>
+          </div>
         </div>
         
       </div>
       <div class="half-screen">
+        {% include "views/social.html" %}
       </div>
     </article>
-  
   </section>
 
   <script src="https://cdn.chatkwik.com/cdn/widget/1bba73b5d2e6130a79de8bf505d42da4fb6947c3bf57cfbeccca296f6c3319c3" type="text/javascript"> </script>
-
 </body>
 </html>
