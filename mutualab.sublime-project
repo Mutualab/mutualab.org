@@ -1,20 +1,23 @@
 {
-	"folders":
-	[
-		{
-			"path": ".",
+  "folders":
+  [
+    {
+      "path": ".",
       "folder_exclude_patterns":
       [
         "node_modules",
-        "bower_components",
+        //"bower_components",
         //".tmp",
         //"dist"
       ],
-		},
+    },
+    {
+      "path": "images",
+    },
     {
       "path": "src",
     }
-	],
+  ],
   "syntax_override":
   {
   }
