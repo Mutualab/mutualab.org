@@ -3,7 +3,9 @@ const       gulp = require('gulp'),
            bsync = require('browser-sync').create(),
           dotenv = require('dotenv'),
             argv = require('yargs').argv, 
-             lib = require('./gulp');
+           watch = require('gulp-watch');
+
+const  lib = require('./gulp')
 
 dotenv.config();
 const config = {
