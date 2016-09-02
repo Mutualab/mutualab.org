@@ -4,7 +4,7 @@
      class="{{= network.name }}"
      ng-mouseover="hovered='{{= network.name }}'"
      ng-mouseleave="hovered=null"
-     target="{{= network.target or '_blank' }}">
+     {% if network.self == null %}target="_blank"{% endif %}>
     <i class="{{= network.class }}"></i>
   </a>
   {% endfor %}

@@ -10,23 +10,20 @@
     },
 
     {
-    "label":"Mentions légales",
-    "url":"legal.html"
+    "label":"Restauration Bis2fly",
+    "url":"restaurant-bis2fly.html"
+    },
+
+    {
+    "label":"Évenements Mutualāb",
+    "url":"evenements-mutualab.html"
     },
     "separator",
     {
-      "label":"Espace de coworking",
-      "url":"index.html",
-      "navTo":"#coworking"
-    },
-    {
-      "label":"Salles de réunions",
-      "url":"salle-reunion-lille.html"
-    },
-    {
-      "label":"Maker space",
-      "url":"makerspace.html"
+    "label":"Mentions légales",
+    "url":"legal.html"
     }
+    
   ],
   [
     {

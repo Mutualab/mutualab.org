@@ -31,9 +31,10 @@
     "title":"Nous trouver, nous contacter"
   },
   "socialNetworks":[
-    {"name":"email",   "url":"mailto:mutualab@coworkinglille.com", "class":"fa fa-envelope-o", "target":"self"},
+    {"name":"email",   "url":"mailto:mutualab@coworkinglille.com", "class":"fa fa-envelope-o", "self":true},
     {"name":"twitter", "url":"https://twitter.com/mutualab", "class":"fa fa-twitter"},
-    {"name":"facebook","url":"https://www.facebook.com/Mutualab", "class":"fa fa-facebook"}
+    {"name":"facebook","url":"https://www.facebook.com/Mutualab", "class":"fa fa-facebook"},
+    {"name":"github","url":"https://github.com/mutualab", "class":"fa fa-github"}
   ],
   "contactInfos":{
     "openning":"Du Lundi au Vendredi de 9h à 19h",
