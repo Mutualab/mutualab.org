@@ -57,14 +57,14 @@ gulp.task('watch',['default'], () => {
   
   gulp.start('bsync');
   gulp.watch([`bower.json`],['wiredep']);
-  gulp.watch([`./${config.srcDir}/sass/**/*.scss`], ['sass']);
-  gulp.watch([`./${config.srcDir}/ng/**/*.js`], ['js']);
-  gulp.watch([`./${config.srcDir}/ng/**/*.html`], ['ngTemplates']);
-  gulp.watch([`./${config.srcDir}/render/**/*.{html,js}`,
-              `./${config.contDir}/**/*{.json,.md}`], ['contents']);
+  watch([`./${config.srcDir}/sass/**/*.scss`], function(){ gulp.start(['sass']);});
+  watch([`./${config.srcDir}/ng/**/*.js`], function(){ gulp.start(['js']);});
+  watch([`./${config.srcDir}/ng/**/*.html`], function(){ gulp.start(['ngTemplates']);});
+  watch([`./${config.srcDir}/render/**/*.{html,js}`,
+         `./${config.contDir}/**/*.{json,md}`], function(){ gulp.start(['contents']);});
 
-  gulp.watch([`./${config.srcDir}/fonts/**/*.{eot,svg,ttf,woff,woff2}`],['fonts'])
-  gulp.watch([ `./${config.srcDir}/images/**/*.{svg, jpg, png, gif}`],['images'])
+  watch([`./${config.srcDir}/fonts/**/*.{eot,svg,ttf,woff,woff2}`],function(){ gulp.start(['fonts'])});
+  watch([ `./${config.srcDir}/images/**/*.{svg, jpg, png, gif}`],function(){ gulp.start(['images'])});
   
 });
 
