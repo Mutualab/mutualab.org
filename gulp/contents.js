@@ -75,8 +75,7 @@ module.exports = (config, bsync) => () => {
         var rawContent = fs.readFileSync(file,'utf-8');
 
         metadata = frontMatter(rawContent);
-        rawContent = rawContent.replace( /^---([\s\S]*?)---$/gm , '')
-        console.log(rawContent)
+        rawContent = rawContent.replace( /^---([\s\S]*?)---$/m , '')
         markdownHtml =  marked(rawContent);
 
         
