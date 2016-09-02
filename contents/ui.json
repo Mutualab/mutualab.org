@@ -1,5 +1,7 @@
 {
+  "siteUrl":"http://localhost:3000/",
   "title":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+  "metaDescription":"Mutualāb est un vaste espace de travail partagé : 700 m2 en plein centre de Lille, pour travailler en mode collaboratif ou personnel.",
   "header":{
     "logoTitle":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
     "introHeader":"Développez vos projets, rencontrez, échangez, faites germer vos idées…"
@@ -7,6 +9,7 @@
   "menu":{
     "work":{
         "label":"Espace de coworking",
+        "url":"",
         "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualab est ouvert tous les jours de la semaine, de 9h à 19h.",
         "submenu":[
             {"label":"Les tarifs du coworking","href":"#pricing-coworking"},
@@ -15,10 +18,12 @@
     },
     "rent":{
       "label":"Salles de réunions",
+      "url":"salle-reunion-lille.html",
       "description":"Présentations, événements, formations, réunions… Tout est possible ! \n\n Nos espaces sont modulables : recevez vos partenaires et partagez vos idées dans un cadre inspirant, convivial et innovant."
     },
     "maker":{
       "label":"Maker space",
+      "url":"makerspace.html",
       "description":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace."
     }
   },
@@ -31,6 +36,7 @@
     {"name":"facebook","url":"https://www.facebook.com/Mutualab", "class":"fa fa-facebook"}
   ],
   "contactInfos":{
+    "openning":"Du Lundi au Vendredi de 9h à 19h",
     "email":"mutualab@coworkinglille.com",
     "address":"19 rue Nicolas Leblanc",
     "zip_code":"59000",
@@ -39,5 +45,28 @@
   "openStreetMap":{
     "iframeUrl":"http://www.openstreetmap.org/export/embed.html?bbox=3.0587106943130493%2C50.62797585690704%2C3.0641233921051025%2C50.631211937089404&amp;layer=hot&amp;marker=50.62959222343254%2C3.061419725418091",
     "linkUrl":"https://www.openstreetmap.org/?mlat=50.62959&mlon=3.06142#map=18/50.62959/3.06142&layers=H"
-  }
+  },
+
+  "partners":[
+    {"label":"Ville de Lille","url":"http://www.lille.fr/","logo":"images/partners/Logo-ville-de-lille-45x60.jpg"},
+    {"label":"Lille métropole","url":"http://www.lillemetropole.fr/sites/lmcu/mel.html","logo":"images/partners/lmcu-78x60.png"}
+  ],
+
+  "networks":[
+    {
+      "label":"Tech places",
+      "url":"http://techplaces.co/",
+      "logo":"images/partners/TP.svg"
+    },
+    {
+      "label":"Catalyst Expérimentation sociales et numérique",
+      "url":"http://catalyst-initiative.org/",
+      "logo":"images/partners/logo-catalyst.png"
+    },
+    {
+      "label":"Coworking Lille",
+      "url":"http://mutualab.org/",
+      "logo":"images/partners/logo-coworking-lille.png"
+    }
+  ]
 }
