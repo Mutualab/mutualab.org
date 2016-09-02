@@ -1,0 +1,87 @@
+<footer>
+    <article id="nous-trouver" class="adress-infos container-fluid">
+      <h1>{{= ui.contactSection.title }}</h1>
+      <div class="row">
+        <div class="col-sm-6 no-padding">
+          <div class="map-container">
+            <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" 
+                    src="{{= ui.openStreetMap.iframeUrl }}" 
+                    ></iframe>
+
+            <a href="{{= ui.openStreetMap.linkUrl }}" 
+               class="open-map-btn" target="_blank">
+              Agrandir la carte
+              <span class="glyphicon glyphicon-new-window"></span>
+            </a>
+            <div class="adress-info">
+                <p>
+                   <h2>Mutualab</h2>
+                   <strong class="color-green">
+                    <i class="fa fa-clock-o"></i>
+                    {{= ui.contactInfos.openning}} 
+                   </strong><br>
+                   <a href="mailto:{{= ui.contactInfos.email }}">{{= ui.contactInfos.email }}</a> <br>
+                   {{= ui.contactInfos.address}} <br>
+                   {{= ui.contactInfos.zip_code}} {{= ui.contactInfos.city}}
+                </p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-sm-6 no-padding">
+          {% include "views/social.html" %}
+          <div class="partners text-center">
+            <h3>Partenaires</h3>
+            <ul class="logo-list">
+            {% for partner in ui.partners %}
+              <li>
+                <a href="{{= partner.url}}" target="_blank" title="{{=partner.label}}" >
+                  <img src="{{=partner.logo}}">
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+          <div class="partners text-center">
+            <h3>Réseau</h3>
+            <ul class="logo-list">
+            {% for partner in ui.networks %}
+              <li>
+                <a href="{{= partner.url}}" target="_blank" title="{{=partner.label}}" >
+                  <img src="{{=partner.logo}}">
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="footer-footer">
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <img src="images/logo-mutualab-white.svg" width="450">
+        </div>
+        <div class="col-sm-6">
+          {% for footer in footers %}
+          <ul>
+            {% for link in footer %}
+              {% if link == 'separator' %}
+              <hr>
+              {% else %}
+              <li>
+                <a href="{{=link.url}}" {%if link.navTo%}nav-to="{{=link.navTo}}"{%endif%}>
+                  {{=link.label}}
+                </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+      
+      
+    </article>
+  </footer>
+

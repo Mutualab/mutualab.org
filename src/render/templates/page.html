@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{= currentPage.metadata.title }} | {{= ui.title }}</title>
+  <meta name="description" content="{{= currentPage.metadata.description }}">
+  <base href="{{=ui.siteUrl}}">
+  {% if currentPage.metadata.nofollow %}
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+
+  {% include "views/head.html" %}
+</head>
+<body ng-app="mutualab.org" class="page" chat-container page>
+
+  <header class="page-header">
+    <div class="inner-section background-rotate" 
+         ng-class="{
+           0:'inner-section-blue',
+           1:'inner-section-orange',
+           2:'inner-section-green',
+           3:'inner-section-yellow',
+           4:'inner-section-pink'
+         }[$page.bg]">
+      <a class="content-header text-center" href="http://mutualab.org/">
+          <img class="logo" src="images/logo-mutualab.svg" title="{{= ui.header.logoTitle }}"/>
+          <h3>{{= ui.header.introHeader }}</h3>
+      </a>
+    </div>
+  </header>
+  {% include "views/menu.html" %}
+  
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          {{= currentPage.content }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include "views/footer.html" %}
+</body>
+</html>

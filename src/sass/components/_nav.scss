@@ -24,13 +24,13 @@
   nav.main-nav {
   width:100%;
   @media(max-width: $screen-sm-max){
-          display:none;
+    display:none;
   }
 
   &> ul {
     text-align: left;
     margin-left: 0;
-    @media(min-width: 960px){
+    @media(min-width: $screen-md-min){
       text-align: center;
     }
     &> li {
@@ -39,7 +39,7 @@
         
 
         margin-bottom:20px;
-        @media(min-width: 960px){
+        @media(min-width: $screen-md-min){
           display: inline-block;
         }
         list-style-type: none;
@@ -61,7 +61,7 @@
           outline:none;
           background-color:rgba($gray,.02);
         }
-        @media(max-width: 760px){
+        @media(max-width: $screen-sm-min){
             //display:block;
         }
         
@@ -86,20 +86,16 @@
   }
 }
 
+
 /**
  * Manage icon sizes
  */
 
-.menu-container nav.main-nav {
-  $icon-size:15rem;
-  @media(min-width: 960px){
-    $icon-size:9rem;
-  }
-
+@mixin ul-menu($icon-size){
   &> ul {
     &> li {
       & {
-        @media(max-width: 760px){
+        @media(max-width: $screen-sm-min){
           height:$icon-size;
         }
       }
@@ -107,22 +103,22 @@
       & > a {
 
         height:$icon-size;
-        @media(max-width: 760px){
+        @media(max-width: $screen-sm-min){
             padding-top:$icon-size/2;
         }
         
         span {
-          @media(min-width: 760px){
+          @media(min-width: $screen-sm-min){
             line-height:$icon-size;
           }
 
-          @media(min-width: 960px){
+          @media(min-width: $screen-md-min){
             line-height:$icon-size;
           }
         }
       
         i {
-            @media(max-width: 760px){
+            @media(max-width: $screen-sm-min){
               margin-top:-$icon-size/2;
             }
             width: $icon-size;
@@ -131,6 +127,27 @@
         }
       }
     }
+}
+
+/**
+ * Icons size for classic
+ */
+
+.menu-container nav.main-nav {
+  @include ul-menu(10rem);
+  @media(min-width: $screen-md-min){
+    @include ul-menu(6rem);
+  }
+
+  @media(min-width: $screen-lg-min){
+    @include ul-menu(7rem);
+   }
+
+  @media(min-width: $screen-lg-min ){
+    @include ul-menu(8rem);
+  }
+
+  
 }
 
 /**
@@ -150,42 +167,10 @@
   }
 
   nav.main-nav {
-      $icon-size:5rem;
-      @media(min-width: 960px){
-        $icon-size:6rem;
+      @include ul-menu(5rem);
+      @media(min-width: $screen-md-min){
+        @include ul-menu(6.5rem);
       }
-      &> ul {
-
-        &> li {
-          & {
-            @media(max-width: 760px){
-              height:$icon-size;
-            }
-          }
-
-          & > a {
-          
-            height:$icon-size;
-            @media(max-width: 760px){
-                padding-top:$icon-size/2;
-            };
-            span {
-              @media(min-width: 760px){
-                line-height:$icon-size;
-              }
-              @media(min-width: 960px){
-                line-height:$icon-size;
-              }
-            }
-            i {
-              @media(max-width: 760px){
-                margin-top:-$icon-size/2;
-              }
-              width: $icon-size;
-              height:$icon-size;
-            }
-         }
-      }
-    }
+    
   }
 }

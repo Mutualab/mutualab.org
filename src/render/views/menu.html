@@ -1,21 +1,21 @@
 <div class="container menu-container" ui-scrollpoint  ng-class="{'wide':wide}">
-     <div class="col-lg-10 col-lg-offset-1 ">
+     <div class="col-lg-12">
         <nav class="main-nav">
           <ul>
             <li>
-                <a href="index.html" nav-to="#coworking">
+                <a href="{{=ui.siteUrl}}{{= ui.menu.work.url }}" nav-to="#coworking">
                   <i mt-svg src="images/icon-work.svg"></i>
                   <span>{{= ui.menu.work.label }}</span>
                 </a>
             </li>
             <li>
-                <a href="louer-salle.html">
+                <a href="{{=ui.siteUrl}}{{= ui.menu.rent.url }}">
                   <i mt-svg src="images/icon-rent.svg"></i>
                   <span>{{= ui.menu.rent.label }}</span>
                 </a>
             </li>
             <li>
-                <a href="maker-space.html">
+                <a href="{{=ui.siteUrl}}{{= ui.menu.maker.url }}">
                   <i mt-svg src="images/icon-make.svg"></i>
                   <span>{{= ui.menu.maker.label }}</span>
                 </a>

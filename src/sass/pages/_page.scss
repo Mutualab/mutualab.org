@@ -1,0 +1,20 @@
+@import "vars";
+
+.page .main-content{
+  padding: 10% 0;
+  min-height: 400px;
+}
+
+
+.page .main-content{
+  img{
+    max-width:100%;
+    height:auto;
+    margin: .7em 0;
+  }
+
+  h1,h2,h3{
+    text-align: center;
+    padding: .7em 0;
+  }
+}

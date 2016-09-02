@@ -1,0 +1,11 @@
+@import "vars";
+
+@keyframes background-animation {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(10deg);
+
+    }
+}

@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>{{= ui.title }}</title>
+  <meta name="description" content="{{= ui.metaDescription }}">
   {% include "views/head.html" %}
 </head>
-<body ng-app="mutualab.org" class="home">
+<body ng-app="mutualab.org" class="home" chat-container>
   <header class="main-header" >
     <div class="content-header text-center">
         <img class="logo" src="images/logo-mutualab.svg" title="{{= ui.header.logoTitle }}"/>
@@ -19,7 +20,7 @@
 
 
   <section class="main-content">
-    <article id="summary" class="summary-home invert">
+    <article id="summary" class="summary-home invert" ui-scrollpoint>
       <div class="inner-section background-rotate">
         <div class="container">
           <div class="col-lg-10 col-lg-offset-1">
@@ -31,7 +32,7 @@
     
 
     {% include "views/menu.html" %}
-    <article id="coworking" class="coworking-section view-section invert">
+    <article id="coworking" class="coworking-section view-section invert" ui-scrollpoint>
       <div class="inner-section background-rotate">
         <div class="container">
           <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
@@ -49,38 +50,7 @@
         </div>
       </div>
     </article>
-
-    
-    <article id="nous-trouver" class="adress-infos">
-      <h1>{{= ui.contactSection.title }}</h1>
-      <div class="half-screen">
-        <div class="map-container">
-          <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" 
-                  src="{{= ui.openStreetMap.iframeUrl }}" 
-                  ></iframe>
-
-          <a href="{{= ui.openStreetMap.linkUrl }}" 
-             class="open-map-btn" target="_blank">
-            Agrandir la carte
-            <span class="glyphicon glyphicon-new-window"></span>
-          </a>
-          <div class="adress-info">
-              <p>
-                 <h2>Mutualab</h2>
-                 <a href="mailto:{{= ui.contactInfos.email }}">{{= ui.contactInfos.email }}</a> <br>
-                 {{= ui.contactInfos.address}} <br>
-                 {{= ui.contactInfos.zip_code}} {{= ui.contactInfos.city}}
-              </p>
-          </div>
-        </div>
-        
-      </div>
-      <div class="half-screen">
-        {% include "views/social.html" %}
-      </div>
-    </article>
   </section>
-
-  <script src="https://cdn.chatkwik.com/cdn/widget/1bba73b5d2e6130a79de8bf505d42da4fb6947c3bf57cfbeccca296f6c3319c3" type="text/javascript"> </script>
+  {% include "views/footer.html" %}
 </body>
 </html>

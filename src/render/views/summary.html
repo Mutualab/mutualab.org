@@ -2,7 +2,7 @@
   <em class="summary-content">{{= contents.summary }}</em>
     <ul>
         <li click-trigger>
-            <a href="index.html" nav-to="#coworking">
+            <a href="{{= ui.menu.work.url }}" nav-to="#coworking">
               <i class="picto" mt-svg src="images/icon-work.svg"></i>
               <span>{{= ui.menu.work.label }}</span>
             </a>
@@ -11,7 +11,7 @@
             </p>
         </li>
         <li click-trigger>
-            <a href="louer-salle.html">
+            <a href="{{= ui.menu.rent.url }}">
               <i class="picto" mt-svg src="images/icon-rent.svg"></i>
               <span>{{= ui.menu.rent.label }}</span>
             </a>
@@ -20,7 +20,7 @@
             </p>
         </li>
         <li click-trigger>
-            <a href="maker-space.html">
+            <a href="{{= ui.menu.maker.url }}">
               <i class="picto" mt-svg src="images/icon-make.svg"></i>
               <span>{{= ui.menu.maker.label }}</span>
             </a>

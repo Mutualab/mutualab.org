@@ -42,14 +42,21 @@
 }
 
 .summary-home {
+  &.ui-scrollpoint .inner-section:before{
+    transform: rotate(30deg);
+  }
+
   .inner-section{
     background: $blue;
     padding-bottom:4em;
 
     &:before {
-      transform: rotate(30deg);
+      transition:all 1s;
+      transform: rotate(10deg);
       opacity: .3;
       background:url(../images/icon-make-white.svg) 80% -120px no-repeat;
+      
+  
     }
 
     li{
@@ -101,11 +108,16 @@
 }
 
 .coworking-section{
+  &.ui-scrollpoint .inner-section:before{
+    transform: rotate(30deg);
+  }
   .inner-section{
     background: $green;//rgba(lighten($gray,75%),.8);
     padding:10% 0;
     &:before {
-      transform: rotate(30deg);
+      transition:all 1s;
+
+      transform: rotate(10deg);
       opacity: .3;
       background:url(../images/icon-work-white.svg) 0 0 no-repeat;
     }
@@ -113,38 +125,3 @@
   
 }
 
-
-/**
- * Section map
- */
-
-.adress-infos{
-  iframe{
-    width:100%;
-  }
-}
-
-.map-container{
-  position:relative;
-  .open-map-btn{
-    position: absolute;
-    right:10px;
-    top: 10px;
-    background-color: rgba(#fff,.7);
-    padding: .2em .5em;
-    font-size: 1.5em;
-    border-radius: 3px;
-    &:hover{
-      text-decoration: none;
-    }
-  }
-  .adress-info{
-    position: absolute;
-    right:10px;
-    bottom: 30px;
-    padding: .5em .7em;
-    background-color: rgba(#fff,.7);
-    font-size: 1.1em;
-    border-radius: 3px;
-  }
-}

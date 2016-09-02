@@ -78,3 +78,74 @@ header.main-header {
   }
 
 }
+
+
+header.page-header{
+  &{
+    position:relative;
+    overflow: hidden;
+    padding: 0; 
+    margin:0;
+  }
+  .content-header{
+    display:block;
+    margin:2% 0;
+    padding:2% 0;
+    background-color:rgba(#fff,.5);
+
+  }
+  a:hover{
+    text-decoration:none;
+    color:inherit;
+  }
+
+  img.logo{
+    width : 45%;
+    margin:0 auto;
+    display: block;
+    @media(max-width: 760px){
+      width : 90%;
+    }
+
+  }
+  h1{
+    text-align: center;
+    color:#444;
+    color:$gray;
+  }
+
+  img,h1{
+    z-index:10;
+    opacity:.95;
+  }
+  .inner-section{
+    padding-bottom:0;
+    transition:all 1s;
+
+    &:before {  
+      opacity: .3;
+      animation-name:background-animation;
+      animation-duration:2s;
+      transform: rotate(10deg);
+      background:url(../images/icon-make-white.svg) 80% -120px no-repeat;
+    }
+
+    &-blue{
+      background-color: lighten($blue, 15%);
+    }
+    &-orange{
+      background-color: lighten($orange, 15%);
+    }
+    &-green{
+      background-color: lighten($green, 15%);
+    }
+    &-yellow{
+      background-color: lighten($yellow, 15%);
+    }
+    &-pink{
+      background-color: lighten($pink, 15%);
+    }
+  }
+}
+
+
