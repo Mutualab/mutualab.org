@@ -1,5 +1,9 @@
 var app = angular.module('mutualab.org',
-    ['templates','flickr-cover','ui.scrollpoint']);
+    ['templates','flickr-cover','ui.scrollpoint','chat-wrapper']);
+
+
+
+
 
 app.directive('mtSvg',[function(){
   return {
@@ -8,8 +12,6 @@ app.directive('mtSvg',[function(){
       template:'<ng-include src="src"></ng-include>' 
   };
 }]);
-
-
 
 
 app.directive('readMore', function() {

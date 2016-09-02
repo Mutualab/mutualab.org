@@ -59,14 +59,12 @@ app.factory('FlickrImage',['$http','$q','flickrApiKey',
 
     $http.get(requestUrl).then(function(response){
       var photoResp = response.data.photo;
-      //console.log(photoResp)
-      //
       var userSlug;
       if( !!photoResp.owner.path_alias &&  photoResp.owner.path_alias != 'null') 
            userSlug = photoResp.owner.path_alias;
       else userSlug = photoResp.owner.nsid;
 
-      console.log(photoResp)
+      
       var photo = {
         url:"https://farm"+photoResp.farm+".staticflickr.com/"+photoResp.server+"/"+photoResp.id+"_"+photoResp.secret+"_b."+photoResp.originalformat,
         author:{

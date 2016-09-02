@@ -43,12 +43,37 @@ app.service('Akwik', ['$window',function($window){
 }]);
 
 
+app.service('HFchat',['$window',function($window){
+
+    $window.HFCHAT_CONFIG = {
+         EMBED_TOKEN: "8092b980-709b-11e6-900b-997fe1d11a60",
+         ACCESS_TOKEN: "6daf3f3eaa8f440ea36696b3fc931ee8",
+         HOST_URL: "https://happyfoxchat.com",
+         ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+     };
+
+    var HappyFoxChat = {}
+    $window.HFCHAT_CONFIG.onload = function(){
+      HappyFoxChat.wdgt = this;
+      HappyFoxChat.wdgt.collapseChatbox()
+    };
+  
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(scriptTag, s);
+    return HappyFoxChat
+    
+}])
+
 app.directive('chatContainer', ['Akwik',function(Akwik) {
   return {
     link: function(scope, elt, attr) {
       elt = elt.find('.akwik');
-      //console.log(Akwik)
-      console.log('akwik'+ elt.text())
+      //console.log('akwik'+ elt.text())
     }
   };
 }]);
