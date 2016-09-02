@@ -12,7 +12,7 @@
       ],
     },
     {
-      "path": "images",
+      "path": "contents/",
     },
     {
       "path": "src",
