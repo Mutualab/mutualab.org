@@ -1,0 +1,49 @@
+[
+  [
+    {
+    "label":"A propos du Mutualāb",
+    "url":"mutualab-lille.html"
+    },
+    {
+    "label":"Wiki Mutualāb",
+    "url":"http://wiki.mutualab.org/"
+    },
+
+    {
+    "label":"Mentions légales",
+    "url":"legal.html"
+    },
+    "separator",
+    {
+      "label":"Espace de coworking",
+      "url":"index.html",
+      "navTo":"#coworking"
+    },
+    {
+      "label":"Salles de réunions",
+      "url":"salle-reunion-lille.html"
+    },
+    {
+      "label":"Maker space",
+      "url":"makerspace.html"
+    }
+  ],
+  [
+    {
+    "label":"Coworking Lille",
+    "url":"http://mutualab.org/"
+    },
+    {
+      "label":"Espace de coworking",
+      "url":""
+    },
+    {
+      "label":"Salles de réunions",
+      "url":"salle-reunion-lille.html"
+    },
+    {
+      "label":"Maker space",
+      "url":"makerspace.html"
+    }
+  ]
+]
