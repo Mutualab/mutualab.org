@@ -1,0 +1,32 @@
+
+  <div class="list-group list-calendar">
+   <a class="list-group-item" target="_blank"
+    ng-repeat="event in $ctrl.events"
+    href="{{event.htmlLink}}">
+    {{sameDay = (event.start.dateTime|date:'dd:MMM') == (event.end.dateTime|date:'dd:MMM');""}}
+    <span class="date-start date-block  bg-blue">
+      <sup>{{ sameDay ? 'le':'du' }}</sup>
+      <span class="day">{{event.start.dateTime|date:'dd'}}</span>
+      <span class="month-year">{{event.start.dateTime|date:'MMM yyyy'}}</span>
+      <span class="hours" ng-show="!event.start.date">
+          <span ng-show="sameDay">de</span>
+          {{event.start.dateTime|date:'HH:mm'}}
+          <span ng-show="sameDay">à
+          {{event.end.dateTime|date:'HH:mm'}}
+          </span>
+      </span>
+    </span>
+    <span class="date-end date-block  bg-green" ng-show="!sameDay">
+      <sup>au</sup>
+      <span class="day">{{event.end.dateTime|date:'dd'}}</span>
+      <span class="month-year">{{event.end.dateTime|date:'MMM yyyy'}}</span>
+      <span class="hours" ng-show="!event.start.date">{{event.end.dateTime|date:'HH:mm'}}</span>
+    </span>
+    <span class="summary">
+      <h4 class="event-summary">{{event.summary}}</h4>
+      <p>{{(event.description|limitTo:200)+(event.description.length > 200 ? '...' : '')}}</p>
+    </span>
+  </a>
+</div>
+
+</div>
