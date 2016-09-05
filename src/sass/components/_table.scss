@@ -9,7 +9,8 @@ table {
     thead > tr, tbody > tr, tfoot > tr {
       transition: all 0.3s ease;
     }
-    thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+    thead > tr > th, tbody > tr > th, tfoot > tr > th, 
+    thead > tr > td, tbody > tr > td, tfoot > tr > td {
       text-align: left;
       padding: 1.6rem;
       vertical-align: top;

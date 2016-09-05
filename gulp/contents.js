@@ -180,8 +180,6 @@ module.exports = (config, bsync) => () => {
 
 
         var parsed = njkEnv.renderString(componentsSystem(markdownHtml),cmsData);
-        //console.log(parsed);
-        // render template
         cmsData.currentPage = {
             content:parsed,
             metadata:metadata.attributes,

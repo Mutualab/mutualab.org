@@ -45,6 +45,13 @@ footer{
   padding:3em 0;
   background-color:$gray;
   color:#fff;
+
+  img{
+    width:90%;
+    max-width:450px;
+    margin-bottom: 2em;
+  }
+
   ul{
     float:left;
     hr{

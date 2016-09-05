@@ -2,6 +2,7 @@
  * Configs
  */
 
+$gray-base: #000 !default;
 $gray:#333;
 $green:#8DC63F;
 $yellow:#FFCB08;
@@ -10,8 +11,14 @@ $red:#EE382D;
 $pink:#F172AC;
 $orange:#F7941E;
 
+
+$font-family-sans-serif:  Roboto, sans-serif;
 $font-multicolore: "multicolore_regular", sans-serif;
 
+
+$border-radius-base:        1px !default;
+$border-radius-large:       2px !default;
+$border-radius-small:       1px !default;
 
 
 //

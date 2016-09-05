@@ -1,0 +1,55 @@
+@import "vars";
+
+$bootstrap-sass-asset-helper: false !default;
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         darken($blue, 6.5%) !default; // #337ab7
+$brand-success:         $green !default;
+$brand-info:            $blue !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+
+$font-family-base:        $font-family-sans-serif !default;
+
+
+@import "bootstrap/variables";
+$padding-base-vertical:.7em;
+$padding-base-horizontal:1.5em;
+
+
+@import "bootstrap/mixins";
+@import "bootstrap/buttons";
+
+
+.btn{
+  border:none;
+  padding: .8em 1.7em
+}
