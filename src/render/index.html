@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{= ui.title }}</title>
-  <meta name="description" content="{{= ui.metaDescription }}">
-  {% include "views/head.html" %}
-</head>
+{% extends "views/master.html" %}
+
+{% block body %}
 <body ng-app="mutualab.org" class="home" chat-container>
   <header class="main-header" >
     <div class="content-header text-center">
@@ -53,4 +49,4 @@
   </section>
   {% include "views/footer.html" %}
 </body>
-</html>
+{% endblock %}

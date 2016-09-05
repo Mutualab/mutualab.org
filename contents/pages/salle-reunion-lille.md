@@ -4,16 +4,29 @@ description: Louer une salle de réunion Lille centre
 ---
 
 
-## Organiser un événement,  
-louer une salle de réunion
+# Organiser un événement ,louer une salle de réunion
 
-_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_
+> **_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
+> 
+> Mutualab est un lieu d’échange et de rencontre, de partage de connaissances et de savoir-faire. Nos salles de réunion et d’événement vous permettront de réunir vos équipes et partenaires dans un espace inspirant.
+> Nos espaces sont modulables. Selon vos envies, ils peuvent s’accompagner de prestations complètes : restauration, privatisation, visite des lieux et présentation du coworking, atelier collaboratif, etc. Parlons-en !
 
-Mutualab est un lieu d’échange et de rencontre, de partage de connaissances et de savoir-faire. Nos salles de réunion et d’événement vous permettront de réunir vos équipes et partenaires dans un espace inspirant.
 
-Nos espaces sont modulables. Selon vos envies, ils peuvent s’accompagner de prestations complètes : restauration, privatisation, visite des lieux et présentation du coworking, atelier collaboratif, etc. Parlons-en !
+### Petite salle de réunion – 10 pers.
 
-### Salle de réunion – 60 pers.
+A l'étage, une salle de réunion de 25 m² accueille vos réunions.
+
+![Une salle multifonction claire et agréable, pour 5 ou 10 pers.](images/salle-reunion/Halle-au-bardage.jpg)  
+Salle de réunion claire et agréable, pour 10 personnes
+
+- **Capacité: **Jusqu’à 10 personnes.
+- **Équipement:** Grand ecran connecté (apple TV, Chromecast, hdmi) , internet, WiFi, paperboard.
+- **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
+
+[%components.callToAction({label:"Réserver cette salle",url:"reserver-salle.html#/?room=57cd67d001bd9e3bbf44c66e"})%]
+
+
+### Grande salle de réunion – 60 pers.
 
 Au rez-de-chaussée, une grande salle de réunion de 70 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
@@ -23,6 +36,9 @@ Salle de réunion claire et agréable, pour 60 personnes
 - **Capacité: **Jusqu’à 60 personnes (en configuration théâtre).
 - **Équipement:** Vidéo-projecteur, internet, WiFi, paperboard.
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
+
+[%components.callToAction({label:"Réserver cette salle", url:"reserver-salle.html#/?room=57cd67d0f1ccdc12ddf65e77"})%]
+
 
 ### Espace événementiel
 
@@ -36,6 +52,10 @@ Un espace entièrement configurable, ouvert à de nombreux formats : conférence
 - **Capacité : **Jusqu’à 80 places assises / 100 personnes debout.
 - **Équipement :** Vidéo-projecteur, sonorisation, micros, internet, WiFi.
 - **Disponibilité **: du lundi au vendredi, de 9h à 18h (au-delà, nous consulter).
+
+
+[%components.callToAction({label:"Réserver cette espace",url:"reserver-salle.html#/?room=57cd67d08d74c65d5998a690"})%]
+
 
 ## Prestations complémentaires
 

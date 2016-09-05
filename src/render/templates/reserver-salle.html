@@ -1,11 +1,12 @@
 {% extends "views/master-page.html" %}
+
 {% block content %}
   <section class="main-content">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-9 col-md-offset-1">
           {{= currentPage.content }}
-          <mt-calendar></mt-calendar>
+          <booking-form></booking-form>
         </div>
       </div>
     </div>
