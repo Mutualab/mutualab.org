@@ -40,6 +40,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-webserver": "^0.9.1",
     "gulp-wiredep": "0.0.0",
+    "he": "^1.1.0",
     "markdown": "^0.5.0",
     "markdown-it": "^6.1.1",
     "markdown-it-synapse-table": "^1.0.6",
