@@ -27,8 +27,13 @@
         "dist/css/bootstrap.min.css"
       ]
     },
-    "font-awesome":{
-      "main":["css/font-awesome.css"]
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
     }
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7"
   }
 }

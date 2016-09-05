@@ -16,6 +16,10 @@
     },
     {
       "path": "src",
+    },
+    {
+      "path":"bower_components/bootstrap-sass/assets/stylesheets",
+      "name":"bootstrap"
     }
   ],
   "syntax_override":
