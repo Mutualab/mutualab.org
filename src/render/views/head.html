@@ -3,31 +3,42 @@
 <link rel="shortcut icon" type="image/png" href="images/favicon-mutualab@32x32.png">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>
 
+<!-- build:js(.) css/vendor.min.css -->
 <!-- bower:css -->
 <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../../bower_components/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="../../../bower_components/angularMultipleSelect/build/multiple-select.min.css" />
 <!-- endbower -->
+<!-- endbuild -->
 
+
+<!-- build:js(.) css/site.min.css -->
 <link rel="stylesheet" type="text/css" href="fonts/multicolore/stylesheet.css">
 <link rel="stylesheet" type="text/css" href="css/theme.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<!-- endbuild -->
 
-
-
+<!-- build:js(.) js/vendor.min.js -->
 <!-- bower:js -->
 <script src="../../../bower_components/jquery/dist/jquery.js"></script>
 <script src="../../../bower_components/angular/angular.js"></script>
 <script src="../../../bower_components/angular-ui-scrollpoint/dist/scrollpoint.js"></script>
+<script src="../../../bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="../../../bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+<script src="../../../bower_components/angularMultipleSelect/build/multiple-select.min.js"></script>
 <!-- endbower -->
+<script src="../../../bower_components/angular-i18n/angular-locale_fr-fr.js"></script>
+<!-- endbuild -->
 
+<script>angular.module('config',[]).constant('Config',{{= ngConfig|dump }});</script>
 
+<!-- build:js(.) js/site.min.js -->
 <script src="js/templates.js"></script>
 <script src="js/flickr-cover.js"></script>
 <script src="js/chat.js"></script>
+<script src="js/slack-webhook.js"></script>
+<script src="js/booking-form.js"></script>
 <script src="js/site.js"></script>
-<script src="js/config.js"></script>
 <script src="js/page.js"></script>
 <script src="js/calendar.js"></script>
-<script src="js/booking-form.js"></script>
-
-
+<!-- endbuild -->

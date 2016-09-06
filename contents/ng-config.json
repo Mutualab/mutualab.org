@@ -1,0 +1,32 @@
+{
+  "googleEventsCalendarId":"rnn0dim2qm94h11qot49smul9g@group.calendar.google.com",
+  "roomCalendars":[
+    {
+      "_id": "57cd67d001bd9e3bbf44c66e",
+      "name":"Petite Salle de réunion à l'étage (moins de 10 personnes)",
+       "calendarId":"ra83nh3n5qb01l8kl52sd4k5cs@group.calendar.google.com"
+    },
+    {
+      "_id": "57cd67d0f1ccdc12ddf65e77",
+      "name":"Grande Salle de réunion en bas (plus de 10 personnes)",
+       "calendarId":"ra83nh3n5qb01l8kl52sd4k5cs@group.calendar.google.com"
+    },
+    {
+      "_id": "57cd67d08d74c65d5998a690",
+      "name":"Espace événemmentiel en bas (plus de 10 personnes)",
+       "calendarId":"ra83nh3n5qb01l8kl52sd4k5cs@group.calendar.google.com"
+    }
+  ],
+  "prestationsList":[
+      {"label":"Petits déjeuners (5 € / HT pers.)"},
+      {"label":"Traiteur (7 € / HT pers.)"},
+      {"label":"Accompagnement (sur devis)"},
+      {"label":"Communication"},
+      {"label":"Vestiaire (environ 250 € HT pour une soirée)"},
+      {"label":"Accueil   (environ 200 € HT/ Pers. d'accueil pour une soirée)"},
+      {"label":"Agent de sécurité : sur devis (environ 50 € HT / heure)."}
+    ],
+
+  "slackWebhook":"https://hooks.slack.com/services/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"
+
+}
