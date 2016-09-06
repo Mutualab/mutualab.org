@@ -1,0 +1,70 @@
+@import "vars";
+.booking-form{
+  .date-selection{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 2px;
+    padding:1em;
+  }
+  .day-group{
+    display: block;
+    overflow: hidden;
+    width:27%;
+    max-width:300px;
+    margin:.2em 1em;
+    float:left;
+    text-align: center;
+    .checkbox{
+      padding:.3em;
+      margin: 0 .2em;
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  textarea.form-control{
+    resize: vertical;
+    min-height:120px;
+  }
+
+  .prestations-box{
+    padding:.5em;
+    max-width: 450px;
+  }
+
+  .day-group .checkbox, .prestations-box{
+    border-radius: 3px;
+    &:hover{
+      background-color: rgba(lighten($gray,50%),.5);
+    }
+  }
+}
+
+/*
+ * Datepicker element
+ */
+
+.datepicker.dropdown-menu {
+  max-width: 300px !important;
+  height: 270px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 65px;
+    }
+  }
+  td, th{
+    border:none;
+    padding:0;
+  }
+}

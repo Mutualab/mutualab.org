@@ -41,15 +41,30 @@ $font-family-base:        $font-family-sans-serif !default;
 
 
 @import "bootstrap/variables";
-$padding-base-vertical:.7em;
-$padding-base-horizontal:1.5em;
-
-
 @import "bootstrap/mixins";
 @import "bootstrap/buttons";
+@import "bootstrap/alerts";
+@import "bootstrap/forms";
 
 
 .btn{
   border:none;
   padding: .8em 1.7em
+}
+
+
+.form-group label{
+  margin-right:1em;
+}
+
+*:focus {
+    outline: none !important;
+    text-decoration: none !important;
+    border:  none !important;
+}
+
+*:focus {
+  outline: none !important;
+  border: solid 1px rgba($gray,.2) !important;
+  //padding: 1em;
 }
