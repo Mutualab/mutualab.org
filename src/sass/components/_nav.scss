@@ -24,7 +24,7 @@
   nav.main-nav {
   width:100%;
   @media(max-width: $screen-sm-max){
-    display:none;
+    //display:none;
   }
 
   &> ul {
@@ -36,12 +36,8 @@
     &> li {
       transition: all .5s;
       & {
-        
-
         margin-bottom:20px;
-        @media(min-width: $screen-md-min){
-          display: inline-block;
-        }
+        display: inline-block;
         list-style-type: none;
         padding:0 2rem;
       }
@@ -61,9 +57,7 @@
           outline:none;
           background-color:rgba($gray,.02);
         }
-        @media(max-width: $screen-sm-min){
-            //display:block;
-        }
+
         
         span {
           color:lighten($gray, 40%);
@@ -95,32 +89,21 @@
   &> ul {
     &> li {
       & {
-        @media(max-width: $screen-sm-min){
           height:$icon-size;
-        }
       }
 
       & > a {
 
         height:$icon-size;
-        @media(max-width: $screen-sm-min){
-            padding-top:$icon-size/2;
-        }
+        //padding-top:$icon-size/2;
+        
         
         span {
-          @media(min-width: $screen-sm-min){
             line-height:$icon-size;
-          }
-
-          @media(min-width: $screen-md-min){
-            line-height:$icon-size;
-          }
         }
       
         i {
-            @media(max-width: $screen-sm-min){
-              margin-top:-$icon-size/2;
-            }
+            
             width: $icon-size;
             height:$icon-size;
           }
@@ -135,7 +118,7 @@
 
 .menu-container nav.main-nav {
   @include ul-menu(10rem);
-  @media(min-width: $screen-md-min){
+  @media(min-width: $screen-sm-min){
     @include ul-menu(6rem);
   }
 
@@ -173,4 +156,32 @@
       }
     
   }
+}
+
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
 }
