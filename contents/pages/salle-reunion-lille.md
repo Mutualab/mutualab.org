@@ -54,7 +54,7 @@ Un espace entièrement configurable, ouvert à de nombreux formats : conférence
 - **Disponibilité **: du lundi au vendredi, de 9h à 18h (au-delà, nous consulter).
 
 
-[%components.callToAction({label:"Réserver cette espace",url:"reserver-salle.html#/?room=57cd67d08d74c65d5998a690"})%]
+[%components.callToAction({label:"Réserver cet espace",url:"reserver-salle.html#/?room=57cd67d08d74c65d5998a690"})%]
 
 
 ## Prestations complémentaires

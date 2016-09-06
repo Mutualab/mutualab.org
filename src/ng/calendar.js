@@ -15,7 +15,6 @@ angular.module('mutualab.org')
         var vm = this;
         var timemax = (new Date())
         timemax.setDate((new Date()).getDate() + 205);
-        console.log(timemax)
         $http.get(
           'https://www.googleapis.com/calendar/v3/calendars/'+Config.googleEventsCalendarId+'/events',
           {

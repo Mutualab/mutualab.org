@@ -1,5 +1,5 @@
 var app = angular.module('mutualab.org',
-    ['templates','flickr-cover','ui.scrollpoint','chat-wrapper']);
+    ['config', 'templates','flickr-cover','ui.scrollpoint','chat-wrapper','booking-form']);
 
 
 
@@ -32,9 +32,7 @@ app.directive('navTo', ['smoothNav',function(smoothNav) {
       var target = angular.element(scope.navTo).get(0);
       elt.attr('href',elt.attr('href')+scope.navTo);
       if( target ){
-
-        elt.click(function(evt){
-          
+        elt.click(function(evt){          
           smoothNav.move(target)
           evt.preventDefault();
           return false;
@@ -89,3 +87,9 @@ app.directive('clickTrigger',function(){
     }
   }
 });
+
+app.filter('trusted', ['$sce', function($sce) {
+  return function(htmlstring) {
+    return $sce.trustAsHtml(htmlstring);
+  };
+}]);

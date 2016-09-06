@@ -1,3 +1,94 @@
-<form>
-  room : {{$ctrl.params|json}}
+<div class="row vertical-padding">
+  <div class="col-md-12">
+    <h3>1 - Sélectionnez une salle de réunion</h3>
+    <select ng-model="$ctrl.selectedRoom" class="form-control"
+            ng-options="room.name for room in $ctrl.rooms"
+            ng-change="$ctrl.getDates()">
+    </select>
+  </div>
+</div>
+<form class="booking-form" ng-show="$ctrl.selectedRoom.name" name="bookingForm" ng-submit="bookingForm.$valid && $ctrl.submitForm()">
+  <h3>2 - Renseignez les informations concernant votre réservation</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Association ou entreprise</label>
+        <input type="text" class="form-control" 
+               ng-model="$ctrl.bookingData.company" ng-required="true">
+      </div>
+      <div class="form-group">
+        <label>Organisateur ( Référent )</label>
+        <input type="text" class="form-control" 
+             ng-model="$ctrl.bookingData.organizer" ng-required="true">
+      </div>
+
+      <div class="form-group">
+        <label>Adresse email</label>
+        <input type="text" class="form-control" 
+             ng-model="$ctrl.bookingData.email" ng-required="true">
+      </div>
+      <div class="form-group">
+        <label>Numéro de téléphone (Optionnel)</label>
+        <input type="tel" class="form-control" 
+             ng-model="$ctrl.bookingData.phone">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h5>Prestations complémentaires</h5>
+      <div class="checkbox prestations-box form-group" ng-repeat="prestation in $ctrl.bookingData.prestationsList">
+        <label>
+          <input type="checkbox" ng-model="prestation.selected">
+          {{prestation.label}}
+        </label>      
+      </div>
+    </div>
+  </div>
+  <h3>3 - Séléctionnez la ou les périodes que vous désirez réserver :</h3>
+  <div class="row">
+    <div class="col-sm-8">
+      A partir de quelle date souhaitez-vous consulter les disponnibilités de cette salle ?
+    </div>
+    <div class="col-sm-4" id="select-date">
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="$ctrl.selectedDate" 
+               name="date" autoclose="true"
+               bs-datepicker use-native="true" ng-change="$ctrl.getDates()">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="date-selection">
+        <div class="day-group" ng-repeat="dayGroup in $ctrl.datesList">
+          <h5>{{dayGroup[0].start.dateTime|date:"EEEE dd MMMM yyyy"}}</h5>
+          <div class="checkbox" ng-repeat="date in dayGroup">
+            <label>
+              <input type="checkbox" ng-model="date.selected">
+              de {{date.start.dateTime|date:"HH:mm"}} à {{date.end.dateTime|date:"HH:mm"}}
+            </label>
+        </div>    
+        </div>  
+      </div>
+    </div>
+  </div>
+  <h4>4 - Informations complémentaires</h4>
+  <div class="row">
+    <div class="col-sm-10 col-md-offset-1">
+      <textarea 
+                class="form-control"
+                ng-model="$ctrl.bookingData.description"></textarea>
+    </div>
+  </div>
+  <div class="row vertical-padding" ng-show="!!$ctrl.slackResponse">
+    <div class="alert alert-success alert-dismissible " role="alert">
+      <strong>Félicitation !</strong> Votre demande a bien été envoyée.
+    </div>
+  </div>
+  
+
+  <div class="text-center vertical-padding">
+    <button type="submit" class="btn btn-primary btn-lg"
+      ng-disabled="bookingForm.$invalid">Envoyer</button>
+  </div>
 </form>

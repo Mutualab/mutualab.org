@@ -1,3 +1,4 @@
+{% macro pricingTable(pricings) %}
 <div class="row">
   <div class="pricing-inner">
     {% for plan in pricings.plans %}
@@ -52,3 +53,4 @@
    {% endfor %}
   </div>
 </div>
+{% endmacro %}
