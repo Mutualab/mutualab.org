@@ -10,3 +10,7 @@ before_script:
 - npm install
 - bower install
 script: git fetch origin gh-pages; gulp build:gh-pages
+cache:
+- node_modules
+- bower_components
+  
