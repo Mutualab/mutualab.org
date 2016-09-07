@@ -132,8 +132,8 @@ module.exports = (config, bsync) => () => {
       cmsData[getName(file).cml]=content;
     });
 
-    cmsData._config = {
-      env: config.env
+    cmsData.gConfig = {
+      env: process.env.ENV
     };
 
      /**

@@ -3,7 +3,7 @@
 {% block head %}
   <title>{{= currentPage.metadata.title }} | {{= ui.title }}</title>
   <meta name="description" content="{{= currentPage.metadata.description }}">
-  {% if currentPage.metadata.nofollow %}
+  {% if currentPage.metadata.nofollow or gConfig.env == 'dev' %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
 {% endblock %}
