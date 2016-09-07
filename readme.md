@@ -20,6 +20,7 @@ Les pré-requis :
 
 ### Structure du projet
 
+```
 .
 |-contents                ->  Contenus modifiables 
 |---pages                 ->  Pages dynamiques
@@ -36,6 +37,7 @@ Les pré-requis :
 |---sass                  ->  Styles de l'application ( Scss )
 |-----components          ->  Styles des composants ( Scss )
 |-----pages               ->  Styles des pages ( Scss )
+```
 
 ## Modifier les contenus du site
 ### Généralités 
