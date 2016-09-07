@@ -1,41 +1,52 @@
 {
-  "siteUrl":"http://localhost:3000/",
   "title":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
+
   "metaDescription":"Mutualāb est un vaste espace de travail partagé : 700 m2 en plein centre de Lille, pour travailler en mode collaboratif ou personnel.",
+  
   "header":{
     "logoTitle":"Mutualāb - Espace de coworking, Salle de réunion et Maker space à Lille",
     "introHeader":"Développez vos projets, rencontrez, échangez, faites germer vos idées…"
   },
+
   "menu":{
     "work":{
         "label":"Espace de coworking",
-        "url":"",
+        "url":"index.html",
         "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualab est ouvert tous les jours de la semaine, de 9h à 19h.",
-        "submenu":[
-            {"label":"Les tarifs du coworking","href":"#pricing-coworking"},
-            {"label":"Trouver le mutualab"}
-        ]
+        "shortDescription":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous."
     },
     "rent":{
       "label":"Salles de réunions",
       "url":"salle-reunion-lille.html",
-      "description":"Présentations, événements, formations, réunions… Tout est possible ! \n\n Nos espaces sont modulables : recevez vos partenaires et partagez vos idées dans un cadre inspirant, convivial et innovant."
+      "description":"Présentations, événements, formations, réunions… Tout est possible ! \n\n Nos espaces sont modulables : recevez vos partenaires et partagez vos idées dans un cadre inspirant, convivial et innovant.",
+      "shortDescription":"Présentations, événements, formations, réunions… Tout est possible !"
     },
     "maker":{
       "label":"Maker space",
       "url":"makerspace.html",
-      "description":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace."
-    }
+      "description":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace.",
+      "shortDescription":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. "
+    },
+    "subitems":[
+      {"url":"restaurant-bis2fly.html", "label":"Restaurant le bis2fly"},
+      {"url":"evenements-mutualab.html", "label":"Événements à venir"},
+      {"url":"http://wiki.mutualab.org", "label":"Wiki du mutualab"},
+      {"url":"vip-box.html", "label":"Retirer une vip box"}
+    ]
+
   },
+
   "contactSection":{
     "title":"Nous trouver, nous contacter"
   },
+
   "socialNetworks":[
     {"name":"email",   "url":"mailto:mutualab@coworkinglille.com", "class":"fa fa-envelope-o", "self":true},
     {"name":"twitter", "url":"https://twitter.com/mutualab", "class":"fa fa-twitter"},
     {"name":"facebook","url":"https://www.facebook.com/Mutualab", "class":"fa fa-facebook"},
     {"name":"github",  "url":"https://github.com/mutualab", "class":"fa fa-github"}
   ],
+
   "contactInfos":{
     "openning":"Du Lundi au Vendredi de 9h à 19h",
     "email":"mutualab@coworkinglille.com",
@@ -43,6 +54,7 @@
     "zip_code":"59000",
     "city":"Lille"
   },
+
   "openStreetMap":{
     "iframeUrl":"http://www.openstreetmap.org/export/embed.html?bbox=3.0587106943130493%2C50.62797585690704%2C3.0641233921051025%2C50.631211937089404&amp;layer=hot&amp;marker=50.62959222343254%2C3.061419725418091",
     "linkUrl":"https://www.openstreetmap.org/?mlat=50.62959&mlon=3.06142#map=18/50.62959/3.06142&layers=H"
