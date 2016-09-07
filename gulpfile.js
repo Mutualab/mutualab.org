@@ -60,7 +60,9 @@ gulp.task('git:co:gh-pages',(done)=>{
 })
 
 gulp.task('git:commit:gh-pages',()=>{
-  return gulp.src('./*').pipe(git.commit('Automatic publication'));
+  return gulp.src('./*')
+         .pipe(git.add())
+         .pipe(git.commit('Automatic publication'));
 })
 
 gulp.task('git:push:gh-pages',(done)=>{
