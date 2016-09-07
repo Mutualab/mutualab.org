@@ -21,7 +21,7 @@ Site de l'espace de coworking mutualab
 
 ### À propos des pages générées automatiquement
 Pour chaque fichier `.md` que vous créé dans le dossier [`contents/pages`](contents/pages/) le moteur va générer une page `nom-du-fichier-md.html`vous pourrez alors la lier à une autre fichier `.md`.
-Les pages utilisent le système de configuration [Front Matter](https://jekyllrb.com/docs/frontmatter/) pour définir les métadonnée de la page ( titre de la page, description pour les moteurs de recherche etc. )
+Les pages utilisent le système de configuration [Front Matter](https://jekyllrb.com/docs/frontmatter/) pour définir les métadonnée de la page (titre de la page, description pour les moteurs de recherche etc.)
 
 le modèle à respecter est le suivant :
 ```
