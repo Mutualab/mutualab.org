@@ -63,7 +63,11 @@ gulp.task('git:co:gh-pages',(done)=>{
 gulp.task('git:commit:gh-pages',()=>{
   return gulp.src(["./css/**/*","./fonts/**/*","./images/**/*","./js/**/*","./*.html"])
          .pipe(git.add())
-         .pipe(git.commit('Automatic publication'));
+         .pipe(git.commit(undefined, {
+                args: '-m "Automatic publication"',
+                disableAppendPaths: true
+           })   
+         );
 })
 
 
