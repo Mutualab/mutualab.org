@@ -33,7 +33,7 @@ gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
 gulp.task( 'minify'     , lib.minify(config) );
 gulp.task( 'clean:tmp'  , lib.clean(config,"tmpDir") );
 gulp.task( 'clean:build', lib.clean(config,"buildDir") );
-gulp.task('dist:clean'  , lib.clean(config,"ghPages") );
+gulp.task( 'clean:gh-page', lib.clean(config,"ghPages") );
 
 
 
@@ -52,15 +52,26 @@ gulp.task('prepare',()=>{
          .pipe(gulp.dest(config.buildDir))
 });
 
-gulp.task('co:gh-pages',(done)=>{
+gulp.task('git:co:gh-pages',(done)=>{
   git.checkout('gh-pages',{},(err)=>{
     if (err) throw err;
     done();
   })
 })
 
+gulp.task('git:commit:gh-pages',()=>{
+  return gulp.src('.').pipe(git.commit('Automatic publication'));
+})
 
-gulp.task('co:master',(done)=>{
+gulp.task('git:push:gh-pages',(done)=>{
+  git.push('origin', 'gh-pages',{},(err)=>{
+    if (err) throw err;
+    done();
+  })
+})
+
+
+gulp.task('git:co:master',(done)=>{
   git.checkout('master',{},(err)=>{
     if (err) throw err;
     done();
@@ -72,7 +83,7 @@ gulp.task('dist:copy',()=>{
   return gulp.src(["dist/**/*"]).pipe(gulp.dest("."));
 })
 
-gulp.task('gh-pages',gulpsync(['dist:clean','dist:copy','clean:build']));
+
 
 /**
  * Dev tasks
@@ -120,6 +131,11 @@ gulp.task('build', gulpsync(buildStack) )
 const buildServeStack = buildStack.map((e)=>e).concat(['bsync:built'])
 gulp.task('build:serve', gulpsync(buildServeStack) )
 
+
+const buildGhPages = buildStack.map((e)=>e).concat([
+    'git=co:gh-pages','clean:gh-page','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git=co:master'])
+
+gulp.task('build:gh-pages',gulpsync(buildGhPages));
 
 gulp.task('watch',['default'], () => {
   
