@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  {% if config.env == 'dev' %}
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  
   {% block head %}
     <title>{{= ui.title }}</title>
     <meta name="description" content="{{= ui.metaDescription }}">
   {% endblock %}
+
+
   {% include "views/head.html" %}
 </head>
 {% block body %}

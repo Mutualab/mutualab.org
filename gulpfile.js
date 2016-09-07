@@ -16,7 +16,8 @@ const config = {
       buildDir : "dist",
       tmpDir   : ".tmp",
       contDir  : "contents",
-      ghPages   : ["css","fonts","images","js","*.html"]
+      ghPages   : ["css","fonts","images","js","*.html"],
+      env : process.env.ENV
 };
  
 /**

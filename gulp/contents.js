@@ -132,6 +132,9 @@ module.exports = (config, bsync) => () => {
       cmsData[getName(file).cml]=content;
     });
 
+    cmsData._config = {
+      env: config.env
+    };
 
      /**
      * Register components
