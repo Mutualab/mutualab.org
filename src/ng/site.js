@@ -68,7 +68,7 @@ app.service('smoothNav',['$window',function($window) {
 }]);
 
 
-app.directive('clickTrigger',function(){
+app.directive('clickTrigger',['$window', function($window){
   return {
     scope:{
       "clickTrigger":"@?"
@@ -81,12 +81,13 @@ app.directive('clickTrigger',function(){
         target = elt.find('a').get(0)
       }
 
-      elt.click(function(evt){
+      var clickHandler = ("ontouchstart" in $window ? "tap" : "click")
+      elt.on(clickHandler, function(evt){
         target.click()
       })
     }
   }
-});
+}]);
 
 app.filter('trusted', ['$sce', function($sce) {
   return function(htmlstring) {

@@ -68,7 +68,7 @@ app.factory('FlickrImage',['$http','$q','flickrApiKey',
       var photo = {
         url:"https://farm"+photoResp.farm+".staticflickr.com/"+photoResp.server+"/"+photoResp.id+"_"+photoResp.secret+"_b."+photoResp.originalformat,
         author:{
-          name:photoResp.owner.realname,
+          name:photoResp.owner.realname || photoResp.owner.username,
           profile:"https://www.flickr.com/photos/"+userSlug,
           pic:"https://flickr.com/buddyicons/"+photoResp.owner.nsid+".jpg"
         },
