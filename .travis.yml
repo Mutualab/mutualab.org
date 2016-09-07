@@ -8,7 +8,12 @@ before_script:
 - npm install -g bower
 - npm install gulp
 - bower install
-script: git remote set-branches --add origin gh-pages; git fetch --all ; git checkout gh-pages; gulp build:gh-pages;
+script: 
+- git config --global user.email "travis@deploy";git config --global user.name "Travis deployment";
+- git remote set-branches --add origin gh-pages; 
+- git fetch --all ; 
+- git checkout gh-pages; 
+- gulp build:gh-pages;
 cache:
   directories:
   - node_modules
