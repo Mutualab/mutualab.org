@@ -10,7 +10,7 @@ module.exports = function(config, target) {
     target = 'tmp';
   }
   return function() {
-    return gulp.src("" + config[target]).pipe(vinylPaths(del)).pipe(stripDebug());
+    return gulp.src(config[target]).pipe(vinylPaths(del)).pipe(stripDebug());
   };
 };
 

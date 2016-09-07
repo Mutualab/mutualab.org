@@ -4,6 +4,8 @@ const       gulp = require('gulp'),
           dotenv = require('dotenv'),
             argv = require('yargs').argv, 
            watch = require('gulp-watch'),
+            del  = require('del'),
+
         gulpsync = require('gulp-sync')(gulp).sync;
 
 const  lib = require('./gulp')
@@ -13,7 +15,8 @@ const config = {
       srcDir   : "src",
       buildDir : "dist",
       tmpDir   : ".tmp",
-      contDir  : "contents"
+      contDir  : "contents",
+      ghPage   : ["css","fonts","images","js","*.html"]
 };
  
 /**
@@ -27,9 +30,11 @@ gulp.task( "js"         , lib.javascript(config, bsync) );
 gulp.task( 'wiredep'    , lib.wiredep(config , bsync) );
 gulp.task( 'images'     , lib.images(config , bsync) );
 gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
-gulp.task( 'minify'      , lib.minify(config) );
-gulp.task( 'clean:tmp'      , lib.clean(config,"tmpDir") );
-gulp.task( 'clean:build'      , lib.clean(config,"buildDir") );
+gulp.task( 'minify'     , lib.minify(config) );
+gulp.task( 'clean:tmp'  , lib.clean(config,"tmpDir") );
+gulp.task( 'clean:build', lib.clean(config,"buildDir") );
+gulp.task('dist:clean'  , lib.clean(config,"ghPage") );
+
 
 
 
@@ -43,6 +48,13 @@ gulp.task('prepare',()=>{
           `${config.tmpDir}/**/*.{eot,svg,ttf,woff,woff2}`])
          .pipe(gulp.dest(config.buildDir))
 });
+
+
+gulp.task('dist:copy',()=>{
+  return gulp.src(["dist/**/*"]).pipe(gulp.dest("."));
+})
+
+gulp.task('gh-pages',gulpsync(['dist:clean','dist:copy','clean:build']));
 
 /**
  * Dev tasks
