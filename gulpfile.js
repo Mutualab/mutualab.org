@@ -23,16 +23,16 @@ const config = {
  * Init tasks stored in ./gulp folder
  */
 
-gulp.task( "sass"       , lib.sass(config, bsync) );
-gulp.task( 'contents'   , lib.contents(config, bsync) );
-gulp.task( 'ngTemplates', lib.ngTemplates(config, bsync) );
-gulp.task( "js"         , lib.javascript(config, bsync) );
-gulp.task( 'wiredep'    , lib.wiredep(config , bsync) );
-gulp.task( 'images'     , lib.images(config , bsync) );
-gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
-gulp.task( 'minify'     , lib.minify(config) );
-gulp.task( 'clean:tmp'  , lib.clean(config,"tmpDir") );
-gulp.task( 'clean:build', lib.clean(config,"buildDir") );
+gulp.task( "sass"         , lib.sass(config, bsync) );
+gulp.task( 'contents'     , lib.contents(config, bsync) );
+gulp.task( 'ngTemplates'  , lib.ngTemplates(config, bsync) );
+gulp.task( "js"           , lib.javascript(config, bsync) );
+gulp.task( 'wiredep'      , lib.wiredep(config , bsync) );
+gulp.task( 'images'       , lib.images(config , bsync) );
+gulp.task( 'fonts'        , ['contents'], lib.fonts(config , bsync) );
+gulp.task( 'minify'       , lib.minify(config) );
+gulp.task( 'clean:tmp'    , lib.clean(config,"tmpDir") );
+gulp.task( 'clean:build'  , lib.clean(config,"buildDir") );
 gulp.task( 'clean:gh-page', lib.clean(config,"ghPages") );
 
 
