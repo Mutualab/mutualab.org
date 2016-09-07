@@ -22,7 +22,8 @@
     "font-awesome": "^4.6.3",
     "angular-i18n": "^1.5.8",
     "angular-strap": "^2.3.9",
-    "angularMultipleSelect": "angular-multiple-select#^1.1.2"
+    "angularMultipleSelect": "angular-multiple-select#^1.1.2",
+    "jquery-touch-events": "^1.0.5"
   },
   "overrides": {
     "bootstrap": {
