@@ -9,4 +9,4 @@ before_script:
 - npm install gulp
 - npm install
 - bower install
-script:  gulp build:gh-pages
+script: git fetch origin gh-pages; gulp build:gh-pages
