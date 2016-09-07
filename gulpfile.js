@@ -5,7 +5,7 @@ const       gulp = require('gulp'),
             argv = require('yargs').argv, 
            watch = require('gulp-watch'),
             del  = require('del'),
-
+             git = require('gulp-git'),
         gulpsync = require('gulp-sync')(gulp).sync;
 
 const  lib = require('./gulp')
@@ -16,7 +16,7 @@ const config = {
       buildDir : "dist",
       tmpDir   : ".tmp",
       contDir  : "contents",
-      ghPage   : ["css","fonts","images","js","*.html"]
+      ghPages   : ["css","fonts","images","js","*.html"]
 };
  
 /**
@@ -33,7 +33,7 @@ gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
 gulp.task( 'minify'     , lib.minify(config) );
 gulp.task( 'clean:tmp'  , lib.clean(config,"tmpDir") );
 gulp.task( 'clean:build', lib.clean(config,"buildDir") );
-gulp.task('dist:clean'  , lib.clean(config,"ghPage") );
+gulp.task('dist:clean'  , lib.clean(config,"ghPages") );
 
 
 
@@ -42,12 +42,30 @@ gulp.task('dist:clean'  , lib.clean(config,"ghPage") );
 /**
  * Prepare for dist
  */
+
+
+
 gulp.task('prepare',()=>{
   return gulp.src([
           `${config.tmpDir}/**/*.{svg,jpg,png,gif}`,
           `${config.tmpDir}/**/*.{eot,svg,ttf,woff,woff2}`])
          .pipe(gulp.dest(config.buildDir))
 });
+
+gulp.task('co:gh-pages',(done)=>{
+  git.checkout('gh-pages',{},(err)=>{
+    if (err) throw err;
+    done();
+  })
+})
+
+
+gulp.task('co:master',(done)=>{
+  git.checkout('master',{},(err)=>{
+    if (err) throw err;
+    done();
+  })
+})
 
 
 gulp.task('dist:copy',()=>{
