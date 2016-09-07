@@ -21,7 +21,7 @@ Site de l'espace de coworking mutualab
 
 ### À propos des pages générées automatiquement
 Pour chaque fichier `.md` que vous créé dans le dossier [`contents/pages`](contents/pages/) le moteur va générer une page `nom-du-fichier-md.html`vous pourrez alors la lier à une autre fichier `.md`.
-Les pages utilisent le système de configuration [Front Matter](https://jekyllrb.com/docs/frontmatter/) pour définir les métadonnée de la page (titre de la page, description pour les moteurs de recherche etc.)
+Les pages utilisent le système de configuration [Front Matter](https://jekyllrb.com/docs/frontmatter/) pour définir les métadonnées de la page (titre de la page, description pour les moteurs de recherche etc.)
 
 le modèle à respecter est le suivant :
 ```
@@ -68,8 +68,15 @@ permet d'afficher un gros bouton
  - Cloner le repo : `git clone https://github.com/Mutualab/mutualab.org.git`
  - Installer les dépendances du build tool de développement :  `npm install` à executer à la racine du repo
  - Installer les dépendances du site `bower install`
- - Pour executer le projet en dev :  `gulp watch`
+
+
+
+### Commandes Gulp
+ - Tâche de développement :  `gulp watch`
  - Pour générer le site :  `gulp build`
+ - Pour générer le projet en local et lancer le serveur de test : `gulp build:serve`
+ - Pour publier le site sur une page github :  `gulp build:gh-pages`
+ 
 
 ### Structure du projet
 

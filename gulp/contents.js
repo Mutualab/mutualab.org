@@ -17,7 +17,6 @@ const
              he = require('he'),
          dotenv = require('dotenv');
 
-dotenv.config();
 
 module.exports = (config, bsync) => () => {
 

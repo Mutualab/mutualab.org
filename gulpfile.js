@@ -1,4 +1,5 @@
 const       gulp = require('gulp'),
+              fs = require('fs'),
          wiredep = require('gulp-wiredep'),
            bsync = require('browser-sync').create(),
           dotenv = require('dotenv'),
@@ -10,7 +11,14 @@ const       gulp = require('gulp'),
 
 const  lib = require('./gulp')
 
-dotenv.config();
+
+const envFileExist = fs.existsSync('./.env');
+if(envFileExist) {
+  dotenv.config();
+}
+
+
+
 const config = {
       srcDir   : "src",
       buildDir : "dist",
@@ -34,9 +42,7 @@ gulp.task( 'fonts'        , ['contents'], lib.fonts(config , bsync) );
 gulp.task( 'minify'       , lib.minify(config) );
 gulp.task( 'clean:tmp'    , lib.clean(config,"tmpDir") );
 gulp.task( 'clean:build'  , lib.clean(config,"buildDir") );
-gulp.task( 'clean:gh-page', lib.clean(config,"ghPages") );
-
-
+gulp.task( 'clean:gh-pages', lib.clean(config,"ghPages") );
 
 
 
@@ -141,7 +147,7 @@ gulp.task('build:serve', gulpsync(buildServeStack) )
 
 
 const buildGhPages = buildStack.map((e)=>e).concat([
-    'git:co:gh-pages','clean:gh-page','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git:co:master'])
+    'git:co:gh-pages','clean:gh-pages','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git:co:master'])
 
 gulp.task('build:gh-pages',gulpsync(buildGhPages));
 
