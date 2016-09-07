@@ -40,13 +40,14 @@ header.main-header {
   .author-infos{
     &{
       position: absolute;
-      bottom:30px;
+      bottom:10px;
       right:50px;
       color:#fff;
     }
 
     span{
       display: inline-block;
+      margin-top: .3em;
     }
 
     img{
@@ -55,6 +56,7 @@ header.main-header {
       float:left;
       border-radius: 50%;
       margin-right:10px;
+      width:30px;
     }
   }
 

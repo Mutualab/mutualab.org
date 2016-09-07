@@ -1,0 +1,38 @@
+<div class="container vertical-padding">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="summary-section">
+          <ul>
+              <li click-trigger>
+                  <a href="index.html" nav-to="#coworking">
+                    <i class="picto" mt-svg src="images/icon-work.svg"></i>
+                  </a>
+                  <h2>{{= ui.menu.work.label }}</h2>
+                  <p class="menu-description">
+                    {{= ui.menu.work.shortDescription|nl2br }}
+                  </p>
+              </li>
+              <li click-trigger>
+                  <a href="{{= ui.menu.rent.url }}">
+                    <i class="picto" mt-svg src="images/icon-rent.svg"></i>
+                  </a>
+                  <h2>{{= ui.menu.rent.label }}</h2>
+                  <p class="menu-description">
+                    {{= ui.menu.rent.shortDescription|nl2br }}
+                  </p>
+              </li>
+              <li click-trigger>
+                  <a href="{{= ui.menu.maker.url }}">
+                    <i class="picto" mt-svg src="images/icon-make.svg"></i>
+                  </a>
+                  <h2>{{= ui.menu.maker.label }}</h2>
+                  <p class="menu-description">
+                    {{= ui.menu.maker.shortDescription|nl2br }}
+                  </p>
+              </li>
+            </ul>
+                  {% include "views/nav-subitems.html" %}  
+      </div>
+    </div>
+  </div>
+</div>

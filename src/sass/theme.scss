@@ -45,6 +45,7 @@ $font-family-base:        $font-family-sans-serif !default;
 @import "bootstrap/buttons";
 @import "bootstrap/alerts";
 @import "bootstrap/forms";
+@import "bootstrap/navbar";
 
 
 .btn{
@@ -60,11 +61,11 @@ $font-family-base:        $font-family-sans-serif !default;
 *:focus {
     outline: none !important;
     text-decoration: none !important;
-    border:  none !important;
+    border:  none;
 }
 
 *:focus {
   outline: none !important;
-  border: solid 1px rgba($gray,.2) !important;
+  border: solid 1px rgba($gray,.2);
   //padding: 1em;
 }

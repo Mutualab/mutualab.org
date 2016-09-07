@@ -1,0 +1,12 @@
+<div class="sublist">
+  <ul>
+    {% for item in ui.menu.subitems %}
+    <li class="sublist-item btn">
+      <a href="{{= item.url }}" title="{{= item.label }}" >
+        <span>{{= item.label }}</span>
+      </a>
+    </li>
+    {% endfor %} 
+     
+  </ul>
+</div>

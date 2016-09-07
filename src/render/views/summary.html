@@ -4,8 +4,8 @@
         <li click-trigger>
             <a href="{{= ui.menu.work.url }}" nav-to="#coworking">
               <i class="picto" mt-svg src="images/icon-work.svg"></i>
-              <span>{{= ui.menu.work.label }}</span>
             </a>
+            <h2>{{= ui.menu.work.label }}</h2>
             <p class="menu-description">
               {{= ui.menu.work.description|nl2br }}
             </p>
@@ -13,8 +13,8 @@
         <li click-trigger>
             <a href="{{= ui.menu.rent.url }}">
               <i class="picto" mt-svg src="images/icon-rent.svg"></i>
-              <span>{{= ui.menu.rent.label }}</span>
             </a>
+            <h2>{{= ui.menu.rent.label }}</h2>
             <p class="menu-description">
               {{= ui.menu.rent.description|nl2br }}
             </p>
@@ -22,11 +22,12 @@
         <li click-trigger>
             <a href="{{= ui.menu.maker.url }}">
               <i class="picto" mt-svg src="images/icon-make.svg"></i>
-              <span>{{= ui.menu.maker.label }}</span>
             </a>
+            <h2>{{= ui.menu.maker.label }}</h2>
             <p class="menu-description">
               {{= ui.menu.maker.description|nl2br }}
             </p>
         </li>
       </ul>
+      {% include "views/nav-subitems.html" %}
   </div>

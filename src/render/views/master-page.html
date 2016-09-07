@@ -3,7 +3,6 @@
 {% block head %}
   <title>{{= currentPage.metadata.title }} | {{= ui.title }}</title>
   <meta name="description" content="{{= currentPage.metadata.description }}">
-  <base href="{{=ui.siteUrl}}">
   {% if currentPage.metadata.nofollow %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
@@ -22,7 +21,7 @@
            3:'inner-section-yellow',
            4:'inner-section-pink'
          }[$page.bg]" ui-scrollpoint="1%" >
-      <a class="content-header text-center" href="{{= ui.siteUrl }}">
+      <a class="content-header text-center" href="index.html">
           <img class="logo" src="images/logo-mutualab.svg" title="{{= ui.header.logoTitle }}"/>
           <h3>{{= ui.header.introHeader }}</h3>
       </a>
