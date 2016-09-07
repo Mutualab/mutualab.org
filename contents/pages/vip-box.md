@@ -1,7 +1,7 @@
 ---
 title: Salle de réunions 
 description: Retirer une vip box
-nofollow:true
+nofollow: true
 ---
 
 # Retirer une VIP Box
