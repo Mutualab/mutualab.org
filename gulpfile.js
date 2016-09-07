@@ -3,7 +3,8 @@ const       gulp = require('gulp'),
            bsync = require('browser-sync').create(),
           dotenv = require('dotenv'),
             argv = require('yargs').argv, 
-           watch = require('gulp-watch');
+           watch = require('gulp-watch'),
+        gulpsync = require('gulp-sync')(gulp).sync;
 
 const  lib = require('./gulp')
 
@@ -26,7 +27,22 @@ gulp.task( "js"         , lib.javascript(config, bsync) );
 gulp.task( 'wiredep'    , lib.wiredep(config , bsync) );
 gulp.task( 'images'     , lib.images(config , bsync) );
 gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
+gulp.task( 'minify'      , lib.minify(config) );
+gulp.task( 'clean:tmp'      , lib.clean(config,"tmpDir") );
+gulp.task( 'clean:build'      , lib.clean(config,"buildDir") );
 
+
+
+
+/**
+ * Prepare for dist
+ */
+gulp.task('prepare',()=>{
+  return gulp.src([
+          `${config.tmpDir}/**/*.{svg,jpg,png,gif}`,
+          `${config.tmpDir}/**/*.{eot,svg,ttf,woff,woff2}`])
+         .pipe(gulp.dest(config.buildDir))
+});
 
 /**
  * Dev tasks
@@ -34,9 +50,19 @@ gulp.task( 'fonts'      , ['contents'], lib.fonts(config , bsync) );
 
 gulp.task('bsync', () => {
   bsync.init({ 
-                server: { baseDir: [ './', config.tmpDir, config.buildDir]},
+                server: { baseDir: [ './', config.tmpDir]},
        injectFileTypes: ["css","map", "png", "jpg", "jpeg", "gif", "webp"],
-                online: false,
+                online: true,
+                  open: false,
+             });
+});
+
+
+gulp.task('bsync:built', () => {
+  bsync.init({ 
+                server: { baseDir: [ config.buildDir]},
+       injectFileTypes: ["css","map", "png", "jpg", "jpeg", "gif", "webp"],
+                online: true,
                   open: false,
              });
 });
@@ -47,11 +73,23 @@ gulp.task('reload',()=>{
         .pipe(bsync.stream());
 })
 
+
+
 /**
  *  Default task
  */
 
-gulp.task('default', ['contents','sass','wiredep','ngTemplates','js','images','fonts'])
+const defaultStack = ['contents','sass','wiredep','ngTemplates','js','images','fonts']
+gulp.task('default', defaultStack)
+
+const buildStack = defaultStack.map((e)=>e).concat(['minify','prepare'])
+buildStack.unshift('clean:tmp','clean:build')
+gulp.task('build', gulpsync(buildStack) )
+
+
+const buildServeStack = buildStack.map((e)=>e).concat(['bsync:built'])
+gulp.task('build:serve', gulpsync(buildServeStack) )
+
 
 gulp.task('watch',['default'], () => {
   
