@@ -11,8 +11,7 @@ before_script:
 script: 
 - git config --global user.email "travis@deploy";git config --global user.name "Travis deployment";
 - git remote set-branches --add origin gh-pages; 
-- git fetch --all ; 
-- git checkout gh-pages; 
+- git fetch --all ;
 - gulp build:gh-pages;
 cache:
   directories:
