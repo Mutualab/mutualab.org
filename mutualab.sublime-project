@@ -21,6 +21,10 @@
       "path":"bower_components/bootstrap-sass/assets/stylesheets",
       "name":"bootstrap"
     }
+    ,
+    {
+      "path":"gulp"
+    }
   ],
   "syntax_override":
   {
