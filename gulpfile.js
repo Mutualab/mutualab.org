@@ -115,7 +115,7 @@ gulp.task('reload',()=>{
 })
 
 
-test
+
 /**
  *  Default task
  */
