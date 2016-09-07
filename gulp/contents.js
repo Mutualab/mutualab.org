@@ -14,7 +14,10 @@ const
         plumber = require('gulp-plumber'),
    autoprefixer = require("gulp-autoprefixer"),
           gutil = require('gulp-util'),
-             he = require('he');
+             he = require('he'),
+         dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = (config, bsync) => () => {
 
@@ -129,6 +132,7 @@ module.exports = (config, bsync) => () => {
       cmsData[getName(file).cml]=content;
     });
 
+
      /**
      * Register components
      */
@@ -159,6 +163,8 @@ module.exports = (config, bsync) => () => {
     var defaultPageTemplate = fs.readFileSync(`${config.srcDir}/render/templates/page.html`,'utf-8');
     contentMdPagesFiles.forEach((file) => {
         var rawContent = fs.readFileSync(file,'utf-8');
+
+        if(!fs.existsSync(config.tmpDir)) fs.mkdirSync(config.tmpDir);
 
         // extract front matter variable from content
         metadata = frontMatter(rawContent);
