@@ -10,6 +10,7 @@ before_script:
 - bower install
 script: git fetch origin gh-pages; git checkout -b gh-pages; git checkout master;
 cache:
-- node_modules
-- bower_components
+  directories:
+  - node_modules
+  - bower_components
   
