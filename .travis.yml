@@ -8,7 +8,7 @@ before_script:
 - npm install -g bower
 - npm install gulp
 - bower install
-script: git --version
+script: git fetch origin ; git chekout gh-pages
 cache:
   directories:
   - node_modules
