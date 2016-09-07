@@ -6,7 +6,7 @@ branches:
   - master
 before_script:
 - npm install -g bower
-- npm install -g gulp
+- npm install gulp
 - npm install
 - bower install
 script:  gulp build:gh-pages
