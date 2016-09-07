@@ -133,7 +133,7 @@ gulp.task('build:serve', gulpsync(buildServeStack) )
 
 
 const buildGhPages = buildStack.map((e)=>e).concat([
-    'git=co:gh-pages','clean:gh-page','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git=co:master'])
+    'git:co:gh-pages','clean:gh-page','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git:co:master'])
 
 gulp.task('build:gh-pages',gulpsync(buildGhPages));
 
