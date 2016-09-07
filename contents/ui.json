@@ -61,7 +61,7 @@
   },
 
   "partners":[
-    {"label":"Ville de Lille","url":"http://www.lille.fr/","logo":"images/partners/logo-ville-lille.jpg"},
+    {"label":"Ville de Lille","url":"http://www.lille.fr/","logo":"images/partners/logo-lille.jpg"},
     {"label":"Lille métropole","url":"http://www.lillemetropole.fr/sites/lmcu/mel.html","logo":"images/partners/lmcu-78x60.png"}
   ],
 
