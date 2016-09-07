@@ -1,4 +1,6 @@
 # Ont contribué à ce projet
 
-[Vincent Sandt](https://github.com/vqoph)
-Design, Integration de la v1, moteur de gestion de contenu
+
+[Lucie Baratte](http://www.kaleidoscopeye.com/), Logo, Charte graphique
+
+[Vincent Sandt](https://github.com/vqoph), Web Design, moteur de gestion de contenu, intégration
