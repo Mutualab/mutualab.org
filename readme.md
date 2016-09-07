@@ -5,39 +5,7 @@ Site de l'espace de coworking mutualab
  - Le projet est un site statique généré avec gulp
 
 
-## Développement 
-Les pré-requis : 
-  - Nodejs
-  - Bower
-  - Gulp
 
-### Installer le projet en développement
- - Cloner le repo : `git clone https://github.com/Mutualab/mutualab.org.git`
- - Installer les dépendances du build tool de développement :  `npm install` à executer à la racine du repo
- - Installer les dépendances du site `bower install`
- - Pour executer le projet en dev :  `gulp watch`
- - Pour générer le site :  `gulp build`
-
-### Structure du projet
-
-```
-.
-|-contents                ->  Contenus modifiables 
-|---pages                 ->  Pages dynamiques
-|-gulp                    ->  Taches Gulp
-|-src                     ->  Sources du site
-|---fonts                 ->  Typographies
-|---images                ->  Images du site 
-|---ng                    ->  Logique cliente ( AngularJs )
-|-----templates           ->  Templates client ( AngularJs )
-|---render                ->  Pages serveur ( Nunjucks )
-|-----components          ->  Composant utilisable dans les fichier `.md` ( Nunjucks )
-|-----templates           ->  Templates des pages dynammiques ( Nunjucks )
-|-----views               ->  Templates serveur ( Nunjucks )
-|---sass                  ->  Styles de l'application ( Scss )
-|-----components          ->  Styles des composants ( Scss )
-|-----pages               ->  Styles des pages ( Scss )
-```
 
 ## Modifier les contenus du site
 ### Généralités 
@@ -87,6 +55,42 @@ permet d'afficher un gros bouton
 [%components.callToAction({label:"<texte-du-bouton>",url:"<adresse-du-bouton>"%]
 ```
 
+
+## Contribuer
+
+### Pré-requis : 
+  - Nodejs
+  - Bower
+  - Gulp
+
+
+### Installer le projet en développement
+ - Cloner le repo : `git clone https://github.com/Mutualab/mutualab.org.git`
+ - Installer les dépendances du build tool de développement :  `npm install` à executer à la racine du repo
+ - Installer les dépendances du site `bower install`
+ - Pour executer le projet en dev :  `gulp watch`
+ - Pour générer le site :  `gulp build`
+
+### Structure du projet
+
+```
+.
+|-contents                ->  Contenus modifiables 
+|---pages                 ->  Pages dynamiques
+|-gulp                    ->  Taches Gulp
+|-src                     ->  Sources du site
+|---fonts                 ->  Typographies
+|---images                ->  Images du site 
+|---ng                    ->  Logique cliente ( AngularJs )
+|-----templates           ->  Templates client ( AngularJs )
+|---render                ->  Pages serveur ( Nunjucks )
+|-----components          ->  Composant utilisable dans les fichier `.md` ( Nunjucks )
+|-----templates           ->  Templates des pages dynammiques ( Nunjucks )
+|-----views               ->  Templates serveur ( Nunjucks )
+|---sass                  ->  Styles de l'application ( Scss )
+|-----components          ->  Styles des composants ( Scss )
+|-----pages               ->  Styles des pages ( Scss )
+```
 
 
 
