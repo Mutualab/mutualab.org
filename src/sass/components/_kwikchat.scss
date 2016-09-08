@@ -5,6 +5,12 @@
     display:none;
   }
 
+  .launcher__button{
+    background-image: url(../images/bob.png);
+    background-position: top center;
+    background-size: cover;
+  }
+
   .profile__app:after{
     content:"Posez vos questions, un des coworkers présent pourra vous répondre";
     text-align:center;
