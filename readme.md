@@ -1,7 +1,5 @@
 # Site internet du mutualab
 
-Site de l'espace de coworking mutualab
-
 
 ## Modifier les contenus du site
 ### Généralités 
