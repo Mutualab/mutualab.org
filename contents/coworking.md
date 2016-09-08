@@ -13,7 +13,7 @@ Pour toutes questions, il y a la FAQ, notre [courriel](mailto:mutualab@coworking
 # Mutualab, c’est aussi :
 *   Du thé et du café** sans limite, pour la productivité
 *   Une **cuisine** équipée, pour la convivialité
-*   2 petites salles de réunion** pour recevoir vos clients et partenaires en toute confidentialité
+*   3 salles de réunion** pour recevoir vos clients et partenaires en toute confidentialité
 *   Des **espaces de détente** : une table de ping pong, une bibliothèque, une salle de jeux et une console de jeux en Arcade.
 
 **Et surtout des rencontres, des découvertes et des moments partagés avec toute la communauté !**
