@@ -2,10 +2,6 @@
 
 Site de l'espace de coworking mutualab
 
- - Le projet est un site statique généré avec gulp
-
-
-
 
 ## Modifier les contenus du site
 ### Généralités 
