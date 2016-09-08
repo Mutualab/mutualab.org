@@ -10,12 +10,15 @@ jslint = require('gulp-jslint');
 changed = require('gulp-changed')
 
 module.exports = (config) => {
-  return function() {
-    return gulp.src(config.tmpDir + "/*.html").pipe(usemin({
-      css: [cssmin],
-      js:  [uglify],
+  return ()=> {
+    return gulp.src(config.tmpDir + "/*.html")
+    .pipe(usemin({
+      css: [(()=>{ return cssmin() })],
+      js:  [(()=>{ return uglify() })],
       html:[htmlmin],
       inlineJs:  [uglify],
-    })).pipe(gulp.dest(config.buildDir));
+    }))
+    .pipe(changed(config.buildDir))
+    .pipe(gulp.dest(config.buildDir));
   };
 };
