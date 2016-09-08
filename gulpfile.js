@@ -76,6 +76,13 @@ gulp.task('git:commit:gh-pages',()=>{
          );
 })
 
+// Working tree status
+gulp.task('status', function(){
+  git.status({args: '--porcelain'}, function (err, stdout) {
+    if (err) throw err;
+    console.log(stdout)
+  });
+});
 
 gulp.task('git:push:gh-pages',(done)=>{
   git.push('origin', 'gh-pages',{},(err)=>{
