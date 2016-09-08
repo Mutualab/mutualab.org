@@ -21,3 +21,4 @@ cache:
 
 notifications:
   email: false
+  slack: mutualab:5SoNAVBR0TKFLgjhsiFetwER
