@@ -7,6 +7,7 @@ const       gulp = require('gulp'),
            watch = require('gulp-watch'),
             del  = require('del'),
              git = require('gulp-git'),
+          gulpif = require('gulp-if'),
         gulpsync = require('gulp-sync')(gulp).sync;
 
 const  lib = require('./gulp')
@@ -32,16 +33,16 @@ const config = {
  * Init tasks stored in ./gulp folder
  */
 
-gulp.task( "sass"         , lib.sass(config, bsync) );
-gulp.task( 'contents'     , lib.contents(config, bsync) );
-gulp.task( 'ngTemplates'  , lib.ngTemplates(config, bsync) );
-gulp.task( "js"           , lib.javascript(config, bsync) );
-gulp.task( 'wiredep'      , lib.wiredep(config , bsync) );
-gulp.task( 'images'       , lib.images(config , bsync) );
-gulp.task( 'fonts'        , ['contents'], lib.fonts(config , bsync) );
-gulp.task( 'minify'       , lib.minify(config) );
-gulp.task( 'clean:tmp'    , lib.clean(config,"tmpDir") );
-gulp.task( 'clean:build'  , lib.clean(config,"buildDir") );
+gulp.task( "sass"          , lib.sass(config, bsync) );
+gulp.task( 'contents'      , lib.contents(config, bsync) );
+gulp.task( 'ngTemplates'   , lib.ngTemplates(config, bsync) );
+gulp.task( "js"            , lib.javascript(config, bsync) );
+gulp.task( 'wiredep'       , lib.wiredep(config , bsync) );
+gulp.task( 'images'        , lib.images(config , bsync) );
+gulp.task( 'fonts'         , ['contents'], lib.fonts(config , bsync) );
+gulp.task( 'minify'        , lib.minify(config) );
+gulp.task( 'clean:tmp'     , lib.clean(config,"tmpDir") );
+gulp.task( 'clean:build'   , lib.clean(config,"buildDir") );
 gulp.task( 'clean:gh-pages', lib.clean(config,"ghPages") );
 
 
@@ -49,8 +50,6 @@ gulp.task( 'clean:gh-pages', lib.clean(config,"ghPages") );
 /**
  * Prepare for dist
  */
-
-
 
 gulp.task('prepare',()=>{
   return gulp.src([
