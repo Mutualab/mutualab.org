@@ -72,7 +72,7 @@ gulp.task('git:commit:gh-pages',()=>{
          .pipe(git.add())
          .pipe(git.commit("Automatic publication",{
                 disableAppendPaths: true
-           })   
+           }).on('error',console.log)
          );
 })
 
