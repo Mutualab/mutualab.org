@@ -1,8 +1,9 @@
 # Site internet du mutualab
+[![Build Status](https://travis-ci.org/Mutualab/mutualab.org.svg?branch=master)](https://travis-ci.org/Mutualab/mutualab.org)
 
 Site de l'espace de coworking mutualab
 
-status : [![Build Status](https://travis-ci.org/Mutualab/mutualab.org.svg?branch=master)](https://travis-ci.org/Mutualab/mutualab.org)
+
 
 
 ## Modifier les contenus du site
