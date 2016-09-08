@@ -8,10 +8,10 @@ header.main-header {
   &{
     position:relative;
     overflow: hidden;
-    min-height:30%;
-    padding:30% 0;
+    min-height:20%;
+    padding:25% 0;
     @media(min-width: 960px){
-      padding:10% 0;
+      padding:9% 0;
     }
   }
 
@@ -34,6 +34,15 @@ header.main-header {
     background-repeat: no-repeat;
     background-size: cover;
     z-index:-1;
+    transition:opacity .5s;
+
+    &.bg-anim{
+      z-index:-2;
+    }
+
+    &.fadeOut{
+      opacity:0;
+    }
     //filter:blur(2px);
   }
 
@@ -61,11 +70,15 @@ header.main-header {
   }
 
   img.logo{
-    width : 45%;
+    width : 40%;
     margin:0 auto;
     display: block;
     @media(max-width: 760px){
       width : 90%;
+    }
+
+    @media(min-width: $screen-lg-min){
+      width : 30%;
     }
 
   }

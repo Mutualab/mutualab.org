@@ -42,11 +42,13 @@
 }
 
 .summary-home {
+
   &.ui-scrollpoint .inner-section:before{
     transform: rotate(30deg);
   }
 
   .inner-section{
+    padding-top: 3em;
     background: $blue;
     padding-bottom:4em;
 

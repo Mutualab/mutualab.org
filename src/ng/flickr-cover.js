@@ -7,19 +7,36 @@ var app = angular.module('flickr-cover',['templates']);
 app.constant('flickrApiKey',"__FLICKR_API_KEY__")
 
 
-app.directive('flickrImg',['FlickrImagesSearch','FlickrImage','FlkrUtils',
-                   function(FlickrImagesSearch,  FlickrImage,  FlkrUtils){
+app.directive('flickrImg',['FlickrImagesSearch','FlickrImage','FlkrUtils','$interval','$timeout',
+                   function(FlickrImagesSearch,  FlickrImage,  FlkrUtils,  $interval,$timeout){
   return {
     restrict:'A',
-    scope:{search:"@",author:"="},
+    scope:{search:"@",flkModel:"="},
     link:function(scope,elt,attr){
+
+      scope.flkModel = scope.flkModel || {}
+      var images = [];
+      function randomImage(){
+        FlickrImage(FlkrUtils.randomElt(images).id)
+          .then(function(data){
+            scope.flkModel.backgroundOldImage = scope.flkModel.backgroundImage || null
+            if(scope.flkModel.backgroundOldImage) elt.addClass('fadeOut');
+
+            $timeout(function(){
+              scope.flkModel.backgroundImage = "url("+data.url+")";
+              scope.flkModel.author = data.author;
+              elt.removeClass('fadeOut');
+            },1500)
+          });
+      }
+
       FlickrImagesSearch.get(attr.search)
-      .then(function(images){
-        FlickrImage(FlkrUtils.randomElt(images).id).then(function(data){
-          elt.css('background-image',"url("+data.url+")");
-          scope.author = data.author;
-        });
-      })
+      .then(function(imageResponse){
+        images = imageResponse;
+        randomImage();
+      });
+
+      $interval(randomImage,8000)
     }      
   };
 }]);
@@ -51,8 +68,10 @@ app.service('FlickrImagesSearch',['$http','$q','flickrApiKey',
 
 app.factory('FlickrImage',['$http','$q','flickrApiKey',
                    function($http,  $q,  flickrApiKey){
-    var defrd = $q.defer();
+  
+
   return function(flickrImageId){
+    var defrd = $q.defer();
     var requestUrl = "https://api.flickr.com/services/rest/"+
                  "?method=flickr.photos.getInfo&api_key="+flickrApiKey+
                  "&photo_id="+flickrImageId+"&format=json&nojsoncallback=1";

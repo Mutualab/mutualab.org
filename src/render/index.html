@@ -7,15 +7,17 @@
         <img class="logo" src="images/logo-mutualab.svg" title="{{= ui.header.logoTitle }}"/>
         <h3>{{= ui.header.introHeader }}</h3>
     </div>
-    <div class="background-header" flickr-img search="mutualab" author="author"></div>
-    <a class="author-infos" ng-show="author" href="{{author.profile}}" target="_blank">
-        <img ng-src="{{author.pic}}" alt="Photo de {{author.name}}">
-        <span>Photo de {{author.name}}</span>
+    <div class="background-header bg-anim"  style="background-image:{{ flk.backgroundOldImage }}"></div>
+    <div class="background-header" flickr-img search="mutualab" flk-model="flk" style="background-image:{{ flk.backgroundImage }}"></div>
+    <a class="author-infos" ng-show="flk.author" href="{{flk.author.profile}}" target="_blank">
+        <img ng-src="{{flk.author.pic}}" alt="Photo de {{flk.author.name}}">
+        <span>Photo de {{flk.author.name}}</span>
     </a>
   </header>
 
 
   <section class="main-content">
+     {% include "views/menu.html" %}
     <article id="summary" class="summary-home invert" ui-scrollpoint>
       <div class="inner-section background-rotate">
         <div class="container">
@@ -27,7 +29,7 @@
     </article>
     
 
-    {% include "views/menu.html" %}
+   
     <article id="coworking" class="coworking-section view-section invert" ui-scrollpoint>
       <div class="inner-section background-rotate">
         <div class="container">
