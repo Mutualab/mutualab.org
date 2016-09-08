@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "^3.1.0",
     "angular": "^1.5.3",
     "bootstrap": "^3.3.7",
     "angular-ui-scrollpoint": "^2.1.1",

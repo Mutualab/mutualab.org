@@ -8,7 +8,9 @@ const       gulp = require('gulp'),
             del  = require('del'),
              git = require('gulp-git'),
           gulpif = require('gulp-if'),
-        gulpsync = require('gulp-sync')(gulp).sync;
+        gulpsync = require('gulp-sync')(gulp).sync,
+          uglify = require('gulp-uglify');
+          cssmin = require('gulp-clean-css');
 
 const  lib = require('./gulp')
 
@@ -58,6 +60,21 @@ gulp.task('prepare',()=>{
          .pipe(gulp.dest(config.buildDir))
 });
 
+gulp.task('uglify:js',()=>{
+  return gulp.src([`${config.buildDir}/**/*.js`])
+         .pipe(uglify())
+         .pipe(gulp.dest(config.buildDir))
+});
+
+gulp.task('uglify:css',()=>{
+  return gulp.src([`${config.buildDir}/**/*.css`])
+         .pipe(cssmin())
+         .pipe(gulp.dest(config.buildDir))
+});
+
+gulp.task('uglify',['uglify:js','uglify:css']);
+
+
 gulp.task('git:co:gh-pages',(done)=>{
   git.checkout('gh-pages',{},(err)=>{
     if (err) throw err;
@@ -70,6 +87,7 @@ gulp.task('git:commit:gh-pages',()=>{
   return gulp.src(["./css/**/*","./fonts/**/*","./images/**/*","./js/**/*","./*.html"])
          .pipe(git.add())
          .pipe(git.commit("Automatic publication",{
+                args:"--allow-empty",
                 disableAppendPaths: true
            }).on('error',console.log)
          );
@@ -143,7 +161,7 @@ gulp.task('reload',()=>{
 const defaultStack = ['contents','sass','wiredep','ngTemplates','js','images','fonts']
 gulp.task('default', defaultStack)
 
-const buildStack = defaultStack.map((e)=>e).concat(['minify','prepare'])
+const buildStack = defaultStack.map((e)=>e).concat(['minify','uglify','prepare'])
 buildStack.unshift('clean:tmp','clean:build')
 gulp.task('build', gulpsync(buildStack) )
 

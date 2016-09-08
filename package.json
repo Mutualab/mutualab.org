@@ -36,6 +36,7 @@
     "gulp-jslint": "^1.0.5",
     "gulp-livereload": "^3.8.1",
     "gulp-minify-html": "^1.0.6",
+    "gulp-newer": "^1.2.0",
     "gulp-ng-html2js": "^0.2.2",
     "gulp-nunjucks": "^2.2.0",
     "gulp-nunjucks-api": "^0.7.0",
