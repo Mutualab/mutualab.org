@@ -45,26 +45,36 @@
  * Datepicker element
  */
 
-.datepicker.dropdown-menu {
-  max-width: 300px !important;
-  height: 270px;
-  button {
-    outline: none;
-    border: 0px;
-  }
-  tbody {
-    height: 180px;
-  }
-  tbody button {
-    padding: 6px;
-  }
-  &.datepicker-mode-1, &.datepicker-mode-2 {
+.datepicker, .timepicker {
+  &.dropdown-menu{
+    max-width: 300px !important;
+    button {
+      outline: none;
+      border: 0;
+    }
+    tbody {
+      height: 180px;
+    }
     tbody button {
-      height: 65px;
+      padding: 6px;
+    }
+    
+    td, th{
+      border:0;
+      padding:0;
     }
   }
-  td, th{
-    border:none;
-    padding:0;
-  }
 }
+
+.datepicker.dropdown-menu{
+  height: 270px;
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+      tbody button {
+        height: 65px;
+      }
+    }
+}
+
+
+
+

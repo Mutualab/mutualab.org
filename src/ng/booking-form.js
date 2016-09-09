@@ -2,14 +2,15 @@ angular.module('booking-form',[
     'mgcrea.ngStrap.tooltip',
     'mgcrea.ngStrap.helpers.dateParser',
     'mgcrea.ngStrap.datepicker',
+    'mgcrea.ngStrap.timepicker',
     'multipleSelect',
     'config',
     'slack-webhook'])
 
 .component('bookingForm', {
   controller:[
-          '$location','$http', 'Config','GetFreeDates','SlackWebhook','$filter', 
-  function($location,  $http,   Config , GetFreeDates,  SlackWebhook,  $filter){
+          '$location','$http', 'Config','GetFreeBusy','SlackWebhook','$filter', 
+  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter){
     var vm = this;
 
     /**
@@ -42,14 +43,14 @@ angular.module('booking-form',[
           vm.selectedRoom = (Config.roomCalendars.filter(function(elt){
                  return  elt._id == urlParams.room
           }))[0];
-          getDates();
+          //getDates();
      }
 
 
     /**
      * View methods
      */
-    vm.getDates= getDates
+    vm.checkBusy= checkBusy;//getDates
     vm.payload= {}
 
     vm.submitForm=function(){
@@ -112,20 +113,26 @@ angular.module('booking-form',[
      * Private controller methods
      */
 
-    function getDates(){
-        GetFreeDates(vm.selectedDate, vm.selectedRoom.calendarId).then(function(result){
-            vm.datesList = result
+    function checkBusy(){
+        var dateFrom = new Date(vm.bookingData.dateDay);
+        var dateTo = new Date(vm.bookingData.dateDay);
+
+        dateFrom.setHours(9);
+        dateTo.setHours(19);
+        console.log(dateFrom,dateTo)
+
+        GetFreeBusy(dateFrom, dateTo , vm.selectedRoom.calendarId).then(function(result){
+            console.log(result)
+            vm.busy = result.calendars[vm.selectedRoom.calendarId].busy
         })
     }
-
-
     return vm;
   }],
   templateUrl:"booking-form.html"
 })
 
 
-.service('GetFreeDates',[
+.service('FetFreeEvents',[
     '$http','Config','$q',
     function($http,Config,$q){
       return function(dateFrom, calendarId){
@@ -175,6 +182,35 @@ angular.module('booking-form',[
 
           resolve(daysList)
         })
+      });
+    }
+    
+}])
+
+
+
+.service('GetFreeBusy',[
+    '$http','Config','$q',
+    function($http,Config,$q){
+      return function(dateFrom, dateTo, calendarId){
+        return $q(function(resolve){
+        
+        $http.post(
+          'https://www.googleapis.com/calendar/v3/freeBusy',
+            {
+                timeMin:dateFrom,
+                timeMax:dateTo,
+                timeZone:'Europe/Paris',
+                items:[{id:calendarId}]
+              
+            },
+            {
+                params:{key:'__GOOGLE_API_KEY__'}
+            }
+        )
+        .then(function(response){
+          resolve(response.data)
+        });
       });
     }
     

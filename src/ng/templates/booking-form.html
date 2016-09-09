@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <h3>3 - Séléctionnez la ou les périodes que vous désirez réserver :</h3>
+  <!--<h3>3 - Séléctionnez la ou les périodes que vous désirez réserver :</h3>
   <div class="row">
     <div class="col-sm-8">
       A partir de quelle date souhaitez-vous consulter les disponnibilités de cette salle ?
@@ -69,6 +69,47 @@
             </label>
         </div>    
         </div>  
+      </div>
+    </div>
+  </div>-->
+  <h3>3 - Séléctionnez une date à laquelle vous souhaitez réserver la salle</h3>
+  <div class="row">
+     <div class="col-sm-4" id="select-date">
+      <div class="form-group">
+
+        <input type="text" class="form-control" ng-model="$ctrl.bookingData.dateDay" 
+               name="date" autoclose="true" ng-change="$ctrl.checkBusy()"
+               bs-datepicker use-native="true">
+      </div>
+    </div>
+     <div class="col-sm-4" id="select-date">
+      <div class="form-group">
+
+        <input type="text" class="form-control" ng-model="$ctrl.bookingData.timeFrom" 
+               name="date" autoclose="true"
+               bs-timepicker use-native="true">
+      </div>
+    </div>
+    <div class="col-sm-4" id="select-date">
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="$ctrl.bookingData.timeTo" 
+               name="date" autoclose="true"
+               bs-timepicker use-native="true">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning" ng-show="$ctrl.busy.length">
+        Cette salle est réservée
+        <span ng-repeat="range in $ctrl.busy track by $index">
+          de {{range.start|date:'HH:mm'}} à {{range.end|date:'HH:mm'}} 
+          {{$ctrl.busy.length > 1 && $ctrl.busy.length != $index+1 ? ',':''}}
+          {{$ctrl.busy.length > 1 && $ctrl.busy.length == $index ? 'et':''}}
+        </span>
+      </div>
+      <div class="alert alert-success" ng-show="$ctrl.busy && !$ctrl.busy.length">
+        La salle est libre toute la journée
       </div>
     </div>
   </div>
