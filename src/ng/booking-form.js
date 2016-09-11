@@ -21,11 +21,11 @@ angular.module('booking-form',[
     vm.selectedDate = new Date();
     vm.rooms = Config.roomCalendars;
     vm.bookingData = {
-      company:"Test company",
-      organizer:"Test Organisateur",
-      email:"lorem@ipsum.dolor",
-      phone:"0000000000",
-      description:"Pour emphysiquer l'animalculisme, la force de toute la République Démocratique du Congo tarde à établir la renaissance africaine propre(s) aux congolais, Bonne Année. Parallèlement, le colloque éventualiste sous cet angle là oblige à informatiser la bijectivité avéré(e)(s), bonnes fêtes. Quand on parle de relaxation, la contextualisation autour de l'ergonométrie peut incristaliser mes frères propres propre(s) aux congolais, merci."
+      //company:"Test company",
+      //organizer:"Test Organisateur",
+      //email:"lorem@ipsum.dolor",
+      //phone:"0000000000",
+      //description:"Pour emphysiquer l'animalculisme, la force de toute la République Démocratique du Congo tarde à établir la renaissance africaine propre(s) aux congolais, Bonne Année. Parallèlement, le colloque éventualiste sous cet angle là oblige à informatiser la bijectivité avéré(e)(s), bonnes fêtes. Quand on parle de relaxation, la contextualisation autour de l'ergonométrie peut incristaliser mes frères propres propre(s) aux congolais, merci."
     };
     vm.bookingData.prestationsList = Config.prestationsList
     vm.minDateDay = new Date();
