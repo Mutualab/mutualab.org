@@ -14,7 +14,7 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Association ou entreprise</label>
-        <input type="text" class="form-control" 
+        <input type="text" class="form-control"  
                ng-model="$ctrl.bookingData.company" ng-required="true">
       </div>
       <div class="form-group">
@@ -44,72 +44,63 @@
       </div>
     </div>
   </div>
-  <!--<h3>3 - Séléctionnez la ou les périodes que vous désirez réserver :</h3>
-  <div class="row">
-    <div class="col-sm-8">
-      A partir de quelle date souhaitez-vous consulter les disponnibilités de cette salle ?
-    </div>
-    <div class="col-sm-4" id="select-date">
-      <div class="form-group">
-        <input type="text" class="form-control" ng-model="$ctrl.selectedDate" 
-               name="date" autoclose="true"
-               bs-datepicker use-native="true" ng-change="$ctrl.getDates()">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="date-selection">
-        <div class="day-group" ng-repeat="dayGroup in $ctrl.datesList">
-          <h5>{{dayGroup[0].start.dateTime|date:"EEEE dd MMMM yyyy"}}</h5>
-          <div class="checkbox" ng-repeat="date in dayGroup">
-            <label>
-              <input type="checkbox" ng-model="date.selected">
-              de {{date.start.dateTime|date:"HH:mm"}} à {{date.end.dateTime|date:"HH:mm"}}
-            </label>
-        </div>    
-        </div>  
-      </div>
-    </div>
-  </div>-->
+
   <h3>3 - Séléctionnez une date à laquelle vous souhaitez réserver la salle</h3>
   <div class="row">
      <div class="col-sm-4" id="select-date">
       <div class="form-group">
-
         <input type="text" class="form-control" ng-model="$ctrl.bookingData.dateDay" 
-               name="date" autoclose="true" ng-change="$ctrl.checkBusy()"
-               bs-datepicker use-native="true">
+               name="dateDay" autoclose="true" ng-change="$ctrl.checkBusy()"
+               bs-datepicker placeholder="Séléctionnez un jour"
+               star-week="1" days-of-week-disabled="0" data-min-date="{{$ctrl.minDateDay}}"
+               ng-required="true">
       </div>
     </div>
      <div class="col-sm-4" id="select-date">
       <div class="form-group">
 
-        <input type="text" class="form-control" ng-model="$ctrl.bookingData.timeFrom" 
-               name="date" autoclose="true"
-               bs-timepicker use-native="true">
+
+        <select 
+               class="form-control" 
+               ng-model="$ctrl.bookingData.timeFrom"
+               ng-show="!!$ctrl.bookingData.dateDay && $ctrl.dateStartRanges.length"
+               ng-options="date as date.format('HH:mm') for date in $ctrl.dateStartRanges"
+               ng-change="$ctrl.setUpMaxEndDate()"
+               ng-required="true"
+               >
+              <option value="">Heure de début</option>
+        </select>
       </div>
     </div>
     <div class="col-sm-4" id="select-date">
       <div class="form-group">
-        <input type="text" class="form-control" ng-model="$ctrl.bookingData.timeTo" 
-               name="date" autoclose="true"
-               bs-timepicker use-native="true">
+        <select 
+               class="form-control" 
+               ng-model="$ctrl.bookingData.timeTo"
+               ng-show="!!$ctrl.bookingData.timeFrom"
+               ng-options="date as date.format('HH:mm') for date in $ctrl.dateEndRanges"
+               ng-required="true">
+              <option value="">Heure de Fin</option>
+        </select>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="alert alert-warning" ng-show="$ctrl.busy.length">
-        Cette salle est réservée
+      <div class="alert alert-warning" ng-show="$ctrl.busy.length && $ctrl.dateStartRanges.length">
+        Pour la journée du {{$ctrl.bookingData.dateDay|date:'dd/MM/yyyy'}}
+        cette salle est réservée
         <span ng-repeat="range in $ctrl.busy track by $index">
-          de {{range.start|date:'HH:mm'}} à {{range.end|date:'HH:mm'}} 
-          {{$ctrl.busy.length > 1 && $ctrl.busy.length != $index+1 ? ',':''}}
-          {{$ctrl.busy.length > 1 && $ctrl.busy.length == $index ? 'et':''}}
+          {{$ctrl.busy.length > 1 && $ctrl.busy.length-1 == $index ? '&nbsp;et':''}}
+          {{$ctrl.busy.length > 1 && $ctrl.busy.length != $index+1 && $index ? ',':''}}
+          &nbsp;de {{range.start|date:'HH:mm'}} à {{range.end|date:'HH:mm'}}
         </span>
       </div>
       <div class="alert alert-success" ng-show="$ctrl.busy && !$ctrl.busy.length">
-        La salle est libre toute la journée
+        La salle est libre toute la journée 
+      </div>
+       <div class="alert alert-danger" ng-show="!$ctrl.dateStartRanges.length && $ctrl.busy.length">
+        Aucune plage libre à cette date
       </div>
     </div>
   </div>

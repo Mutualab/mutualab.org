@@ -1,4 +1,5 @@
 angular.module('booking-form',[
+    'ng-wrappers',
     'mgcrea.ngStrap.tooltip',
     'mgcrea.ngStrap.helpers.dateParser',
     'mgcrea.ngStrap.datepicker',
@@ -9,8 +10,8 @@ angular.module('booking-form',[
 
 .component('bookingForm', {
   controller:[
-          '$location','$http', 'Config','GetFreeBusy','SlackWebhook','$filter', 
-  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter){
+          '$location','$http', 'Config','GetFreeBusy','SlackWebhook','$filter','Moment','_',
+  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter, Moment,   _){
     var vm = this;
 
     /**
@@ -20,13 +21,14 @@ angular.module('booking-form',[
     vm.selectedDate = new Date();
     vm.rooms = Config.roomCalendars;
     vm.bookingData = {
-      //company:"Test company",
-      //organizer:"Test Organisateur",
-      //email:"lorem@ipsum.dolor",
-      //phone:"0000000000",
-      //description:"Pour emphysiquer l'animalculisme, la force de toute la République Démocratique du Congo tarde à établir la renaissance africaine propre(s) aux congolais, Bonne Année. Parallèlement, le colloque éventualiste sous cet angle là oblige à informatiser la bijectivité avéré(e)(s), bonnes fêtes. Quand on parle de relaxation, la contextualisation autour de l'ergonométrie peut incristaliser mes frères propres propre(s) aux congolais, merci."
+      company:"Test company",
+      organizer:"Test Organisateur",
+      email:"lorem@ipsum.dolor",
+      phone:"0000000000",
+      description:"Pour emphysiquer l'animalculisme, la force de toute la République Démocratique du Congo tarde à établir la renaissance africaine propre(s) aux congolais, Bonne Année. Parallèlement, le colloque éventualiste sous cet angle là oblige à informatiser la bijectivité avéré(e)(s), bonnes fêtes. Quand on parle de relaxation, la contextualisation autour de l'ergonométrie peut incristaliser mes frères propres propre(s) aux congolais, merci."
     };
     vm.bookingData.prestationsList = Config.prestationsList
+    vm.minDateDay = new Date();
     /**
      * Get url params
      */
@@ -51,7 +53,37 @@ angular.module('booking-form',[
      * View methods
      */
     vm.checkBusy= checkBusy;//getDates
-    vm.payload= {}
+    vm.payload= {};
+
+    var gcRanges = null
+    vm.setUpMaxEndDate =function(){
+      var startRange = new Date(vm.bookingData.timeFrom)
+      var endRange   = new Date(vm.bookingData.timeFrom);
+      endRange.setHours(19);
+
+
+      var matchedEnd = false;
+      
+      if(gcRanges) gcRanges.forEach(function(dateRange){
+        var start = new Date(dateRange.start)
+        if(startRange < start && !matchedEnd){
+            endRange = start;matchedEnd=true;
+        }
+      });
+
+     
+
+     startRange = Moment(startRange);
+     endRange   = Moment(endRange);
+
+     startRange.add(20,'minutes');
+     //endRange.subtract(10,'minutes');
+
+     var range  = Moment.range([startRange,endRange])
+     vm.dateEndRanges = range.toArray('minutes').filter(toHalfHour);
+
+    };
+
 
     vm.submitForm=function(){
       
@@ -59,23 +91,12 @@ angular.module('booking-form',[
                               .filter(function(elt){ return elt.selected })
                               .map(function(elt){ return elt.label });
 
-      var booked = vm.datesList.map(function(elt){return elt});
-      booked =  booked.reduce(function(p,n){
-                            return p.concat(n);
-                        },[]);
-      
-      booked = booked
-            .filter(function(elt){return elt.selected;})
-            .map(function(elt){
-              var bookingHour = 
-                     ""+ $filter('date')(elt.start.dateTime,"dd/MM/yyyy") +
-                     " de "+ $filter('date')(elt.start.dateTime,"HH:mm") +
-                     " à "+ $filter('date')(elt.end.dateTime, "HH:mm");
+      var booked = "le "+ Moment(vm.bookingData.dateDay).format('DD/MM/YYYY')+ ' de '+
+                                 Moment(vm.bookingData.timeFrom).format('HH:mm')+ ' à '+
+                                 Moment(vm.bookingData.timeTo).format('HH:mm');
 
-                return "<"+elt.htmlLink+"|"+bookingHour+">";
-            })
-
-      vm.payload={
+      console.log(booked);
+      var payload={
         "text":"*Nouvelle reservation de salle*",
         "attachments": [
             {
@@ -91,7 +112,7 @@ angular.module('booking-form',[
             { 
               "color":"good",
               "title": "Reservation(s)",
-              "text":  booked.join("\n"),
+              "text": booked,
               "mrkdwn_in": ["text"]
             },
             { 
@@ -101,91 +122,83 @@ angular.module('booking-form',[
         ],
         "mrkdwn": true
       }
-      SlackWebhook.post(vm.payload)
+      
+      SlackWebhook.post(payload)
       .then(function(response){
         vm.slackResponse = response;
+        vm.bookingData = {}
       })
     };
-
 
 
     /** 
      * Private controller methods
      */
-
+    
+    function toHalfHour(eltDate){
+        var minutes = Moment(eltDate).format('mm');
+        var valid =  minutes == '00' || minutes == '30';
+        return valid;
+    }
+ 
     function checkBusy(){
         var dateFrom = new Date(vm.bookingData.dateDay);
         var dateTo = new Date(vm.bookingData.dateDay);
 
         dateFrom.setHours(9);
-        dateTo.setHours(19);
-        console.log(dateFrom,dateTo)
+        dateTo.setHours(18);
 
-        GetFreeBusy(dateFrom, dateTo , vm.selectedRoom.calendarId).then(function(result){
-            console.log(result)
-            vm.busy = result.calendars[vm.selectedRoom.calendarId].busy
+
+
+        GetFreeBusy(dateFrom, dateTo , vm.selectedRoom.calendarId)
+        .then(function(result){
+
+          vm.bookingData.timeFrom = null
+          vm.bookingData.timeTo = null
+
+          if(result.calendars[vm.selectedRoom.calendarId]){
+              gcRanges = result.calendars[vm.selectedRoom.calendarId].busy
+              vm.busy = gcRanges;
+              var hoursRange = Moment.range(dateFrom, dateTo);
+
+              gcRanges.forEach(function(gcFormatedRange){
+                var start = Moment(gcFormatedRange.start)
+                var end = Moment(gcFormatedRange.end)
+
+                start.subtract(20,'minutes');
+                end  .add(0,'minutes');
+
+                var gcRange = Moment.range([start,end]);
+
+                if(typeof hoursRange.subtract == 'function'){
+                  hoursRange = hoursRange.subtract(gcRange);
+                }else{
+                  hoursRange = _.flatten(hoursRange.map(function(currentRange){
+                    newRange =  currentRange.subtract(gcRange);
+                    return newRange;
+                  }))
+                }
+                
+              });
+
+              var viewRange = [];
+              if(!hoursRange.start){
+                hoursRange.forEach(function(currentRange){
+                  halfHours = currentRange.toArray('minutes')
+                  viewRange = viewRange.concat(halfHours);
+                })
+              }else{
+                viewRange = hoursRange.toArray('minutes');
+              }
+
+              vm.dateStartRanges = viewRange.filter(toHalfHour) 
+          }
         })
     }
     return vm;
   }],
   templateUrl:"booking-form.html"
 })
-
-
-.service('FetFreeEvents',[
-    '$http','Config','$q',
-    function($http,Config,$q){
-      return function(dateFrom, calendarId){
-        return $q(function(resolve){
-        var today = new Date();
-
-        if(dateFrom > today){
-          dateFrom.setHours(9);
-        }
-
-        
-
-        var timemax = (new Date(dateFrom))
-        timemax.setDate((new Date(timemax)).getDate() + 14);
-
-        $http.get(
-          'https://www.googleapis.com/calendar/v3/calendars/'+calendarId+'/events',
-            {
-              params:{
-                key:'__GOOGLE_API_KEY__',
-                orderBy:'startTime',
-                singleEvents:true,
-                timeMin:dateFrom,
-                timeMax:timemax,
-                timeZone:'Europe/Paris',
-              }
-            }
-        )
-        .then(function(response){
-          var filteredDates = response.data.items.filter(function(elt){
-            return elt.summary == 'libre';
-          });
-
-          var daysList = [];
-          var lastDay = null;
-          var lastDayGroup = [];
-          filteredDates.forEach(function(elt){
-            var dayToDate = new Date(elt.start.dateTime)
-            var day = dayToDate.getDay()+''+dayToDate.getMonth()+''+dayToDate.getFullYear();
-            if(day != lastDay) {
-                if(lastDayGroup.length) daysList.push(lastDayGroup);
-                lastDay = day
-                lastDayGroup = [];
-            }
-            lastDayGroup.push(elt);
-          });
-
-          resolve(daysList)
-        })
-      });
-    }
-    
-}])
 
 
 
