@@ -8,7 +8,7 @@ Site de l'espace de coworking mutualab
 
 ## Modifier les contenus du site
 ### Généralités 
- - Pour modifier ces contenus vous devez : avoir un compte github, être autorisé à modifier le projet mutualab.org ou forker le projet et soumettre une `pull-request` 
+ - Pour modifier les contenus vous devez : avoir un compte github, être autorisé à modifier le projet mutualab.org ou forker le projet et soumettre une `pull-request` 
  - Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/), 
   Ce dossier est composé de :
     - fichiers `.json` qui permettent de modifier des configurations et les textes génériques de l'interface ( boutons, navigation etc.) [Syntaxe Json](https://en.wikipedia.org/wiki/JSON#Example).
