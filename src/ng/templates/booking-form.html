@@ -3,11 +3,12 @@
     <h3>1 - Sélectionnez une salle de réunion</h3>
     <select ng-model="$ctrl.selectedRoom" class="form-control"
             ng-options="room.name for room in $ctrl.rooms"
-            ng-change="$ctrl.getDates()">
+            ng-change="$ctrl.bookingData.dateDay = null ; $ctrl.slackResponse = null">
     </select>
   </div>
 </div>
-<form class="booking-form" ng-show="$ctrl.selectedRoom.name" name="bookingForm" ng-submit="bookingForm.$valid && $ctrl.submitForm()">
+<form class="booking-form" ng-show="$ctrl.selectedRoom.name" name="bookingForm" 
+      ng-submit="bookingForm.$valid && $ctrl.submitForm()">
   <h3>2 - Renseignez les informations concernant votre réservation</h3>
 
   <div class="row">
@@ -85,7 +86,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" ng-show="$ctrl.bookingData.dateDay">
     <div class="col-md-12">
       <div class="alert alert-warning" ng-show="$ctrl.busy.length && $ctrl.dateStartRanges.length">
         Pour la journée du {{$ctrl.bookingData.dateDay|date:'dd/MM/yyyy'}}

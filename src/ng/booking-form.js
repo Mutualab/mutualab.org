@@ -45,14 +45,14 @@ angular.module('booking-form',[
           vm.selectedRoom = (Config.roomCalendars.filter(function(elt){
                  return  elt._id == urlParams.room
           }))[0];
-          //getDates();
+          
      }
 
 
     /**
      * View methods
      */
-    vm.checkBusy= checkBusy;//getDates
+    vm.checkBusy= checkBusy;
     vm.payload= {};
 
     var gcRanges = null
