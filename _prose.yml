@@ -1,7 +1,7 @@
 prose:
   rooturl: "contents"
   siteurl: 'http://www.mutualab.org/'
-  media: 'images/'
+  media: 'contents/images/'
   ignore:
     - _prose.yml
     - /gulp
