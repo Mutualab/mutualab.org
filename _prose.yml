@@ -1,0 +1,24 @@
+prose:
+  siteurl: 'http://www.mutualab.org/'
+  media: 'src/images/'
+  ignore:
+    - _prose.yml
+    - /gulp
+    - /src
+  metadata:
+    contents/page:
+      - name: "title"
+        field: 
+          element: "text"
+          label: "titre de la page (balise title)"
+        value: "Page sans titre"
+      - name: "description"
+        field: 
+          element: "text"
+          label: "déscription de la page (meta description)"
+        value: ""
+      - name: "visible"
+        field: 
+          element: "checkbox"
+          label: "Visible par les moteurs de recherche"
+        value: true
