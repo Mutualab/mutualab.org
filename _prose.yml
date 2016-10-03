@@ -1,24 +1,33 @@
 prose:
+  rooturl: "contents"
   siteurl: 'http://www.mutualab.org/'
-  media: 'src/images/'
+  media: 'contents/images'
   ignore:
     - _prose.yml
     - /gulp
     - /src
+    - .gitignore
+    - .travis.yml
+    - mutualab.sublime-project
+    - bower.json
+    - gulpfile.js
+    - package.json
   metadata:
     contents/page:
       - name: "title"
         field: 
           element: "text"
           label: "titre de la page (balise title)"
-        value: "Page sans titre"
+          value: "Page sans titre"
       - name: "description"
         field: 
-          element: "text"
+          element: "textarea"
           label: "déscription de la page (meta description)"
-        value: ""
-      - name: "visible"
+          value: ""
+      - name: "nofollow"
         field: 
           element: "checkbox"
-          label: "Visible par les moteurs de recherche"
-        value: true
+          label: "Ne pas référencer"
+          value: false
+          on: "oui"
+          off: "non"

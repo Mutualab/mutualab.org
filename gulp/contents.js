@@ -193,6 +193,10 @@ module.exports = (config, bsync) => () => {
             metadata:metadata.attributes,
         }
         content = njkEnv.renderString(pageTemplate, cmsData);
+
+        //fix prose.io render images
+        content = content.replace(/\{\{site.baseurl\}\}\/contents\//g, '');
+
         fs.writeFileSync(`./${config.tmpDir}/${targetFilename}` , content);
 
     });

@@ -1,6 +1,7 @@
 ---
-title: Espace Marker 
-description: Espace Maker, centre ville de Lille 
+title: Espace Marker
+description: 'Espace Maker, centre ville de Lille'
+published: true
 ---
 
 
@@ -8,7 +9,7 @@ description: Espace Maker, centre ville de Lille
 
 ![banniere lille makers](images/makers/banniere-lille-makers.png)
 
-Le Mutualab accueil en son sein l’association Lille Makers.
+Le Mutualab accueille en son sein l’association Lille Makers.
 
 ---
 ### Présentation
