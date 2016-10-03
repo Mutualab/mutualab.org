@@ -1,6 +1,6 @@
 prose:
   siteurl: 'http://www.mutualab.org/'
-  media: 'src/images/'
+  media: 'contents/images/'
   ignore:
     - _prose.yml
     - /gulp
