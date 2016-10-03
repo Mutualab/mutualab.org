@@ -28,7 +28,7 @@ Ce dossier est composé de :
 
 
 #### Ajouter une image
-Allez dans le dossier [`src/images`](src/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
+Allez dans le dossier [`contents/images`](contents/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
 le chemin relatif vers l'image commence par `images/<nom-du-fichier-avec-son-extension>`
 
 
@@ -95,6 +95,7 @@ permet d'afficher un gros bouton
 ```
 .
 |-contents                ->  Contenus modifiables 
+|---images                ->  Image envoyée depuis prose.io
 |---pages                 ->  Pages dynamiques
 |-gulp                    ->  Taches Gulp
 |-src                     ->  Sources du site
