@@ -8,18 +8,28 @@ Site de l'espace de coworking mutualab
 
 ## Modifier les contenus du site
 ### Généralités 
- - Pour modifier les contenus vous devez : avoir un compte github, être autorisé à modifier le projet mutualab.org ou forker le projet et soumettre une `pull-request` 
- - Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/), 
-  Ce dossier est composé de :
+ - Pour modifier les contenus vous devez : avoir un compte github et être autorisé à modifier le projet mutualab.org ou vous pouvez aussi [soumettre une modification](#Soumettre-une-modification)
+
+Vous pouvez modifier les contenus directement sur github, ou **en vous connectant à ce site [prose.io](http://prose.io) avec votre compte github**
+
+Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/)
+
+Ce dossier est composé de :
+
     - fichiers `.json` qui permettent de modifier des configurations et les textes génériques de l'interface ( boutons, navigation etc.) [Syntaxe Json](https://en.wikipedia.org/wiki/JSON#Example).
+
     - fichiers `.md` qui permettent de modifier les contenus enrichis, à l'aide de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown) ([documentation](https://guides.github.com/features/mastering-markdown/#examples))
     - un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
 
+### Soumettre une modification
+Vous pouvez soumettre une modification sans être autorisé à modifier le projet directement.
+ - Cliquer sur le bouton (Fork en haut à droite) 
+ - Effectuer les corrections et les enregistrer
 
- NB: Vous pouvez modifier ces contenus directement sur github, il existe d'autres editeurs de fichiers .md accessibles sur internet via un compte github ou en utilisant ce site [prose.io](http://prose.io)
+
 
 ### À propos des pages générées automatiquement
-Pour chaque fichier `.md` que vous créé dans le dossier [`contents/pages`](contents/pages/) le moteur va générer une page `nom-du-fichier-md.html`vous pourrez alors la lier à une autre fichier `.md`.
+Pour chaque fichier `.md` que vous créez dans le dossier [`contents/pages`](contents/pages/) le moteur va générer une page `nom-du-fichier-md.html`vous pourrez alors l'utiliser comme lien dans un autre fichier `.md`.
 Les pages utilisent le système de configuration [Front Matter](https://jekyllrb.com/docs/frontmatter/) pour définir les métadonnées de la page (titre de la page, description pour les moteurs de recherche etc.)
 
 le modèle à respecter est le suivant :
@@ -27,11 +37,10 @@ le modèle à respecter est le suivant :
 ---
 title: Titre de la page
 description: description pour les moteurs de recherche
-nofollow: true ( optionnel, par défault = false )
+nofollow: false ( optionnel )
 ---
 ```
-### Ajouter une image au carrousel de l'accueil
-Il suffit de poster des photos en public sur flickr avec le hashtag #mutualab 
+**title** et **description** sont obligatoires, *nofollow* est optionnel
 
 ### Ajouter une image
 Allez dans le dossier [`src/images`](src/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
