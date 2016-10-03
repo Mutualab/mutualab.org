@@ -8,7 +8,7 @@ Site de l'espace de coworking mutualab
 
 ## Modifier les contenus du site
 ### Généralités 
- - Pour modifier les contenus vous devez : avoir un compte github et soumettre une modification
+ - Pour modifier les contenus vous devez : **avoir un compte github** et **soumettre une modification**
 
 ### Soumettre une modification
  - Cliquez sur le bouton **Fork** (en haut à droite) 
@@ -110,6 +110,3 @@ permet d'afficher un gros bouton
 |-----components          ->  Styles des composants ( Scss )
 |-----pages               ->  Styles des pages ( Scss )
 ```
-
-
-
