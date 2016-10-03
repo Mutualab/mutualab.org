@@ -17,14 +17,14 @@ prose:
         field: 
           element: "text"
           label: "titre de la page (balise title)"
-        value: "Page sans titre"
+          value: "Page sans titre"
       - name: "description"
         field: 
           element: "text"
           label: "déscription de la page (meta description)"
-        value: ""
+          value: ""
       - name: "visible"
         field: 
           element: "checkbox"
           label: "Visible par les moteurs de recherche"
-        value: true
+          value: true
