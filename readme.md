@@ -30,6 +30,8 @@ description: description pour les moteurs de recherche
 nofollow: true ( optionnel, par défault = false )
 ---
 ```
+### Ajouter une image au carrousel de l'accueil
+Il suffit de poster des photos en public sur flickr avec le hashtag #mutualab 
 
 ### Ajouter une image
 Allez dans le dossier [`src/images`](src/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
