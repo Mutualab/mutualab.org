@@ -41,6 +41,15 @@
     {
       "label":"Maker space",
       "url":"makerspace.html"
+    },
+    "separator",
+    {
+      "label":"Reporter un bug",
+      "url":"https://github.com/Mutualab/mutualab.org/issues"
+    },
+    {
+      "label":"Contribuer au site",
+      "url":"https://github.com/Mutualab/mutualab.org"
     }
   ]
 ]
