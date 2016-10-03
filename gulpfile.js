@@ -28,7 +28,12 @@ const config = {
       tmpDir   : ".tmp",
       contDir  : "contents",
       ghPages   : ["css","fonts","images","js","*.html"],
-      env : process.env.ENV
+      env : process.env.ENV,
+      ftp:{
+        host:    process.env.FTP_HOST,
+        user:    process.env.FTP_USER,
+        password:process.env.FTP_PASSWORD,
+      }
 };
  
 /**
@@ -46,6 +51,9 @@ gulp.task( 'minify'        , lib.minify(config) );
 gulp.task( 'clean:tmp'     , lib.clean(config,"tmpDir") );
 gulp.task( 'clean:build'   , lib.clean(config,"buildDir") );
 gulp.task( 'clean:gh-pages', lib.clean(config,"ghPages") );
+gulp.task( 'ftp:clean'     , lib.ftp(config).clean );
+gulp.task( 'ftp:send'      , lib.ftp(config).send  );
+gulp.task( 'ftp:chmod'     , lib.ftp(config).chmod );
 
 
 
@@ -73,6 +81,9 @@ gulp.task('uglify:css',()=>{
 });
 
 gulp.task('uglify',['uglify:js','uglify:css']);
+
+
+gulp.task('ftp',gulpsync(['ftp:clean','ftp:send','ftp:chmod']))
 
 
 gulp.task('git:co:gh-pages',(done)=>{
@@ -174,6 +185,11 @@ const buildGhPages = buildStack.map((e)=>e).concat([
     'git:co:gh-pages','clean:gh-pages','dist:copy','clean:build','git:commit:gh-pages','git:push:gh-pages','git:co:master'])
 
 gulp.task('build:gh-pages',gulpsync(buildGhPages));
+
+
+const buildFtp = buildStack.map((e)=>e).concat(['ftp:clean','ftp:send','ftp:chmod'])
+gulp.task('build:ftp',gulpsync(buildFtp));
+
 
 gulp.task('watch',['default'], () => {
   

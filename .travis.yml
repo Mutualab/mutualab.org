@@ -13,6 +13,7 @@ script:
 - git remote set-url origin https://${GH_TOKEN}@${GH_REF} > /dev/null 2>&1
 - git remote set-branches --add origin gh-pages
 - git fetch --all > /dev/null 2>&1
+- gulp build:ftp
 - gulp build:gh-pages
 cache:
   directories:
