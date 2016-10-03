@@ -7,7 +7,7 @@ published: true
 
 # Le Maker space
 
-![banniere lille makers](images/makers/banniere-lille-makers.png)
+![banniere lille makers]({{site.baseurl}}/images/makers/banniere-lille-makers.png)
 
 Le Mutualab accueille en son sein l’association Lille Makers.
 
