@@ -6,7 +6,8 @@ prose:
     - /gulp
     - /src
     - .gitignore
-    - .travis
+    - .travis.yml
+    - mutualab.sublime-project
     - bower.json
     - gulpfile.js
     - package.json
