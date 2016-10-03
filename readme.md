@@ -11,16 +11,16 @@ Site de l'espace de coworking mutualab
  - Pour modifier les contenus vous devez : avoir un compte github et soumettre une modification
 
 ### Soumettre une modification
- - Cliquer sur le bouton (Fork en haut à droite) 
- - Effectuer les corrections et les enregistrer
- - Dans github cliquer sur **new pull-request** 
- - Décrire les modifications, si necessaire, et cliquer sur **create pull-request** 
+ - Cliquez sur le bouton (Fork en haut à droite) 
+ - Effectuez les corrections et enregistrez-les (en vous connectant à [prose.io](http://prose.io) avec votre compte github )
+ - Quand vous avez fini, retournez dans github et cliquez sur **new pull-request** 
+ - Décrivez les modifications, si necessaire et cliquer sur **create pull-request** 
 
 
-Il est grandement conseillé de modifier les contenus **en vous connectant à ce site [prose.io](http://prose.io) avec votre compte github**
+Il est grandement conseillé de modifier les contenus **en vous connectant à [prose.io](http://prose.io) avec votre compte github**
 
 
-**Modifier les contenus sans utiliser prose**
+#### Modifier les contenus sans utiliser prose
 Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/)
 
 Ce dossier est composé de :
@@ -29,6 +29,12 @@ Ce dossier est composé de :
 
     - fichiers `.md` qui permettent de modifier les contenus enrichis, à l'aide de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown) ([documentation](https://guides.github.com/features/mastering-markdown/#examples))
     - un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
+
+
+#### Ajouter une image
+Allez dans le dossier [`src/images`](src/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
+le chemin relatif vers l'image commence par `images/<nom-du-fichier-avec-son-extension>`
+
 
 
 ### À propos des pages générées automatiquement
@@ -45,9 +51,6 @@ nofollow: false ( optionnel )
 ```
 **title** et **description** sont obligatoires, *nofollow* est optionnel
 
-### Ajouter une image
-Allez dans le dossier [`src/images`](src/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
-le chemin relatif vers l'image commence par `images/<nom-du-fichier-avec-son-extension>`
 
 ### Utiliser un composant
 Vous pouvez utiliser des composants dans les fichiers `.md` pour utiliser un composant vous devez employer la syntaxe suivante
