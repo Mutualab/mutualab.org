@@ -22,11 +22,9 @@ Site de l'espace de coworking mutualab
 Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/)
 
 Ce dossier est composé de :
-
-    - fichiers `.json` qui permettent de modifier des configurations et les textes génériques de l'interface ( boutons, navigation etc.) [Syntaxe Json](https://en.wikipedia.org/wiki/JSON#Example).
-
-    - fichiers `.md` qui permettent de modifier les contenus enrichis, à l'aide de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown) ([documentation](https://guides.github.com/features/mastering-markdown/#examples))
-    - un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
+- fichiers `.json` qui permettent de modifier des configurations et les textes génériques de l'interface ( boutons, navigation etc.) [Syntaxe Json](https://en.wikipedia.org/wiki/JSON#Example).
+- fichiers `.md` qui permettent de modifier les contenus enrichis, à l'aide de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown) ([documentation](https://guides.github.com/features/mastering-markdown/#examples))
+- un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
 
 
 #### Ajouter une image
