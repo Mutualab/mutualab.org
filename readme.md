@@ -8,7 +8,7 @@ Site de l'espace de coworking mutualab
 
 ## Modifier les contenus du site
 ### Généralités 
- - Pour modifier les contenus vous devez : avoir un compte github et être autorisé à modifier le projet mutualab.org ou vous pouvez aussi [soumettre une modification](#Soumettre-une-modification)
+ - Pour modifier les contenus vous devez : avoir un compte github et [soumettre une modification](#Soumettre-une-modification)
 
 Vous pouvez modifier les contenus directement sur github, ou **en vous connectant à ce site [prose.io](http://prose.io) avec votre compte github**
 
@@ -22,10 +22,10 @@ Ce dossier est composé de :
     - un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
 
 ### Soumettre une modification
-Vous pouvez soumettre une modification sans être autorisé à modifier le projet directement.
  - Cliquer sur le bouton (Fork en haut à droite) 
  - Effectuer les corrections et les enregistrer
-
+ - Dans github cliquer sur **new pull-request** 
+ - Décrire les modifications, si necessaire, et cliquer sur **create pull-request** 
 
 
 ### À propos des pages générées automatiquement
