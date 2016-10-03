@@ -5,6 +5,11 @@ prose:
     - _prose.yml
     - /gulp
     - /src
+    - .gitignore
+    - .travis
+    - bower.json
+    - gulpfile.js
+    - package.json
   metadata:
     contents/page:
       - name: "title"
