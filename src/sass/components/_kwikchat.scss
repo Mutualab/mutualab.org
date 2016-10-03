@@ -1,9 +1,9 @@
 @import "vars";
 
 .kwikchat{
-  .app__text, .admins__admin, .app__team, .app__admins{
+  /*.app__text, .admins__admin, .app__team, .app__admins{
     display:none;
-  }
+  }*/
 
   .launcher__button{
     background-image: url(../images/bob.png);
@@ -11,13 +11,13 @@
     background-size: cover;
   }
 
-  .profile__app:after{
+ /* .profile__app:after{
     content:"Posez vos questions, un des coworkers présent pourra vous répondre";
     text-align:center;
     display:block;
     padding: 1em 1em;
     color:lighten($gray, 30%);
-  }
+  }*/
 
   .conversation__header{
     background-color: transparent;
