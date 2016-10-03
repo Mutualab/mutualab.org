@@ -20,7 +20,7 @@ prose:
           value: "Page sans titre"
       - name: "description"
         field: 
-          element: "text"
+          element: "textarea"
           label: "déscription de la page (meta description)"
           value: ""
       - name: "nofollow"
