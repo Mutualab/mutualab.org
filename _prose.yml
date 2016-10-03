@@ -23,8 +23,8 @@ prose:
           element: "text"
           label: "déscription de la page (meta description)"
           value: ""
-      - name: "visible"
+      - name: "nofollow"
         field: 
           element: "checkbox"
-          label: "Visible par les moteurs de recherche"
-          value: true
+          label: "Ne pas référencer"
+          value: false
