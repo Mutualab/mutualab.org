@@ -11,13 +11,11 @@ Site de l'espace de coworking mutualab
  - Pour modifier les contenus vous devez : avoir un compte github et soumettre une modification
 
 ### Soumettre une modification
- - Cliquez sur le bouton (Fork en haut à droite) 
- - Effectuez les corrections et enregistrez-les (en vous connectant à [prose.io](http://prose.io) avec votre compte github )
- - Quand vous avez fini, retournez dans github et cliquez sur **new pull-request** 
- - Décrivez les modifications, si necessaire et cliquer sur **create pull-request** 
-
-
-Il est grandement conseillé de modifier les contenus **en vous connectant à [prose.io](http://prose.io) avec votre compte github**
+ - Cliquez sur le bouton **Fork** (en haut à droite) 
+ - Effectuez les corrections en vous connectant à [prose.io](http://prose.io) avec votre compte github
+ - Enregistrez vos corrections
+ - Enfin, retournez dans github et cliquez sur **new pull-request** 
+ - Décrivez les modifications, si necessaire et cliquer sur **create pull-request**
 
 
 #### Modifier les contenus sans utiliser prose
