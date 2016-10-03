@@ -16,7 +16,7 @@ description: Louer une salle de réunion Lille centre
 
 A l'étage, une salle de réunion de 25 m² accueille vos réunions.
 
-![Une salle multifonction claire et agréable, pour 5 ou 10 pers.](images/salle-reunion/P9053629-resized.jpg)  
+![Une salle multifonction claire et agréable, pour 5 ou 10 pers.]({{site.baseurl}}/contents/images/salle-reunion/P9053629-resized.jpg)  
 Salle de réunion claire et agréable, pour 10 personnes
 
 - **Capacité: **Jusqu’à 10 personnes.
@@ -30,7 +30,7 @@ Salle de réunion claire et agréable, pour 10 personnes
 
 Au rez-de-chaussée, une grande salle de réunion de 70 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/Halle-au-bardage.jpg)  
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.]({{site.baseurl}}/contents/images/salle-reunion/Halle-au-bardage.jpg)  
 Salle de réunion claire et agréable, pour 60 personnes
 
 - **Capacité: **Jusqu’à 60 personnes (en configuration théâtre).
