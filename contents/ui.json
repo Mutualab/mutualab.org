@@ -12,7 +12,7 @@
     "work":{
         "label":"Espace de coworking",
         "url":"index.html",
-        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualab est ouvert tous les jours de la semaine, de 9h à 19h.",
+        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualāb est ouvert tous les jours de la semaine, de 9h à 19h.",
         "shortDescription":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous."
     },
     "rent":{
@@ -24,14 +24,14 @@
     "maker":{
       "label":"Maker space",
       "url":"makerspace.html",
-      "description":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace.",
-      "shortDescription":"Mutualab est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. "
+      "description":"Mutualāb est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. \n\n Chaque semaine, le jeudi soir, l’association LilleMakers vient mener ses expériences au sein du Makerspace.",
+      "shortDescription":"Mutualāb est un lieu ouvert d’innovation sociale. On y invente de nouvelles façons de travailler, de partager les idées et les savoir-faire. "
     },
     "subitems":[
       {"url":"restaurant-bis2fly.html", "label":"Restaurant le bis2fly"},
       {"url":"evenements-mutualab.html", "label":"Événements à venir"},
-      {"url":"http://wiki.mutualab.org", "label":"Wiki du mutualab"},
-      {"url":"vip-box.html", "label":"Retirer une vip box"}
+      {"url":"http://wiki.mutualab.org", "label":"Wiki du Mutualāb"},
+      {"url":"mutualab-lille.html", "label":"À propos du Mutualāb"}
     ]
 
   },
