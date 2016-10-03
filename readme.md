@@ -10,8 +10,17 @@ Site de l'espace de coworking mutualab
 ### Généralités 
  - Pour modifier les contenus vous devez : avoir un compte github et [soumettre une modification](#Soumettre-une-modification)
 
-Vous pouvez modifier les contenus directement sur github, ou **en vous connectant à ce site [prose.io](http://prose.io) avec votre compte github**
+### Soumettre une modification
+ - Cliquer sur le bouton (Fork en haut à droite) 
+ - Effectuer les corrections et les enregistrer
+ - Dans github cliquer sur **new pull-request** 
+ - Décrire les modifications, si necessaire, et cliquer sur **create pull-request** 
 
+
+Il est grandement conseillé de modifier les contenus **en vous connectant à ce site [prose.io](http://prose.io) avec votre compte github**
+
+
+**Modifier les contenus sans utiliser prose**
 Les contenus modifiables du site se trouvent dans le dossier [`contents`](contents/)
 
 Ce dossier est composé de :
@@ -20,12 +29,6 @@ Ce dossier est composé de :
 
     - fichiers `.md` qui permettent de modifier les contenus enrichis, à l'aide de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown) ([documentation](https://guides.github.com/features/mastering-markdown/#examples))
     - un dossier `pages` qui contient des pages de contenu enrichi qui seront générées par le site.
-
-### Soumettre une modification
- - Cliquer sur le bouton (Fork en haut à droite) 
- - Effectuer les corrections et les enregistrer
- - Dans github cliquer sur **new pull-request** 
- - Décrire les modifications, si necessaire, et cliquer sur **create pull-request** 
 
 
 ### À propos des pages générées automatiquement
