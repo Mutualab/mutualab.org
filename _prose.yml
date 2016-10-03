@@ -28,3 +28,5 @@ prose:
           element: "checkbox"
           label: "Ne pas référencer"
           value: false
+          on: "oui"
+          off: "non"
