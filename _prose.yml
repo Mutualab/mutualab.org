@@ -1,4 +1,5 @@
 prose:
+  rooturl: "contents"
   siteurl: 'http://www.mutualab.org/'
   media: 'images/'
   ignore:
