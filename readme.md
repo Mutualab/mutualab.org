@@ -7,14 +7,14 @@ Site de l'espace de coworking mutualab
 
 
 ## Modifier les contenus du site
-### Généralités 
+### Généralités
  - Pour modifier les contenus vous devez : **avoir un compte github** et **soumettre une modification**
 
 ### Soumettre une modification
- - Cliquez sur le bouton **Fork** (en haut à droite) 
+ - Cliquez sur le bouton **Fork** (en haut à droite)
  - Effectuez les corrections en vous connectant à [prose.io](http://prose.io) avec votre compte github
  - Enregistrez vos corrections
- - Enfin, retournez dans github et cliquez sur **new pull-request** 
+ - Enfin, retournez dans github et cliquez sur **new pull-request**
  - Décrivez les modifications, si necessaire et cliquer sur **create pull-request**
 
 
@@ -28,7 +28,7 @@ Ce dossier est composé de :
 
 
 #### Ajouter une image
-Allez dans le dossier [`contents/images`](contents/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md` 
+Allez dans le dossier [`contents/images`](contents/images/) ajoutez le fichier (ou uploadez la sur github), vous pouvez ensuite vous servir de cette image dans un fichier `.md`
 le chemin relatif vers l'image commence par `images/<nom-du-fichier-avec-son-extension>`
 
 
@@ -62,7 +62,7 @@ permet d'afficher le tableau des tarifs
 ```
 
 ##### components.callToAction({label,url})
-permet d'afficher un gros bouton 
+permet d'afficher un gros bouton
 ```
 [%components.callToAction({label:"<texte-du-bouton>",url:"<adresse-du-bouton>"%]
 ```
@@ -70,7 +70,7 @@ permet d'afficher un gros bouton
 
 ## Contribuer
 
-### Pré-requis : 
+### Pré-requis :
   - Nodejs
   - Bower
   - Gulp
@@ -88,19 +88,24 @@ permet d'afficher un gros bouton
  - Pour générer le site :  `gulp build`
  - Pour générer le projet en local et lancer le serveur de test : `gulp build:serve`
  - Pour publier le site sur une page github :  `gulp build:gh-pages`
- 
+
+Si vous voyez l'erreur suivante au stade de `gulp watch`, installez gulp en local `npm install gulp` :
+
+    [11:06:33] Local gulp not found in ~/github/jibundeyare/mutualab.org
+    [11:06:33] Try running: npm install gulp
+
 
 ### Structure du projet
 
 ```
 .
-|-contents                ->  Contenus modifiables 
+|-contents                ->  Contenus modifiables
 |---images                ->  Image envoyée depuis prose.io
 |---pages                 ->  Pages dynamiques
 |-gulp                    ->  Taches Gulp
 |-src                     ->  Sources du site
 |---fonts                 ->  Typographies
-|---images                ->  Images du site 
+|---images                ->  Images du site
 |---ng                    ->  Logique cliente ( AngularJs )
 |-----templates           ->  Templates client ( AngularJs )
 |---render                ->  Pages serveur ( Nunjucks )

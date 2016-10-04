@@ -7,25 +7,25 @@
     </select>
   </div>
 </div>
-<form class="booking-form" ng-show="$ctrl.selectedRoom.name" name="bookingForm" 
+<form class="booking-form" ng-show="$ctrl.selectedRoom.name" name="bookingForm"
       ng-submit="bookingForm.$valid && $ctrl.submitForm()">
   <h3>2 - Renseignez les informations concernant votre réservation</h3>
 
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label>Association ou entreprise</label>
+        <label>Association ou entreprise *</label>
         <input type="text" class="form-control"   name="company"
                ng-model="$ctrl.bookingData.company" ng-required="true">
       </div>
       <div class="form-group">
-        <label>Organisateur ( Référent )</label>
+        <label>Organisateur ( Référent ) *</label>
         <input type="text" class="form-control"  name="name"
              ng-model="$ctrl.bookingData.organizer" ng-required="true">
       </div>
 
       <div class="form-group">
-        <label>Adresse email</label>
+        <label>Adresse email *</label>
         <input type="text" class="form-control" name="email"
              ng-model="$ctrl.bookingData.email" ng-required="true">
       </div>
@@ -41,16 +41,16 @@
         <label>
           <input type="checkbox" ng-model="prestation.selected">
           {{prestation.label}}
-        </label>      
+        </label>
       </div>
     </div>
   </div>
 
-  <h3>3 - Séléctionnez une date à laquelle vous souhaitez réserver la salle</h3>
+  <h3>3 - Séléctionnez une date à laquelle vous souhaitez réserver la salle *</h3>
   <div class="row">
      <div class="col-sm-4" id="select-date">
       <div class="form-group">
-        <input type="text" class="form-control" ng-model="$ctrl.bookingData.dateDay" 
+        <input type="text" class="form-control" ng-model="$ctrl.bookingData.dateDay"
                name="dateDay" autoclose="true" ng-change="$ctrl.checkBusy()"
                bs-datepicker placeholder="Séléctionnez un jour"
                star-week="1" days-of-week-disabled="0" data-min-date="{{$ctrl.minDateDay}}"
@@ -61,8 +61,8 @@
       <div class="form-group">
 
 
-        <select 
-               class="form-control" 
+        <select
+               class="form-control"
                ng-model="$ctrl.bookingData.timeFrom"
                ng-show="!!$ctrl.bookingData.dateDay && $ctrl.dateStartRanges.length"
                ng-options="date as date.format('HH:mm') for date in $ctrl.dateStartRanges"
@@ -75,8 +75,8 @@
     </div>
     <div class="col-sm-4" id="select-date">
       <div class="form-group">
-        <select 
-               class="form-control" 
+        <select
+               class="form-control"
                ng-model="$ctrl.bookingData.timeTo"
                ng-show="!!$ctrl.bookingData.timeFrom"
                ng-options="date as date.format('HH:mm') for date in $ctrl.dateEndRanges"
@@ -98,7 +98,7 @@
         </span>
       </div>
       <div class="alert alert-success" ng-show="$ctrl.busy && !$ctrl.busy.length">
-        La salle est libre toute la journée 
+        La salle est libre toute la journée
       </div>
        <div class="alert alert-danger" ng-show="!$ctrl.dateStartRanges.length && $ctrl.busy.length">
         Aucune plage libre à cette date
@@ -108,17 +108,24 @@
   <h4>4 - Informations complémentaires</h4>
   <div class="row">
     <div class="col-sm-10 col-md-offset-1">
-      <textarea 
+      <textarea
                 class="form-control"
                 ng-model="$ctrl.bookingData.description"></textarea>
     </div>
   </div>
+
+  <div class="vertical-padding">
+    <div class="col-sm-12">
+      <i>* : champs obligatoires</i>
+    </div>
+  </div>
+
   <div class="row vertical-padding" ng-show="!!$ctrl.slackResponse">
     <div class="alert alert-success alert-dismissible " role="alert">
       <strong>Félicitation !</strong> Votre demande a bien été envoyée.
     </div>
   </div>
-  
+
 
   <div class="text-center vertical-padding">
     <button type="submit" class="btn btn-primary btn-lg"
