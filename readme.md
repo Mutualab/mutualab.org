@@ -87,7 +87,8 @@ permet d'afficher un gros bouton
  - Tâche de développement :  `gulp watch`
  - Pour générer le site :  `gulp build`
  - Pour générer le projet en local et lancer le serveur de test : `gulp build:serve`
- - Pour publier le site sur une page github :  `gulp build:gh-pages`
+ - Vous pouvez ensuite envoyer une pull-request pour soumettre vos modification au mainteneur
+
 
 Si vous voyez l'erreur suivante au stade de `gulp watch`, installez gulp en local `npm install gulp` :
 
