@@ -5,12 +5,12 @@ published: false
 ---
 
 
-# Organiser un événement ,louer une salle de réunion
+# Organiser un événement, louer une salle de réunion
 
 > **_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
 > 
 > Mutualab est un lieu d’échange et de rencontre, de partage de connaissances et de savoir-faire. Nos salles de réunion et d’événement vous permettront de réunir vos équipes et partenaires dans un espace inspirant.
-> Nos espaces sont modulables. Vous pouvez les louer à la journée, la demie-journée ou à l'heure. 
+> Nos espaces sont modulables. Vous pouvez les louer à la journée, la demi-journée ou à l'heure. 
 > **La location d'une salle de réunion donne accès à** internet (wifi), à un vidéoprojecteur entrée VGA (prévoir un adaptateur pour d'autres entrées) ou un écran selon l'espace (prévoir des adaptateurs) et à un paperboard.
 Selon vos envies, ils peuvent s’accompagner de prestations complètes : restauration, privatisation, visite des lieux et présentation du coworking, atelier collaboratif, etc. Parlons-en !
 
@@ -58,7 +58,7 @@ Un espace entièrement configurable, ouvert à de nombreux formats : conférence
 - **Équipement :** Vidéo-projecteur, sonorisation, micros, internet, WiFi.
 - **Disponibilité **: du lundi au vendredi, de 9h à 18h (au-delà, nous consulter).
 
-Il peux être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateur pour d'autres entrées), d'une sonorisation, d'un micro (en option, facturé 50€ HT) & d'internet (Wifi).
+Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateur pour d'autres entrées), d'une sonorisation, d'un micro (en option, facturé 50€ HT) & d'internet (Wifi).
 
 [%components.callToAction({label:"Réserver cet espace",url:"reserver-salle.html#/?room=57cd67d08d74c65d5998a690"})%]
 
