@@ -1,7 +1,7 @@
 ---
 title: Salle de réunions
 description: Louer une salle de réunion Lille centre
-published: false
+published: true
 ---
 
 
@@ -27,6 +27,7 @@ Salle de réunion claire et agréable, pour 10 personnes
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
 Prévoir un adaptateur hdmi ! 
 
+Tarif HT à la journée / soirée: 150 € / 80 €
 [%components.callToAction({label:"Réserver cette salle",url:"reserver-salle.html#/?room=57cd67d001bd9e3bbf44c66e"})%]
 
 
@@ -42,6 +43,7 @@ Salle de réunion claire et agréable, pour 60 personnes
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
 Prévoir un adaptateur hdmi ou autre si besoin!
 
+Tarif HT à la journée / soirée: 290 € / 150 € 
 [%components.callToAction({label:"Réserver cette salle", url:"reserver-salle.html#/?room=57cd67d0f1ccdc12ddf65e77"})%]
 
 
@@ -60,6 +62,7 @@ Un espace entièrement configurable, ouvert à de nombreux formats : conférence
 
 Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateur pour d'autres entrées), d'une sonorisation, d'un micro (en option, facturé 50€ HT) & d'internet (Wifi).
 
+Tarif HT à la journée / soirée: 600 € / 350 €
 [%components.callToAction({label:"Réserver cet espace",url:"reserver-salle.html#/?room=57cd67d08d74c65d5998a690"})%]
 
 
@@ -67,12 +70,12 @@ Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateu
 
 Nous vous proposons d’alléger votre organisation en agrémentant vos événements selon vos besoins.
 
-**Petits-déjeuners – Pauses :**
+**Petits-déjeuners – Pauses café :**
 
 Forfait suivant les demandes: 
 
 - Boissons chaudes.
-- Eau minérale, eau gazeuse et jus d’orange.
+- Eau minérale, eau gazeuse et jus de fruit.
 - Viennoiseries, petits gâteaux.
 
 **Traiteur :**
@@ -80,7 +83,6 @@ Forfait suivant les demandes:
 Différentes formules suivant les demandes:  
 Nous pouvons gérer pour vous la livraison de lunch box, l’organisation complète d’un buffet (bio ou non) ou d’un cocktail via nos prestataires.
 
-Si vous souhaitez profiter du restaurant bio **Bis2Fly**, vous pouvez y [réserver une ou plusieurs tables](http://www.bis2fly.com/).
 
 **Accompagnement dans la structuration de l’événement :**
 
