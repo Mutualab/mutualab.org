@@ -1,7 +1,7 @@
 ---
 title: Salle de réunions
 description: Louer une salle de réunion Lille centre
-published: false
+published: true
 ---
 
 
