@@ -1,0 +1,16 @@
+{% extends "views/master.html" %}
+
+{% block head %}
+  <title>{{= currentPage.metadata.title }} | {{= ui.title }}</title>
+  <meta name="description" content="{{= currentPage.metadata.description }}">
+  <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+
+{% block body %}
+<body ng-app="mutualab.org" class="page {{= currentPage.metadata.pageClass }}" chat-container page>
+
+
+  {% block content %}{% endblock %}
+</body>
+{% endblock %}

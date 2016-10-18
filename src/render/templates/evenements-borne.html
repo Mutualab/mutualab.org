@@ -1,0 +1,13 @@
+{% extends "views/master-borne.html" %}
+{% block content %}
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          {{= currentPage.content }}
+          <mt-calendar></mt-calendar>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
