@@ -11,7 +11,7 @@ angular.module('booking-form',[
 .component('bookingForm', {
   controller:[
           '$location','$http', 'Config','GetFreeBusy','SlackWebhook','$filter','Moment','_',
-  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter, Moment,   _){
+  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter, Moment,  _){
     var vm = this;
 
     /**
@@ -48,7 +48,6 @@ angular.module('booking-form',[
           
      }
 
-
     /**
      * View methods
      */
@@ -71,8 +70,6 @@ angular.module('booking-form',[
         }
       });
 
-     
-
      startRange = Moment(startRange);
      endRange   = Moment(endRange);
 
@@ -84,16 +81,23 @@ angular.module('booking-form',[
 
     };
 
+    //modal-window
+    vm.modalShown = false;
+    vm.toggleModal = function() {
+      vm.modalShown =  !vm.modalShown;
+    };
 
     vm.submitForm=function(){
+
+      vm.bookingData.dateDay = Moment(vm.bookingData.dateDay).format('DD/MM/YYYY');
+      vm.bookingData.timeFrom = Moment(vm.bookingData.timeFrom).format('HH:mm');
+      vm.bookingData.timeTo = Moment(vm.bookingData.timeTo).format('HH:mm');
       
       var prestationsList = vm.bookingData.prestationsList
                               .filter(function(elt){ return elt.selected })
                               .map(function(elt){ return elt.label });
 
-      var booked = "le "+ Moment(vm.bookingData.dateDay).format('DD/MM/YYYY')+ ' de '+
-                                 Moment(vm.bookingData.timeFrom).format('HH:mm')+ ' à '+
-                                 Moment(vm.bookingData.timeTo).format('HH:mm');
+      var booked = "le "+ (vm.bookingData.dateDay)+ ' de '+(vm.bookingData.timeFrom)+ ' à '+(vm.bookingData.timeTo);
 
       console.log(booked);
       var payload={
@@ -129,7 +133,6 @@ angular.module('booking-form',[
         vm.bookingData = {}
       })
     };
-
 
     /** 
      * Private controller methods
@@ -199,8 +202,6 @@ angular.module('booking-form',[
   }],
   templateUrl:"booking-form.html"
 })
-
-
 
 .service('GetFreeBusy',[
     '$http','Config','$q',

@@ -129,6 +129,30 @@
 
   <div class="text-center vertical-padding">
     <button type="submit" class="btn btn-primary btn-lg"
-      ng-disabled="bookingForm.$invalid">Envoyer</button>
+      ng-disabled="bookingForm.$invalid" ng-click='$ctrl.toggleModal()'>Envoyer</button>
+    <modal-dialog show='$ctrl.modalShown' width='750px' height='60%'>
+      <div class="formConfirmation">
+        <h3>Félicitation ! Votre demande a bien été envoyée.</h3>
+      </div>
+      <div class="recapConfirmation">
+        <div class="headerRecap">
+          <h4>Récapitulatif de la réservation</h4>
+        </div>
+        <div class="infoRoom">
+          <h5>Informations sur la réservation</h5>
+          <p class="title"><strong>Salle réservée :</strong> {{$ctrl.selectedRoom.name }}</p>
+          <p class="title"><strong>Date et heure de la réservation :</strong> Le {{$ctrl.bookingData.dateDay}} de {{$ctrl.bookingData.timeFrom}} à {{$ctrl.bookingData.timeTo}}</p>
+          <p class="title"><strong>Prestations complémentaires :</strong> {{$ctrl.bookingData.organizer}}</p>
+          <p class="title"><strong>Informations complémentaires :</strong> {{$ctrl.bookingData.description}}</p>
+        </div>
+        <div class="infoPers">
+          <h5>Informations personnelles</h5>
+          <p class="title"><strong>Association ou entreprise :</strong> {{$ctrl.bookingData.company}}</p>
+          <p class="title"><strong>Organisateur ( Référent ) :</strong> {{$ctrl.bookingData.organizer}}</p>
+          <p class="title"><strong>Adresse email :</strong> {{$ctrl.bookingData.email}}</p>
+          <p class="title"><strong>Numéro de téléphone :</strong> {{$ctrl.bookingData.phone}}</p>
+        </div>
+      </div>
+    </modal-dialog>
   </div>
 </form>
