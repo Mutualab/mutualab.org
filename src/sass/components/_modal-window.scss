@@ -1,0 +1,68 @@
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:fixed;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.2;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.ng-modal-dialog-content {
+  text-align: left;
+
+  .formConfirmation {
+    padding:0.1em;
+    text-align: center;
+    background-color: #5cb85c;
+    border-radius: 4px 4px 0px 0px; 
+
+    h3 {
+      color: #FFF;
+    }
+  }
+
+  .recapConfirmation {
+    padding: 1em;
+
+    .headerRecap {
+      border-bottom: 2px solid #e6e6e6;
+    }
+
+    .infoRoom {
+      border-bottom: 2px solid #e6e6e6;
+      padding: 1em .5em;
+    }
+
+    .infoPers {
+      padding: 1em .5em;
+    }
+  }
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 9px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  display: inline-block;
+  font-weight: bold;
+  color: #FFF;
+  font-family: 'multicolore_regular';
+}
