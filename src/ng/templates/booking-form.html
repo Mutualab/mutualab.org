@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-6">
       <h5>Prestations complémentaires</h5>
-      <div class="checkbox prestations-box form-group" ng-repeat="prestation in $ctrl.bookingData.prestationsList">
+      <div class="checkbox prestations-box form-group" ng-repeat="prestation in $ctrl.prestationsList track by $index">
         <label>
           <input type="checkbox" ng-model="prestation.selected">
           {{prestation.label}}
@@ -126,13 +126,12 @@
     </div>
   </div>
 
-
   <div class="text-center vertical-padding">
     <button type="submit" class="btn btn-primary btn-lg"
-      ng-disabled="bookingForm.$invalid" ng-click='$ctrl.toggleModal()'>Envoyer</button>
-    <modal-dialog show='$ctrl.modalShown' width='750px' height='60%'>
+      ng-disabled="bookingForm.$invalid">Envoyer</button>
+    <modal-dialog show='$ctrl.modalShown' width='750px' height='60%' on-close="$ctrl.onModalClose()">
       <div class="formConfirmation">
-        <h3>Félicitation ! Votre demande a bien été envoyée.</h3>
+        <h3>Votre demande a bien été envoyée.</h3>
       </div>
       <div class="recapConfirmation">
         <div class="headerRecap">
@@ -140,9 +139,9 @@
         </div>
         <div class="infoRoom">
           <h5>Informations sur la réservation</h5>
-          <p class="title"><strong>Salle réservée :</strong> {{$ctrl.selectedRoom.name }}</p>
-          <p class="title"><strong>Date et heure de la réservation :</strong> Le {{$ctrl.bookingData.dateDay}} de {{$ctrl.bookingData.timeFrom}} à {{$ctrl.bookingData.timeTo}}</p>
-          <p class="title"><strong>Prestations complémentaires :</strong> {{$ctrl.bookingData.organizer}}</p>
+          <p class="title"><strong>Salle réservée :</strong> {{$ctrl.selectedRoom.name}}</p>
+          <p class="title"><strong>Date et heure de la réservation :</strong> {{$ctrl.bookedPopin}}</p>
+          <p class="title"><strong>Prestations complémentaires :</strong> {{$ctrl.prestationListPopin}}</p>
           <p class="title"><strong>Informations complémentaires :</strong> {{$ctrl.bookingData.description}}</p>
         </div>
         <div class="infoPers">
