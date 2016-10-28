@@ -47,16 +47,16 @@ app.directive('modalDialog', function() {
   return {
     restrict: 'E',
     scope: {
-      show: '='
+      show: '=',
+      onClose:'&'
     },
     replace: true, 
     transclude: true, 
     link: function(scope, element, attrs) {
       scope.dialogStyle = {};
-      if (attrs.width)
-        scope.dialogStyle.width = attrs.width;
       scope.hideModal = function() {
         scope.show = false;
+        scope.onClose();
       };
     },
     templateUrl: 'modal-window.html' 
