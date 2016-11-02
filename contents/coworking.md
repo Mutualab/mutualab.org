@@ -1,10 +1,11 @@
 # Travailler à Mutualab 
 #### L’espace de coworking de Mutualab est ouvert à tous
-du **Lundi au Vendredi de 09h00 à 19h00.**
+du **Lundi au Vendredi de 09h00 à 18h30.**
+C'est un **espace co-géré**, autrement dit **c'est un lieu géré en commun** et **vivant grâce à l'investissement (minimum) de tous les coworkeurs.euses** (nettoyer sa tasse de café, lancer le lave vaisselle, proposer des évènements, faire des sorties culturelles, boire un verre tous ensemble le vendredi soir...). 
 
 ### _Curieux ?_
 
-N’hésitez pas à **visiter les lieux** et **tester** l’expérience du coworking. Une journée d’essai vous sera offerte.
+N’hésitez pas à **visiter les lieux** et **tester** l’expérience du coworking. Une journée d’essai sera offerte aux futurs coworkeur.euses. 
 
 Pour toutes questions, il y a le chat en bas à droite de cette fenêtre , notre [courriel](mailto:mutualab@coworkinglille.com) ou Bob !
 
