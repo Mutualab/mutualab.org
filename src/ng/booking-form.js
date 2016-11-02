@@ -11,7 +11,7 @@ angular.module('booking-form',[
 .component('bookingForm', {
   controller:[
           '$location','$http', 'Config','GetFreeBusy','SlackWebhook','$filter','Moment','_',
-  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter, Moment,   _){
+  function($location,  $http,   Config , GetFreeBusy,  SlackWebhook,  $filter, Moment,  _){
     var vm = this;
 
     /**
@@ -27,7 +27,7 @@ angular.module('booking-form',[
       //phone:"0000000000",
       //description:"Pour emphysiquer l'animalculisme, la force de toute la République Démocratique du Congo tarde à établir la renaissance africaine propre(s) aux congolais, Bonne Année. Parallèlement, le colloque éventualiste sous cet angle là oblige à informatiser la bijectivité avéré(e)(s), bonnes fêtes. Quand on parle de relaxation, la contextualisation autour de l'ergonométrie peut incristaliser mes frères propres propre(s) aux congolais, merci."
     };
-    vm.bookingData.prestationsList = Config.prestationsList
+    vm.prestationsList = Config.prestationsList
     vm.minDateDay = new Date();
     /**
      * Get url params
@@ -47,7 +47,6 @@ angular.module('booking-form',[
           }))[0];
           
      }
-
 
     /**
      * View methods
@@ -71,8 +70,6 @@ angular.module('booking-form',[
         }
       });
 
-     
-
      startRange = Moment(startRange);
      endRange   = Moment(endRange);
 
@@ -84,16 +81,22 @@ angular.module('booking-form',[
 
     };
 
+    //modal-window
+    vm.modalShown = false;
+   
 
     vm.submitForm=function(){
-      
-      var prestationsList = vm.bookingData.prestationsList
-                              .filter(function(elt){ return elt.selected })
-                              .map(function(elt){ return elt.label });
 
-      var booked = "le "+ Moment(vm.bookingData.dateDay).format('DD/MM/YYYY')+ ' de '+
-                                 Moment(vm.bookingData.timeFrom).format('HH:mm')+ ' à '+
-                                 Moment(vm.bookingData.timeTo).format('HH:mm');
+      vm.bookingData.dateDay = Moment(vm.bookingData.dateDay).format('DD/MM/YYYY');
+      vm.bookingData.timeFrom = Moment(vm.bookingData.timeFrom).format('HH:mm');
+      vm.bookingData.timeTo = Moment(vm.bookingData.timeTo).format('HH:mm');
+
+      vm.bookingData.prestationsListPopin = vm.prestationsList.filter(function(elt){ return elt.selected }).map(function(elt){ return elt.label });
+
+      var prestationsList = vm.bookingData.prestationsListPopin.join(', '); 
+      var booked = "le "+ (vm.bookingData.dateDay)+ ' de '+(vm.bookingData.timeFrom)+ ' à '+(vm.bookingData.timeTo);
+      vm.prestationListPopin = prestationsList;
+      vm.bookedPopin = booked;
 
       console.log(booked);
       var payload={
@@ -106,7 +109,7 @@ angular.module('booking-form',[
                       "*Référent : * "+vm.bookingData.organizer+
                                     "(<mailto:"+vm.bookingData.email +"|"+vm.bookingData.email+">"+
                                       (vm.bookingData.phone ? ", "+vm.bookingData.phone+"":'') + ")"+"\n"+
-                      (prestationsList.length ? "*Prestation(s) :* "+ prestationsList.join(', ')+"\n":''),
+                      (vm.bookingData.prestationsListPopin.length ? "*Prestation(s) :* "+ prestationsList +"\n":''),
               "mrkdwn_in": ["text"]
             },
             { 
@@ -126,11 +129,17 @@ angular.module('booking-form',[
       SlackWebhook.post(payload)
       .then(function(response){
         vm.slackResponse = response;
-        vm.bookingData = {}
+        vm.modalShown =  !vm.modalShown;
       })
     };
-
-
+    vm.onModalClose = function(){
+      console.log('onclose');
+        vm.bookingData = {}
+        vm.prestationsList = vm.prestationsList.map(function(item){
+          item.selected = false
+          return item;
+        });
+    }
     /** 
      * Private controller methods
      */
@@ -199,8 +208,6 @@ angular.module('booking-form',[
   }],
   templateUrl:"booking-form.html"
 })
-
-
 
 .service('GetFreeBusy',[
     '$http','Config','$q',

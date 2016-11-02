@@ -42,7 +42,26 @@ app.directive('navTo', ['smoothNav',function(smoothNav) {
   };
 }]);
 
-
+//New directive for modal window on booking-form
+app.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '=',
+      onClose:'&'
+    },
+    replace: true, 
+    transclude: true, 
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      scope.hideModal = function() {
+        scope.show = false;
+        scope.onClose();
+      };
+    },
+    templateUrl: 'modal-window.html' 
+  };
+});
 
 app.service('smoothNav',['$window',function($window) {
   this.move = function(to, adjust) {
