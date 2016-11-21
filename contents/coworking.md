@@ -2,6 +2,8 @@
 #### L’espace de coworking de Mutualab est ouvert à tous
 du **Lundi au Vendredi de 09h00 à 18h30.**
 
+**Le Mutualab sera fermé du 24 décembre 2016 au 2 janvier 2017.**
+
 C'est un **espace co-géré**, autrement dit **c'est un lieu géré en commun** et **vivant grâce à l'investissement (minimum) de tous les coworkeurs.euses** (nettoyer sa tasse de café, lancer le lave vaisselle, proposer des évènements, faire des sorties culturelles, boire un verre tous ensemble le vendredi soir...). 
 
 ### _Curieux ?_
