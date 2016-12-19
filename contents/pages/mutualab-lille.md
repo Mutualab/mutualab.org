@@ -6,4 +6,5 @@ description: >-
 published: true
 ---
 # À propos du Mutualāb 
-images/<15591698_1295089160552861_858348851_n.jpg>  
+Quelques photos de nous (soirée de Noël, visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun...). 
+Il ne manque plus que toi !  
