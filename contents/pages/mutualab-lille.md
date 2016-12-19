@@ -6,4 +6,4 @@ description: >-
 published: true
 ---
 # À propos du Mutualāb 
-images/<15666356_1295089093886201_2045841463_n.jpg> 
+<15666356_1295089093886201_2045841463_n.jpg> 
