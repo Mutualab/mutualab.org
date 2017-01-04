@@ -1,6 +1,6 @@
 # Travailler à Mutualab 
 #### L’espace de coworking de Mutualab est ouvert à tous
-du **Lundi au Vendredi de 09h00 à 18h30.**
+du **Lundi au Vendredi de 09h00 à 19h00.**
 
 C'est un **espace autogéré**, autrement dit **c'est un lieu géré en commun** et **vivant grâce à l'investissement (minimum) de tous les coworkeurs.euses** (nettoyer sa tasse de café, lancer le lave vaisselle, proposer des évènements, faire des sorties culturelles, boire un verre tous ensemble le vendredi soir...). 
 
