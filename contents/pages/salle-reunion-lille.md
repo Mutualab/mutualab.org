@@ -11,6 +11,7 @@ published: true
 > 
 > Mutualab est un lieu d’échange et de rencontre, de partage de connaissances et de savoir-faire. Nos salles de réunion et d’événement vous permettront de réunir vos équipes et partenaires dans un espace inspirant.
 > Nos espaces sont modulables. Vous pouvez les louer à la journée, la demi-journée ou à l'heure. 
+
 > **La location d'une salle de réunion donne accès à** internet (wifi), à un vidéoprojecteur entrée VGA (prévoir un adaptateur pour d'autres entrées) ou un écran selon l'espace (prévoir des adaptateurs) et à un paperboard.
 Selon vos envies, ils peuvent s’accompagner de prestations complètes : restauration, privatisation, visite des lieux et présentation du coworking, atelier collaboratif, etc. Parlons-en !
 
@@ -31,14 +32,14 @@ Tarif HT à la journée / soirée: 150 € / 80 €
 [%components.callToAction({label:"Réserver cette salle",url:"reserver-salle.html#/?room=57cd67d001bd9e3bbf44c66e"})%]
 
 
-### Grande salle de réunion – 60 pers.
+### Grande salle de réunion – environ 30 pers.
 
 Au rez-de-chaussée, une grande salle de réunion de 70 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
 ![Une salle multifonction claire et agréable, pour 30 ou 60 pers.]({{site.baseurl}}/contents/images/salle-reunion/Halle-au-bardage.jpg)  
-Salle de réunion claire et agréable, pour 60 personnes
+Salle de réunion claire et agréable, pour environ 30 personnes
 
-- **Capacité: **Jusqu’à 60 personnes (en configuration théâtre).
+- **Capacité: **Jusqu’à 40 personnes (en configuration théâtre).
 - **Équipement:** Vidéo-projecteur, internet, WiFi, paperboard.
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
 Prévoir un adaptateur hdmi ou autre si besoin!
