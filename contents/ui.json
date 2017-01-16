@@ -12,8 +12,8 @@
     "work":{
         "label":"Espace de coworking",
         "url":"index.html",
-        "description":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition, vous travaillez comme bon vous semble ! \n\n Mutualāb est ouvert tous les jours de la semaine, de 9h à 19h.",
-        "shortDescription":"Besoin d’un espace de travail ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous."
+        "description":"Besoin d’un espace de travail ? Rien de plus simple : inscrivez-vous, venez avec votre matériel, installez-vous où vous voulez, et connectez-vous. Sans engagement ni condition (si ce n'est laver sa tasse de café!), vous travaillez comme bon vous semble de 9h à 19h! \n\n Mutualāb est ouvert tous les jours de la semaine, de 9h à 19h.",
+        "shortDescription":"Besoin d’un espace de travail (9h/19h) ? Rien de plus simple : venez avec votre matériel, installez-vous où vous voulez, et connectez-vous."
     },
     "rent":{
       "label":"Salles de réunions",
