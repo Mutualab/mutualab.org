@@ -4,7 +4,7 @@
       "name": "daily",
       "label":"Ticket journée",
       "price":"de 7 à 14€",
-      "priceInfo":"TTC/par jour",
+      "priceInfo":"TTC/par jour - ouverture 9h/19h",
       "color":"yellow",
       "specs":[
         {"label":"Bureau nomade *"},
@@ -33,7 +33,7 @@
       "name": "nomad",
       "label":"Forfait nomade",
       "price":"140€",
-      "priceInfo":"TTC/par mois",
+      "priceInfo":"TTC/par mois - ouverture 9h/19h",
       "color":"green",
       "specs":[
         {"label":"Bureau nomade *"},
@@ -51,7 +51,7 @@
       "name": "sedentary",
       "label":"Forfait résident",
       "price":"180€",
-      "priceInfo":"TTC/par mois",
+      "priceInfo":"TTC/par mois - ouverture 9h/19h",
       "color":"blue",
       "specs":[
         {"label":"Bureau fixe"},
@@ -69,7 +69,7 @@
       "name": "team",
       "label":"Équipe",
       "price":"de 120 à 180€",
-      "priceInfo":"TTC/par poste/par mois",
+      "priceInfo":"TTC/par poste/par mois - ouverture 9h/19h",
       "color":"orange",
       "specs":[
         {"label":"Bureau fixe"},
