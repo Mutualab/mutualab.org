@@ -18,8 +18,8 @@
     }
   ],
   "prestationsList":[
-      {"label":"Petits déjeuners (5 € / HT pers.)"},
-      {"label":"Traiteur (7 € / HT pers.)"},
+      {"label":"Petits déjeuners"},
+      {"label":"Traiteur"},
       {"label":"Accompagnement (sur devis)"},
       {"label":"Communication"},
       {"label":"Vestiaire (environ 250 € HT pour une soirée)"},
