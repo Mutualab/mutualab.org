@@ -6,16 +6,16 @@ C'est un **espace autogéré**, autrement dit **c'est un lieu géré en commun**
 
 ### _Curieux ?_
 
-N’hésitez pas à **venir nous rencontrer** et **tester** l’expérience du coworking. Une journée d’essai sera offerte aux futurs coworkeur.euses. **Le mieux est de venir à 9h30 pour la pause café! Et d'éviter de venir entre 12h et 14h**, c'est notre moment de pause et de ce fait nous sommes moins disponibles pour gérer des inscriptions !
+N’hésitez pas à **venir nous rencontrer** et **tester** l’expérience du coworking. Une journée d’essai sera offerte aux futurs coworkeur.euses. **Le mieux est de venir à 9h30 pour la pause café! Et d'éviter de venir entre 12h et 14h**, c'est notre moment de pause et de ce fait nous sommes moins disponibles pour gérer des inscriptions et répondre aux questions !
 
 Pour toutes questions, il y a le chat en bas à droite de cette fenêtre , notre [courriel](mailto:mutualab@coworkinglille.com) ou Bob !
 Sachant que les demandes de location se font **uniquement par email!** 
 
  ---
 # Mutualab, c’est aussi :
-*   Du thé et du café** sans limite, pour la productivité
+*   Du **thé et du café** sans limite, pour la productivité
 *   Une **cuisine** équipée, pour la convivialité
 *   **2 bureaux** pour recevoir vos clients et partenaires en toute confidentialité
-*   Des **espaces de détente** : une table de ping pong, une bibliothèque, une salle de jeux.
+*   Des **espaces de détente** : une table de ping pong, une bibliothèque, bientôt une salle de sieste.
 
 **Et surtout des rencontres, des découvertes et des moments partagés avec toute la communauté !**
