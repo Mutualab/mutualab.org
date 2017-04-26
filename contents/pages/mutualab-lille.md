@@ -8,3 +8,6 @@ published: true
 # À propos du Mutualāb 
 Quelques photos de nous (soirée de Noël, visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun...). 
 Il ne manque plus que toi !  
+
+
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/capture-lorem.jpg) 
