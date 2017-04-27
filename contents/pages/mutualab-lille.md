@@ -9,9 +9,6 @@ published: true
 Quelques photos de nous (soirée de Noël, visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun...). 
 Il ne manque plus que toi !  
 
-
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/capture-lorem.jpg) 
-
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/visite cavrois.jpg) 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/15591698_1295089160552861_858348851_n.jpg) 
