@@ -6,7 +6,10 @@ description: >-
 published: true
 ---
 # À propos du Mutualāb 
-On est une 60ène de coworkeurs-euses. La richesse du Mutualab tiens à la co-gestion, à notre envie de partager nos savoirs et à la diversité des métiers représentés. Au Mutualab tu trouveras, entre autre, des personnes travaillant: 
+On est une 60ène de coworkeurs-euses. La richesse du Mutualab tiens à la co-gestion, à notre envie de partager nos savoirs et à la diversité des métiers représentés. 
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/photoscwkrs-mutualab.jpg) 
+
+Au Mutualab tu trouveras, entre autre, des personnes travaillant: 
 - dans le médical (ex/ production et distribution de réactifs, consommables et équipements de diagnostic médical vers l'Afrique)
 - dans la communication
 - dans la recherche de fond pour les enteprises sociales et associatives
@@ -19,9 +22,8 @@ On est une 60ène de coworkeurs-euses. La richesse du Mutualab tiens à la co-ge
 - dans la protection animale 
 - Mais aussi des architectes (urbanisme et DPLG), des graphistes, des conteurs ... 
 
-# **Voici quelques photos de nous**
-(visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun, soirée de Noël, espace nomade...). 
-#### Il ne manque plus que toi pour compléter cette communauté de travailleurs ! Pour plus d'infos: mutualab@coworkinglille.com ou viens nous voir vers 9h30 pour la pause café, tu trouveras plus de personnes disponibles pour répondre à tes questions! 
+**Voici quelques photos de nous** (visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun, soirée de Noël, espace nomade...). 
+**Il ne manque plus que toi pour compléter cette communauté de travailleurs !** Pour plus d'infos: mutualab@coworkinglille.com ou viens nous voir vers 9h30 pour la pause café, tu trouveras plus de personnes disponibles pour répondre à tes questions! 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/visite cavrois.jpg) 
 
