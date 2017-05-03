@@ -20,3 +20,7 @@ Il ne manque plus que toi !
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/Zoom Anna.jpg) 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/coresto.jpg) 
+
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espaceévent.jpg) 
+
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/ontheroard#1.jpg) 
