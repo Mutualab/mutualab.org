@@ -22,7 +22,7 @@ Au Mutualab tu trouveras, entre autre, des personnes travaillant:
 - dans la protection animale 
 - Mais aussi des architectes (urbanisme et DPLG), des graphistes, des conteurs ... 
 
-**Voici quelques photos de nous** (visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun, soirée de Noël, espace nomade...). 
+**Voici quelques photos de nous** (visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun, soirée de Noël, espace nomade, soirée dégustation de vin, sur un salon professionel à Charleroi...). 
 **Il ne manque plus que toi pour compléter cette communauté de travailleurs !** Pour plus d'infos: mutualab@coworkinglille.com ou viens nous voir vers 9h30 pour la pause café, tu trouveras plus de personnes disponibles pour répondre à tes questions! 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/visite cavrois.jpg) 
@@ -39,11 +39,15 @@ Au Mutualab tu trouveras, entre autre, des personnes travaillant:
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espaceévent.jpg) 
 
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/ontheroard#1.jpg) 
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/ontheroard1.jpg) 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/20161214_205729.jpg) 
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espace nomade.jpg)
 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espacenomade1.jpg)
+
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/degustation de vin.jpg)
+
+![100 m2 entièrement modulables pour vos présentations et rencontres.](images/coffee1.jpg)
 
