@@ -11,4 +11,4 @@ Restaurant-Bar-Salon de thé bio
 
 
 
-[![Bis2fly Restaurant Lille](images/banniere-bis2fly.jpg)](http://www.bis2fly.com/)
+[![Bis2fly Restaurant Lille](images/banniere-bis2fly.jpg)](http://bis2fly.com/)
