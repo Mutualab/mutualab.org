@@ -32,19 +32,20 @@ Tarif HT à la journée / soirée: 150 € / 80 €
 [%components.callToAction({label:"Réserver cette salle",url:"reserver-salle.html#/?room=57cd67d001bd9e3bbf44c66e"})%]
 
 
-### Grande salle de réunion – environ 30 pers.
+### Grande salle de réunion – environ 20 pers.
 
-Au rez-de-chaussée, une grande salle de réunion de 70 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
+Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.]({{site.baseurl}}/contents/images/salle-reunion/Halle-au-bardage.jpg)  
-Salle de réunion claire et agréable, pour environ 30 personnes
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/GSDR.jpg)
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/GSDR1.jpg)
+Salle de réunion claire et agréable, pour environ 20 personnes
 
-- **Capacité: **Jusqu’à 40 personnes (en configuration théâtre).
+- **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
 - **Équipement:** Vidéo-projecteur, internet, WiFi, paperboard.
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
 Prévoir un adaptateur hdmi ou autre si besoin!
 
-Tarif HT à la journée / soirée: 290 € / 150 € 
+Tarif HT à la journée / soirée: 360 € / 150 € 
 [%components.callToAction({label:"Réserver cette salle", url:"reserver-salle.html#/?room=57cd67d0f1ccdc12ddf65e77"})%]
 
 
@@ -58,7 +59,7 @@ Cet espace de 100 m² est dédié aux événements ponctuels ou réguliers.
 Un espace entièrement configurable, ouvert à de nombreux formats : conférences, workshops, barcamps, etc.
 
 - **Capacité : **Jusqu’à 80 places assises / 100 personnes debout.
-- **Équipement :** Vidéo-projecteur, sonorisation, micros, internet, WiFi.
+- **Équipement :** Vidéo-projecteur, internet, WiFi. Sonorisation et micro.
 - **Disponibilité **: du lundi au vendredi, de 9h à 18h (au-delà, nous consulter).
 
 Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateur pour d'autres entrées), d'une sonorisation, d'un micro (en option, facturé 50€ HT) & d'internet (Wifi).
