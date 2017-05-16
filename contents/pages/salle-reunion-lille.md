@@ -38,7 +38,7 @@ Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands
 
 ![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/GSDR.jpg)
 ![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/GSDR1.jpg)
-Salle de réunion claire et agréable, pour environ 20 personnes
+Salle de réunion claire et agréable, pour environ 20 personnes.
 
 - **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
 - **Équipement:** Vidéo-projecteur, internet, WiFi, paperboard.
