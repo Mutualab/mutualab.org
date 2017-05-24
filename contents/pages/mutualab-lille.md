@@ -22,6 +22,7 @@ Au Mutualab tu trouveras, entre autre, des personnes travaillant:
 - dans la protection animale 
 - Mais aussi des architectes (urbanisme et DPLG), des graphistes, des conteurs ...
 
+Pour avoir plus d'infos vous pouvez voir notre Linkedin: 
 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
 <script type="IN/FollowCompany" data-id="1543373"></script>
 
