@@ -22,9 +22,9 @@ Au Mutualab tu trouveras, entre autre, des personnes travaillant:
 - dans la protection animale 
 - Mais aussi des architectes (urbanisme et DPLG), des graphistes, des conteurs ...
 
-Pour avoir plus d'infos vous pouvez voir notre Linkedin: 
+Pour avoir plus d'infos vous pouvez nous suivre sur Linkedin: 
 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
-<script type="IN/FollowCompany" data-id="1543373"></script>
+<script type="IN/FollowCompany" data-id="1543373" data-counter="right"></script>
 
 **Voici quelques photos de nous** (visite d'un espace de coworking à Mons, visite de la Villa Cavrois avec nos architectes, repas commun, soirée de Noël, espace nomade, soirée dégustation de vin, sur un salon professionel à Charleroi...). 
 **Il ne manque plus que toi pour compléter cette communauté de travailleurs !** Pour plus d'infos: mutualab@coworkinglille.com ou viens nous voir vers 9h30 pour la pause café, tu trouveras plus de personnes disponibles pour répondre à tes questions! 
