@@ -10,9 +10,9 @@ published: true
 > **_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
 > 
 > Mutualab est un lieu d’échange et de rencontre, de partage de connaissances et de savoir-faire. Nos salles de réunion et d’événement vous permettront de réunir vos équipes et partenaires dans un espace inspirant.
-Pour avoir plus d'infos vous pouvez voir notre Linkedin: 
+Pour avoir plus d'infos vous pouvez nous suivre sur Linkedin: 
 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
-<script type="IN/FollowCompany" data-id="1543373"></script>
+<script type="IN/FollowCompany" data-id="1543373" data-counter="right"></script>
 
 > Nos espaces sont modulables. Vous pouvez les louer à la journée, la demi-journée ou à l'heure. 
 
