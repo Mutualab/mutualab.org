@@ -7,6 +7,7 @@ published: true
 ---
 # À propos du Mutualāb 
 Espace fermé au mois d'août 2017, bonnes vacances à toutes et tous :) 
+
 On est une 60ène de coworkeurs-euses. La richesse du Mutualab tiens à la co-gestion, à notre envie de partager nos savoirs et à la diversité des métiers représentés. 
 ![100 m2 entièrement modulables pour vos présentations et rencontres.](images/photoscwkrs-mutualab.jpg) 
 
