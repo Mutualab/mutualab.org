@@ -7,10 +7,5 @@ nofollow: true
 
 # Réserver une salle
 
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/GSDR.jpg)
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espace canapé2.jpg)
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/GSDR1.jpg)
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/PSDR.jpg)
-![100 m2 entièrement modulables pour vos présentations et rencontres.](images/espace event.jpg)
-
+Reservez des salles de réunion entièrement modulables pour vos présentations et rencontres
 Pour faire votre demande, merci de remplir le formulaire ci-dessous :
