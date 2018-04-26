@@ -49,7 +49,7 @@ Salle de réunion claire et agréable, pour environ 20 personnes.
 - **Disponibilité**: du lundi au vendredi, 9h – 18h (au-delà, nous consulter)
 Prévoir un adaptateur hdmi ou autre si besoin!
 
-Tarif HT à la journée / soirée: 360 € / 150 € 
+Tarif HT à la journée / soirée: 360 € / 185 € 
 [%components.callToAction({label:"Réserver cette salle", url:"reserver-salle.html#/?room=57cd67d0f1ccdc12ddf65e77"})%]
 
 
