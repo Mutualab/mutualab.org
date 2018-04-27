@@ -39,8 +39,7 @@ Salle de réunion claire et agréable, pour 10 personnes
 
 Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/GSDR.jpg)
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/GSDR1.jpg)
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/GSDR1.JPG)
 Salle de réunion claire et agréable, pour environ 20 personnes.
 
 - **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
@@ -72,7 +71,7 @@ Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateu
 
 Nous vous proposons d’alléger votre organisation en agrémentant vos événements selon vos besoins.
 
-###### Traiteur :
+### Traiteur :
 
 **Petits-déjeuners – Pauses café :**
 
@@ -90,7 +89,7 @@ Différentes formules suivant les demandes : plateaux repas du marché ou buffet
 Plusieurs forfaits pièces salées et sucrées et formule boissons.
 
 
-###### Accompagnement dans la structuration de l’événement :
+#### Accompagnement dans la structuration de l’événement :
 
 Tarifs sur devis. Prestations réalisées par une entreprise membre du réseau CoworkingLille.
 
