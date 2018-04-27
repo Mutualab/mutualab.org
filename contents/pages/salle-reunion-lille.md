@@ -7,16 +7,20 @@ published: true
 
 # Organiser un événement, louer une salle de réunion
 
-> **_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
-> 
-> Mutualab est un lieu d’échanges et de rencontres, de partage de connaissances et de savoir-faire. Nous disposons de plusieurs espaces disponibles à la location pour vous permettre de réunir vos équipes et partenaires dans un espace inspirant.
->Pour avoir plus d'infos vous pouvez nous suivre sur Linkedin: 
+**_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
+
+
+Mutualab est un lieu d’échanges et de rencontres, de partage de connaissances et de savoir-faire. Nous disposons de plusieurs espaces disponibles à la location pour vous permettre de réunir vos équipes et partenaires dans un espace inspirant.
+
+Pour avoir plus d'infos vous pouvez nous suivre sur Linkedin: 
 <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
 <script type="IN/FollowCompany" data-id="1543373" data-counter="right"></script>
 
-> Nos espaces sont modulables. Vous pouvez les louer à la journée, la demi-journée ou à l'heure. 
 
-> **La location d'une salle de réunion donne accès à** internet (wifi), à un vidéoprojecteur (entrée VGA et HDMI) ou un écran selon l'espace (prévoir des adaptateurs) ainsi qu'à un paperboard.
+Nos espaces sont modulables. Vous pouvez les louer à la journée, la demi-journée ou à l'heure. 
+
+
+ **La location d'une salle de réunion donne accès à** internet (wifi), à un vidéoprojecteur (entrée VGA et HDMI) ou un écran selon l'espace (prévoir des adaptateurs) ainsi qu'à un paperboard.
 Selon vos envies, ils peuvent s’accompagner de prestations complètes : restauration, privatisation, visite des lieux et présentation du coworking, atelier collaboratif, etc. Parlons-en !
 
 
@@ -39,7 +43,7 @@ Salle de réunion claire et agréable, pour 10 personnes
 
 Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.]({{site.baseurl}}/contents/images/salle-reunion/GSDR1.JPG)
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/salle-evenements1.jpg)  
 Salle de réunion claire et agréable, pour environ 20 personnes.
 
 - **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
@@ -80,22 +84,28 @@ Forfait suivant les demandes:
 - Eau minérale, eau gazeuse et jus de fruits ;
 - Viennoiseries, petits gâteaux.
 
+
 **Déjeuners :**
 
 Différentes formules suivant les demandes : plateaux repas du marché ou buffet froid (version bio ou classique)
+
 
 **Cocktails :**
 
 Plusieurs forfaits pièces salées et sucrées et formule boissons.
 
 
+
 #### Accompagnement dans la structuration de l’événement :
 
+
 Tarifs sur devis. Prestations réalisées par une entreprise membre du réseau CoworkingLille.
+
 
 **Communication :**
 
 En fonction de la nature de votre événement, CoworkingLille pourra inviter des participants via ses outils de communication : Newsletter, emailing dédié, site du Mutualab et coworkinglille.com, réseaux sociaux (Twitter/ Facebook).
+
 
 **Autres services :**
 
