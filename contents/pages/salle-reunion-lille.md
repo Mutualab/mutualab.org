@@ -43,7 +43,7 @@ Salle de réunion claire et agréable, pour 10 personnes
 
 Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands événements : présentations, workshops, séminaires ou formations.
 
-![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/salle-evenements1.jpg)  
+![Une salle multifonction claire et agréable, pour 30 ou 60 pers.](images/salle-reunion/grande-salle-reunion.jpg)  
 Salle de réunion claire et agréable, pour environ 20 personnes.
 
 - **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
