@@ -73,7 +73,7 @@ Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateu
 
 ## Prestations complémentaires
 
-Nous vous proposons d’alléger votre organisation en agrémentant vos événements selon vos besoins.
+Nous vous proposons d’alléger votre organisation en agrémentant vos événements selon vos besoins.\
 
 
 
@@ -95,7 +95,7 @@ Différentes formules suivant les demandes : plateaux repas du marché ou buffet
 
 **Cocktails :**
 
-Plusieurs forfaits pièces salées et sucrées et formule boissons.
+Plusieurs forfaits pièces salées et sucrées et formule boissons.\
 
 
 
