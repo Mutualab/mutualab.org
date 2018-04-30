@@ -5,7 +5,7 @@ published: true
 ---
 
 
-# Organiser un événement, louer une salle de réunion
+# Organiser un événement, louer une salle de réunion à Lille
 
 **_Vous recherchez un lieu accessible et atypique pour organiser vos réunions, événements ou conférences ?_**
 
@@ -47,7 +47,7 @@ Au rez-de-chaussée, une grande salle de réunion de 55 m² accueille les grands
 Salle de réunion claire et agréable, pour environ 20 personnes.
 
 - **Capacité: **Jusqu’à 30 personnes (en configuration théâtre).
-- **Équipement:** Vidéo-projecteur, Unternet (WiFi), paperboard.
+- **Équipement:** Vidéo-projecteur, Internet (WiFi), paperboard.
 - **Disponibilité**: du lundi au vendredi, 9h – 21h (au-delà, nous consulter)
 
 **Tarifs** : **à l'heure** : 65€HT / **à la demi-journée** : 160€HT / **journée** : 360€HT / **soirée** : 185€HT
@@ -75,7 +75,10 @@ Il peut être équipé d'un vidéo-projecteur entrée VGA (prévoir un adaptateu
 
 Nous vous proposons d’alléger votre organisation en agrémentant vos événements selon vos besoins.
 
-### Traiteur :
+
+
+
+#### Traiteur :
 
 **Petits-déjeuners – Pauses café :**
 
@@ -93,6 +96,8 @@ Différentes formules suivant les demandes : plateaux repas du marché ou buffet
 **Cocktails :**
 
 Plusieurs forfaits pièces salées et sucrées et formule boissons.
+
+
 
 
 
